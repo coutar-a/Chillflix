@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en" xmlns: xmlns: xmlns: xmlns:>
+<head>
+    <!-- Imports -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/init.js"></script>
+    <script src="js/pageLoader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <!-- App setup -->
+    <title>U-Movie</title>
+</head>
+
+<!-- Initialisation -->
+<body onload="$init()">
+
+<!--Navigation bar and side menu (mobile)-->
+<nav>
+    <div class="nav-wrapper">
+        <a onclick="loadHomePage()" href="#!" class="brand-logo">U-Movie</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li>
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+
+            </li>
+            <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
+            <li><a onclick="loadMoviePage()" href="#">Watchlist</a></li>
+            <li><a href="#">Paramètres</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+            <li>
+                <form>
+                    <div class="input-field">
+                        <input id="searchMobile" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+
+            </li>
+            <li><a onclick="loadHomePage()" href="#"><i class="material-icons">home</i>Accueil</a></li>
+            <li><a onclick="loadMoviePage()" href="#"><i class="material-icons">star</i>Watchlist</a></li>
+            <li><a href="#"><i class="material-icons">settings</i>Paramètres</a></li>
+            <li><a href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Home page layout -->
+<div id="homePage">
+    <div class="container">
+        <div class="row">
+            <div class="col l2">
+                <!-- Insérer le contenu ici -->
+                <div id="userProfile" class="card center-align z-depth-5 hide-on-med-and-down valign">
+                    <div class="card-image">
+                        <i class="material-icons large">perm_identity</i>
+                    </div>
+                    <div class="card-stacked">
+                        <div class="card-content valign">
+                            <h5> John Smith</h5>
+                        </div>
+                        <div class="card-action valign center-align">
+                            <a href="#">Paramètres<i class="material-icons">settings</i></a><br>
+                            <a href="#">Se déconnecter<i class="material-icons">vpn_key</i></a>
+                        </div>
+                    </div>
+                </div>
+                <br> <br> <br> <br> <br> <br>
+                <br> <br> <br> <br> <br> <br>
+                <br> <br> <br> <br> <br> <br>
+                <br> <br> <br> <br> <br> <br>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Movie page layout -->
+<div id="moviePage" class="hide">
+    <div class="container">
+        <div class="row">
+            <!-- Insérer le contenu ici -->
+            <div class="col s12 m6 l6">
+                <h1>
+                    Charlie et la chocolaterie
+                </h1>
+                <a id="iTunesLink" href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr">
+                    Lien iTunes<i class="material-icons">shop</i></a>
+                <div class="divider"></div>
+                <h5> À propos du film </h5>
+                <p>
+                    Quelles sont les merveilles qui t'attendent dans l'usine de Willy Wonka ? Pars à la découverte de
+                    vastes
+                    étendues d'herbe sucrée au bon goût de menthe dans la Salle du Chocolat... Navigue sur la Rivière de
+                    Chocolat dans un grand bateau en sucre rose... Essaye le Gobestoppeur sans fin dans la Salle des
+                    Inventions... Observe les talentueux écureuils de la Salle de Tri des Noix et voyage en ascenseur de
+                    verre jusqu'à la Salle de Télévision. Tu y trouveras une montagne d'humour saupoudrée d'un peu de
+                    mystère... et une aventure aussi savoureuse et agréable qu'une tablette de Délice Fondant Wonka
+                    Guimauve-Caramel...
+                </p>
+                <div class="divider"></div>
+                <h5> Genre </h5>
+                <p>
+                    Enfants et famille
+                </p>
+                <div class="divider"></div>
+                <h5> Date de sortie </h5>
+                <p>
+                    2005
+                </p>
+                <div class="divider"></div>
+                <h5> ESRB </h5>
+                <p> Pour tous </p>
+                <div class="divider"></div>
+                <br><br><br>
+
+            </div>
+            <div class="col s12 m6 l6">
+                <img class="materialboxed responsive-img" src="images/film.png">
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Footer layout -->
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">U-Movie</h5>
+                <p class="grey-text text-lighten-4">U-movie and chill.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Liens</h5>
+                <ul>
+                    <li>
+                        <form>
+                            <div class="input-field">
+                                <input id="searchFooter" type="search" required>
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+
+                    </li>
+                    <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
+                    <li><a onclick="loadMoviePage()" href="#">Watchlist</a></li>
+                    <li><a href="#">Paramètres</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2017 Copyright Équipe 13
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+/**
+ * Nav bar (Normal screen view)
+ */
+
+.input-field #search {
+    height: 64px;
+}
+
+/**
+ * Side menu (Mobile view)
+ */
+.brand-logo {
+    margin-left: 20px;
+}
+
+.input-field #searchMobile {
+    height: 64px;
+}
+
+.side-nav {
+    background: #ee6e73;
+}
+
+.side-nav li a {
+    color: #FFFFFF;
+}
+
+/*
+ * Home page
+ */
+
+.card {
+    margin: 25px;
+    background: #ee6e73;
+    border: #333333;
+}
+
+/*
+ * Movie page
+ */
+
+.responsive-img {
+    margin: 50px;
+    margin-top: 100px;
+}
+
+/*
+ * Footer
+ */
+
+.page-footer a {
+    color: #FFFFFF;
+}
