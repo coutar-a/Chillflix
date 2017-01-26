@@ -23,9 +23,9 @@
 <!--Navigation bar and side menu (mobile)-->
 <nav>
     <div class="nav-wrapper">
-        <a onclick="loadHomePage()" href="#!" class="brand-logo">U-Movie</a>
+        <a onclick="loadHomePage()" href="#!" class="brand-logo">Chillflix</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down">
+        <ul class="right hide-on-med-and-down valign">
             <li>
                 <form>
                     <div class="input-field">
@@ -36,11 +36,15 @@
                 </form>
 
             </li>
+            <li id="userProfile"><a><i class="material-icons left">perm_identity</i>John Smith</a></li>
             <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
             <li><a onclick="loadMoviePage()" href="#">Watchlist</a></li>
             <li><a href="#">Paramètres</a></li>
+            <li><a href="#">Se déconnecter</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
+            <li id="userProfileMobile"><a><i class="material-icons">perm_identity</i>John Smith</a></li>
+
             <li>
                 <form>
                     <div class="input-field">
@@ -65,20 +69,6 @@
         <div class="row">
             <div class="col l2">
                 <!-- Insérer le contenu ici -->
-                <div id="userProfile" class="card center-align z-depth-5 hide-on-med-and-down valign">
-                    <div class="card-image">
-                        <i class="material-icons large">perm_identity</i>
-                    </div>
-                    <div class="card-stacked">
-                        <div class="card-content valign">
-                            <h5> John Smith</h5>
-                        </div>
-                        <div class="card-action valign center-align">
-                            <a href="#">Paramètres<i class="material-icons">settings</i></a><br>
-                            <a href="#">Se déconnecter<i class="material-icons">vpn_key</i></a>
-                        </div>
-                    </div>
-                </div>
                 <br> <br> <br> <br> <br> <br>
                 <br> <br> <br> <br> <br> <br>
                 <br> <br> <br> <br> <br> <br>
@@ -100,7 +90,7 @@
                     Charlie et la chocolaterie
                 </h1>
                 <a id="iTunesLink" href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr">
-                    Lien iTunes<i class="material-icons">shop</i></a>
+                    Lien iTunes<i class="material-icons left">shop</i></a>
                 <div class="divider"></div>
                 <h5> À propos du film </h5>
                 <p>
@@ -145,8 +135,8 @@
     <div class="container">
         <div class="row">
             <div class="col l6 s12">
-                <h5 class="white-text">U-Movie</h5>
-                <p class="grey-text text-lighten-4">U-movie and chill.</p>
+                <h5 class="white-text">Chillflix</h5>
+                <p class="grey-text text-lighten-4">Vous ne pourrez plus vous en passer.</p>
             </div>
             <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Liens</h5>
