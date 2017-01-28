@@ -6,7 +6,6 @@
 function loadHomePage() {
     $homePage.removeClass('hide');
     $moviePage.addClass('hide');
-
 }
 
 function loadMoviePage() {
