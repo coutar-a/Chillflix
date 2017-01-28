@@ -39,7 +39,7 @@
             <li id="userProfile"><a><i class="material-icons left">perm_identity</i>John Smith</a></li>
             <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
             <li><a href="#">Watchlist</a></li>
-            <li><a onclick="loadSeriesPage()" href="#">Series</a></li>
+            <li><a onclick="loadSeriesPage()" href="#">Séries</a></li>
             <li><a href="#">Paramètres</a></li>
             <li><a href="#">Se déconnecter</a></li>
         </ul>
@@ -50,7 +50,7 @@
                 <form>
                     <div class="input-field">
                         <input id="searchMobile" type="search" required>
-                        <label class="label-icon" for="searchMobile"><i class="material-icons">search</i></label>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                         <i class="material-icons">close</i>
                     </div>
                 </form>
@@ -100,9 +100,8 @@
                 <h1>
                     Charlie et la chocolaterie
                 </h1>
-                <a href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr"
-                   class="iTunesBtn"></a>
-
+                <a class="iTunesLink" href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr">
+                    Lien iTunes<i class="material-icons left">shop</i></a>
                 <div class="divider"></div>
                 <h5> À propos du film </h5>
                 <p>
@@ -141,6 +140,7 @@
         </div>
     </div>
 </div>
+
 
 <!-- Actor page layout -->
 <div id="actorPage" class="hide">
@@ -191,17 +191,19 @@
 <!-- Series page layout -->
 <div id="seriesPage" class="hide">
     <div class="container">
-        <div class="row">
-            <div class="col s12 m6 l6">
-                <h1>
-                    Silicon Valley
-                </h1>
-                <h5>
-                    Saison 1
-                </h5>
+        <div class="col s12 m12 l12">
+            <h1>
+                Silicon Valley
+            </h1>
+            <h5>
+                Saison 1
+            </h5>
+            <div class="divider"></div>
+        </div>
+        <div class="row flex-s">
+            <div class="col s12 m12 l6 info-box">
                 <a href="https://itunes.apple.com/ca/tv-season/silicon-valley-season-1/id849050573?l=fr"
                    class="iTunesBtn"></a>
-                <div class="divider"></div>
                 <h5> À propos de l'émission </h5>
                 <p>
                     La série décrit les aventures de quatre programmeurs vivant ensemble et essayant
@@ -230,9 +232,8 @@
                 <p> TV-MA (Contenu pour adultes) </p>
                 <div class="divider"></div>
                 <br><br><br>
-
             </div>
-            <div class="col s12 m6 l6">
+            <div class="col s12 m12 l6 img-box">
                 <img class="materialboxed responsive-img" src="images/silicon-valley.jpg">
             </div>
         </div>
@@ -261,8 +262,10 @@
 
                     </li>
                     <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
-                    <li><a onclick="loadMoviePage()" href="#">Watchlist</a></li>
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a onclick="loadSeriesPage()" href="#">Séries</a></li>
                     <li><a href="#">Paramètres</a></li>
+                    <li><a href="#">Se déconnecter</a></li>
                 </ul>
             </div>
         </div>
