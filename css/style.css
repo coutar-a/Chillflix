@@ -2,13 +2,26 @@
  * Nav bar (Normal screen view)
  */
 
+li {
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
+
 .input-field #search {
     height: 64px;
+    width: 50px;
+}
+
+.input-field #search:focus {
+    height: 64px;
+    width: 300px;
 }
 
 /**
  * Side menu (Mobile view)
  */
+
 .brand-logo {
     margin-left: 20px;
 }
