@@ -37,9 +37,9 @@
 
             </li>
             <li id="userProfile"><a><i class="material-icons left">perm_identity</i>John Smith</a></li>
-            <li><a onclick="loadActorPage()" href="#">Accueil</a></li>
-            <li><a onclick="loadMoviePage()" href="#">Watchlist</a></li>
-            <li><a onclick="loadSeriesPage()" href="#">Series</a></li>
+            <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
+            <li><a href="#">Watchlist</a></li>
+            <li><a onclick="loadSeriesPage()" href="#">Séries</a></li>
             <li><a href="#">Paramètres</a></li>
             <li><a href="#">Se déconnecter</a></li>
         </ul>
@@ -56,8 +56,8 @@
                 </form>
 
             </li>
-            <li><a onclick="loadActorPage()" href="#"><i class="material-icons">home</i>Accueil</a></li>
-            <li><a onclick="loadMoviePage()" href="#"><i class="material-icons">theaters</i>Watchlist</a></li>
+            <li><a onclick="loadHomePage()" href="#"><i class="material-icons">home</i>Accueil</a></li>
+            <li><a href="#"><i class="material-icons">theaters</i>Watchlist</a></li>
             <li><a onclick="loadSeriesPage()" href="#"><i class="material-icons">videocam</i>Series</a></li>
             <li><a href="#"><i class="material-icons">settings</i>Paramètres</a></li>
             <li><a href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a></li>
@@ -70,6 +70,21 @@
     <div class="container">
         <div class="row">
             <div class="col l2">
+
+                <h2> Pages de démonstration : </h2>
+
+                <ul>
+                    <li>
+                        <a href="#" onclick="loadMoviePage()"> Exemple de page de film</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="loadSeriesPage()"> Exemple de page de série télévisée</a>
+                    </li>
+                    <li>
+                        <a href="#" onclick="loadActorPage()"> Exemple de page d'acteur </a>
+                    </li>
+                </ul>
+
             </div>
 
         </div>
@@ -247,8 +262,10 @@
 
                     </li>
                     <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
-                    <li><a onclick="loadMoviePage()" href="#">Watchlist</a></li>
+                    <li><a href="#">Watchlist</a></li>
+                    <li><a onclick="loadSeriesPage()" href="#">Séries</a></li>
                     <li><a href="#">Paramètres</a></li>
+                    <li><a href="#">Se déconnecter</a></li>
                 </ul>
             </div>
         </div>
