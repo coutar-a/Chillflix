@@ -13,7 +13,6 @@
     <script src="js/init.js"></script>
     <script src="js/pageLoader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
-    <script src="js/backbone-min.js"></script>
     <!-- App setup -->
     <title>U-Movie</title>
 </head>
@@ -38,7 +37,7 @@
 
             </li>
             <li id="userProfile"><a><i class="material-icons left">perm_identity</i>John Smith</a></li>
-            <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
+            <li><a onclick="loadActorPage()" href="#">Accueil</a></li>
             <li><a onclick="loadMoviePage()" href="#">Watchlist</a></li>
             <li><a href="#">Paramètres</a></li>
             <li><a href="#">Se déconnecter</a></li>
@@ -56,7 +55,7 @@
                 </form>
 
             </li>
-            <li><a onclick="loadHomePage()" href="#"><i class="material-icons">home</i>Accueil</a></li>
+            <li><a onclick="loadActorPage()" href="#"><i class="material-icons">home</i>Accueil</a></li>
             <li><a onclick="loadMoviePage()" href="#"><i class="material-icons">star</i>Watchlist</a></li>
             <li><a href="#"><i class="material-icons">settings</i>Paramètres</a></li>
             <li><a href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a></li>
@@ -65,16 +64,10 @@
 </nav>
 
 <!-- Home page layout -->
-<div id="HomePage">
+<div id="homePage">
     <div class="container">
         <div class="row">
             <div class="col l2">
-                <!-- Insérer le contenu ici -->
-                <br> <br> <br> <br> <br> <br>
-                <br> <br> <br> <br> <br> <br>
-                <br> <br> <br> <br> <br> <br>
-                <br> <br> <br> <br> <br> <br>
-
             </div>
 
         </div>
@@ -131,52 +124,55 @@
     </div>
 </div>
 
-<!-- Series page layout -->
-<div id="seriesPage" class="hide">
+<!-- Home page layout -->
+<div id="homePage">
     <div class="container">
         <div class="row">
+            <div class="col l2">
+                <!-- Insérer le contenu ici -->
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Actor page layout -->
+<div id="actorPage" class="hide">
+    <div class="container">
+        <div class="row">
+            <!-- Insérer le contenu ici -->
             <div class="col s12 m6 l6">
                 <h1>
-                    Silicon Valley
+                    Johnny Depp
                 </h1>
-                <h5>
-                    Saison 1
-                </h5>
-                <a class="iTunesLink" href="https://itunes.apple.com/ca/tv-season/silicon-valley-season-1/id849050573?l=fr">
+                <a class="iTunesLink" href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr">
                     Lien iTunes<i class="material-icons left">shop</i></a>
                 <div class="divider"></div>
-                <h5> À propos de l'émission </h5>
+                <h5> À propos de l'acteur</h5>
                 <p>
-                    La série décrit les aventures de quatre programmeurs vivant ensemble et essayant
-                    de percer dans la Silicon Valley, en Californie. Ils travaillent dans un incubateur
-                    d'entreprises, le Hacker Hostel, géré par Erlich Bachman (T. J. Miller). L'un d'eux,
-                    Richard Hendricks, va créer un algorithme de compression révolutionnaire qui sera
-                    très vite convoité par deux milliardaires : Peter Gregory (Christopher Evan Welch)
-                    et Gavin Belson (Matt Ross). Richard doit choisir, vendre sa découverte au CEO de
-                    Hooli, Gavin Belson, ou bien laisser Peter Gregory investir dans sa future société
-                    en échange d'un retour sur les futurs bénéfices. Richard va accepter l'offre de Peter
-                    Gregory et fonder sa propre société, Pied Piper. Cette décision va le plonger dans
-                    plus d'une situation délicate à gérer pour finaliser son projet.
+                    Johnny Depp est un acteur, réalisateur, guitariste, scénariste et producteur de cinéma américain, 
+                    né le 9 juin 1963 à Owensboro, Kentucky.
                 </p>
                 <div class="divider"></div>
-                <h5> Genre </h5>
+                <h5> films </h5>
                 <p>
-                    Comédie
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                 </p>
                 <div class="divider"></div>
-                <h5> Date de sortie </h5>
+                <h5> autre </h5>
                 <p>
-                    2014
+                    ...
                 </p>
                 <div class="divider"></div>
-                <h5> Avertissement </h5>
-                <p> TV-MA (Contenu pour adultes) </p>
-                <div class="divider"></div>
-                <br><br><br>
 
             </div>
             <div class="col s12 m6 l6">
-                <img class="materialboxed responsive-img" src="images/silicon-valley.jpg">
+                <img class="materialboxed responsive-img" src="images/film.png">
 
 
             </div>
@@ -184,6 +180,8 @@
         </div>
     </div>
 </div>
+
+
 
 <!-- Footer layout -->
 <footer class="page-footer">
