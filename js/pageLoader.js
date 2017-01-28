@@ -30,3 +30,4 @@ function loadSeriesPage() {
     $moviePage.addClass('hide');
     $seriesPage.removeClass('hide');
 }
+

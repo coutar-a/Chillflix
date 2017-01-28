@@ -68,14 +68,14 @@
 <!-- Home page layout -->
 <div id="homePage">
     <div class="container">
-        <div class="row">
+        <div class="row center-align">
             <div class="col l2">
 
-                <h2> Pages de démonstration : </h2>
+                <h2> Pages de démonstration: </h2>
 
                 <ul>
                     <li>
-                        <a href="#" onclick="loadMoviePage()"> Exemple de page de film</a>
+                        <a href="#" onclick="loadMoviePage()"> Exemple de page de film </a>
                     </li>
                     <li>
                         <a href="#" onclick="loadSeriesPage()"> Exemple de page de série télévisée</a>
@@ -96,12 +96,15 @@
     <div class="container">
         <div class="row">
             <!-- Insérer le contenu ici -->
-            <div class="col s12 m6 l6">
+            <div class="col s12 m12 l6">
                 <h1>
                     Charlie et la chocolaterie
                 </h1>
-                <a class="iTunesLink" href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr">
-                    Lien iTunes<i class="material-icons left">shop</i></a>
+                <a href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr"
+                   class="iTunesBtn"></a>
+                <div class="col s4 m4 l4">
+                    <img class="materialboxed responsive-img" src="images/Charlie-et-la-chocolaterie.jpg">
+                </div>
                 <div class="divider"></div>
                 <h5> À propos du film </h5>
                 <p>
@@ -131,9 +134,12 @@
                 <br><br><br>
 
             </div>
-            <div class="col s12 m6 l6">
-                <img class="materialboxed responsive-img" src="images/film.png">
-
+            <div class="col s12 m12 l6">
+                <h5> <i class="material-icons left"> video_library </i> Bande-annonce </h5>
+                <div class="divider"></div>
+                <div class="video-container">
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/xjZihSC42HI" frameborder="0" allowfullscreen></iframe>
+                </div>
 
             </div>
 
@@ -180,8 +186,6 @@
             </div>
             <div class="col s12 m6 l6">
                 <img class="materialboxed responsive-img" src="images/johnny-depp.jpg">
-
-
             </div>
 
         </div>

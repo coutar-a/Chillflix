@@ -7,6 +7,14 @@
 }
 
 /**
+ * video
+ */
+.video-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/**
  * Side menu (Mobile view)
  */
 .brand-logo {
