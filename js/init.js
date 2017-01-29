@@ -10,10 +10,8 @@ function $init() {
         // Pages layouts :
         $moviePage = $("#moviePage");
         $homePage = $("#homePage");
+        $actorPage = $("#actorPage");
+        $seriesPage = $("#seriesPage");
 
     })
 }
-
-
-
-
