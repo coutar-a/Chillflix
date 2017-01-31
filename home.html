@@ -38,10 +38,10 @@
             </li>
             <li id="userProfile"><a><i class="material-icons left">perm_identity</i>John Smith</a></li>
             <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
-            <li><a href="#">Watchlist</a></li>
+            <li><a onclick="loadWatchlistsPage()" href="#">Watchlist</a></li>
             <li><a onclick="loadSeriesPage()" href="#">Séries</a></li>
-            <li><a href="#">Paramètres</a></li>
-            <li><a href="#">Se déconnecter</a></li>
+            <li><a onclick="loadSettingsPage()" href="#">Paramètres</a></li>
+            <li><a onclick="userLogout()" href="#">Se déconnecter</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
             <li id="userProfileMobile"><a><i class="material-icons">perm_identity</i>John Smith</a></li>
@@ -57,37 +57,39 @@
 
             </li>
             <li><a onclick="loadHomePage()" href="#"><i class="material-icons">home</i>Accueil</a></li>
-            <li><a href="#"><i class="material-icons">theaters</i>Watchlist</a></li>
+            <li><a onclick="loadWatchlistsPage()" href="#"><i class="material-icons">theaters</i>Watchlist</a></li>
             <li><a onclick="loadSeriesPage()" href="#"><i class="material-icons">videocam</i>Series</a></li>
-            <li><a href="#"><i class="material-icons">settings</i>Paramètres</a></li>
-            <li><a href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a></li>
+            <li><a onclick="loadSettingsPage()" href="#"><i class="material-icons">settings</i>Paramètres</a></li>
+            <li><a onclick="userLogout()" href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a></li>
         </ul>
     </div>
 </nav>
 
 <!-- Home page layout -->
 <div id="homePage">
-    <div class="container">
-        <div class="row">
-            <div class="col l2">
+    <div class="container space">
+        <div class="row  center-align">
+            <div class="col s12">
 
-                <h2> Pages de démonstration : </h2>
-
+                <h3> Projet de session - 1ère remise</h3>
+                <p class="flow-text">Comme la barre de recherche n'a pas encore été implantée à ce stade, seul les onglets Accueil et Séries
+                    sont fonctionnels. Les autres pages sont accessibles via les liens ci-dessous.</p>
+                <div class="space"></div>
+                <h5> Pages de démonstration: </h5>
                 <ul>
                     <li>
-                        <a href="#" onclick="loadMoviePage()"> Exemple de page de film</a>
+                        <a class="flow-text" href="#" onclick="loadMoviePage()"> Exemple de page de film </a>
                     </li>
                     <li>
-                        <a href="#" onclick="loadSeriesPage()"> Exemple de page de série télévisée</a>
+                        <a class="flow-text" href="#" onclick="loadSeriesPage()"> Exemple de page de série télévisée</a>
                     </li>
                     <li>
-                        <a href="#" onclick="loadActorPage()"> Exemple de page d'acteur </a>
+                        <a class="flow-text" href="#" onclick="loadActorPage()"> Exemple de page d'acteur </a>
                     </li>
                 </ul>
-
             </div>
-
         </div>
+        <div class="space"></div>
     </div>
 </div>
 
@@ -95,13 +97,16 @@
 <div id="moviePage" class="hide">
     <div class="container">
         <div class="row">
-            <!-- Insérer le contenu ici -->
-            <div class="col s12 m6 l6">
+            <!-- Gauche -->
+            <div class="col s12 m12 l6">
                 <h1>
                     Charlie et la chocolaterie
                 </h1>
-                <a class="iTunesLink" href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr">
-                    Lien iTunes<i class="material-icons left">shop</i></a>
+                <a href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr"
+                   class="iTunesBtn"></a>
+                <div class="col s12 m12 l4">
+                    <img class="materialboxed responsive-img" src="images/Charlie-et-la-chocolaterie.jpg">
+                </div>
                 <div class="divider"></div>
                 <h5> À propos du film </h5>
                 <p>
@@ -131,16 +136,20 @@
                 <br><br><br>
 
             </div>
-            <div class="col s12 m6 l6">
-                <img class="materialboxed responsive-img" src="images/film.png">
-
+            <!-- Droite -->
+            <div class="col s12 m12 l6">
+                <h5><i class="material-icons left"> video_library </i> Bande-annonce </h5>
+                <div class="divider"></div>
+                <div class="video-container">
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/xjZihSC42HI" frameborder="0"
+                            allowfullscreen></iframe>
+                </div>
 
             </div>
 
         </div>
     </div>
 </div>
-
 
 <!-- Actor page layout -->
 <div id="actorPage" class="hide">
@@ -151,37 +160,35 @@
                 <h1>
                     Johnny Depp
                 </h1>
-                <a class="iTunesLink" href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr">
-                    Lien iTunes<i class="material-icons left">shop</i></a>
+                <a class="iTunesBtn"
+                   href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr"></a>
                 <div class="divider"></div>
                 <h5> À propos de l'acteur</h5>
                 <p>
-                    Johnny Depp est un acteur, réalisateur, guitariste, scénariste et producteur de cinéma américain, 
+                    Johnny Depp est un acteur, réalisateur, guitariste, scénariste et producteur de cinéma américain,
                     né le 9 juin 1963 à Owensboro, Kentucky.
                 </p>
                 <div class="divider"></div>
                 <h5> Films </h5>
-                <p>
-                    <ul>
-                        <li> Alice au pays des merveilles</li>
-                        <li> Pirate des caraîbes</li>
-                        <li> Le gardien</li>
-                    </ul>
-                </p>
+
+                <ul>
+                    <li> Alice au pays des merveilles</li>
+                    <li> Pirate des caraîbes</li>
+                    <li> Le gardien</li>
+                </ul>
+
                 <div class="divider"></div>
                 <h5> Genre primaire</h5>
-                <p>
-                    <ul>
-                        <li> Films fantastic</li>
-                    </ul>
-                </p>
+
+                <ul>
+                    <li> Films fantastic</li>
+                </ul>
+
                 <div class="divider"></div>
 
             </div>
             <div class="col s12 m6 l6">
                 <img class="materialboxed responsive-img" src="images/johnny-depp.jpg">
-
-
             </div>
 
         </div>
@@ -231,10 +238,44 @@
                 <h5> Avertissement </h5>
                 <p> TV-MA (Contenu pour adultes) </p>
                 <div class="divider"></div>
+                <h5> Liste des épisodes</h5>
+                <ol>
+                    <li>
+                        Produit minimum viable (Minimum Viable Product)
+                    </li>
+                    <li>
+                        La table de capitalisation (The Cap Table)
+                    </li>
+                    <li>
+                        Statuts constitutifs (Articles of Incorporation)
+                    </li>
+                    <li>
+                        Obligations fiduciaires (Fiduciary Duties)
+                    </li>
+                    <li>
+                        Indicateur de risque (Signaling Risk)
+                    </li>
+                    <li>
+                        Internalisation par un tiers (Third Party Insourcing)
+                    </li>
+                    <li>
+                        Preuve de concept (Proof of Concept)
+                    </li>
+                    <li>
+                        Efficacité optimale (Optimal Tip-to-Tip Efficiency)
+                    </li>
+                </ol>
                 <br><br><br>
             </div>
             <div class="col s12 m12 l6 img-box">
                 <img class="materialboxed responsive-img" src="images/silicon-valley.jpg">
+                <div class="divider"></div>
+                <h5><i class="material-icons left"> video_library </i> Bande-annonce </h5>
+                <div class="divider"></div>
+                <div class="video-container">
+                    <iframe width="853" height="480" src="https://www.youtube.com/embed/69V__a49xtw" frameborder="0"
+                            allowfullscreen></iframe>
+                </div>
             </div>
         </div>
     </div>
@@ -262,10 +303,10 @@
 
                     </li>
                     <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
-                    <li><a href="#">Watchlist</a></li>
+                    <li><a onclick="loadWatchlistsPage()" href="#">Watchlist</a></li>
                     <li><a onclick="loadSeriesPage()" href="#">Séries</a></li>
-                    <li><a href="#">Paramètres</a></li>
-                    <li><a href="#">Se déconnecter</a></li>
+                    <li><a onclick="loadSettingsPage()" href="#">Paramètres</a></li>
+                    <li><a onclick="userLogout()" href="#">Se déconnecter</a></li>
                 </ul>
             </div>
         </div>

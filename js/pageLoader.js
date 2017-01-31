@@ -8,6 +8,9 @@ function loadHomePage() {
     $actorPage.addClass('hide');
     $moviePage.addClass('hide');
     $seriesPage.addClass('hide');
+
+    pauseVideo();
+    $('.button-collapse').sideNav('hide');
 }
 
 function loadMoviePage() {
@@ -15,6 +18,9 @@ function loadMoviePage() {
     $actorPage.addClass('hide');
     $moviePage.removeClass('hide');
     $seriesPage.addClass('hide');
+
+    pauseVideo();
+    $('.button-collapse').sideNav('hide');
 }
 
 function loadActorPage() {
@@ -22,6 +28,9 @@ function loadActorPage() {
     $actorPage.removeClass('hide');
     $moviePage.addClass('hide');
     $seriesPage.addClass('hide');
+
+    pauseVideo();
+    $('.button-collapse').sideNav('hide');
 }
 
 function loadSeriesPage() {
@@ -29,4 +38,35 @@ function loadSeriesPage() {
     $actorPage.addClass('hide');
     $moviePage.addClass('hide');
     $seriesPage.removeClass('hide');
+
+    pauseVideo();
+    $('.button-collapse').sideNav('hide');
 }
+
+function loadWatchlistsPage() {
+    // Plus tard
+
+    pauseVideo();
+    $('.button-collapse').sideNav('hide');
+}
+
+
+function loadSettingsPage() {
+    // Plus tard
+
+    pauseVideo();
+    $('.button-collapse').sideNav('hide');
+}
+
+function userLogout() {
+    // Plus tard
+
+    pauseVideo();
+    $('.button-collapse').sideNav('hide');
+}
+
+function pauseVideo() {
+    /** TODO : Trouver une solution pour stopper / mettre sur pause la vidéo. */
+}
+
+
