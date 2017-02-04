@@ -7,6 +7,14 @@
 }
 
 /**
+ * video
+ */
+.video-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/**
  * Side menu (Mobile view)
  */
 .brand-logo {
@@ -54,16 +62,32 @@
 
 }
 
+/**
+ * Mobile layout :
+ */
 @media (max-width: 992px) {
     .flex-s {
         display: flex;
         flex-direction: column; /* Stack on top */
     }
+
     .info-box {
         order: 2; /* Go down, bring Box B up */
+    }
+
+    img {
+        margin-top: 20px;
+        margin-bottom:20px;
     }
 }
 
 .row {
     align-content: center;
 }
+
+.space {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+
