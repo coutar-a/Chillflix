@@ -11,7 +11,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="js/init.js"></script>
-    <script src="js/pageLoader.js"></script>
+    <script src="js/PageLoader.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <!-- App setup -->
     <title>U-Movie</title>
@@ -23,44 +23,44 @@
 <!--Navigation bar and side menu (mobile)-->
 <nav>
     <div class="nav-wrapper">
-        <a onclick="loadHomePage()" href="#!" class="brand-logo">Chillflix</a>
+        <a id="Logo" href="#!" class="buttonHome brand-logo">Chillflix</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down valign">
             <li>
                 <form>
                     <div class="input-field">
-                        <input id="search" type="search" required>
+                        <input id="search" class="searchBar" type="search" required>
                         <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                         <i class="material-icons">close</i>
                     </div>
                 </form>
 
             </li>
-            <li id="userProfile"><a><i class="material-icons left">perm_identity</i>John Smith</a></li>
-            <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
-            <li><a onclick="loadWatchlistsPage()" href="#">Watchlist</a></li>
-            <li><a onclick="loadSeriesPage()" href="#">Séries</a></li>
-            <li><a onclick="loadSettingsPage()" href="#">Paramètres</a></li>
-            <li><a onclick="userLogout()" href="#">Se déconnecter</a></li>
+            <li><a class="buttonUserProfile" href="#"><i class="material-icons left">perm_identity</i>John Smith</a>
+            </li>
+            <li><a class="buttonHome" href="#">Accueil</a></li>
+            <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
+            <li><a class="buttonTVShowPage" href="#">Séries</a></li>
+            <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
+            <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
         </ul>
         <ul class="side-nav" id="mobile-demo">
-            <li id="userProfileMobile"><a><i class="material-icons">perm_identity</i>John Smith</a></li>
-
+            <li><a class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a></li>
             <li>
                 <form>
                     <div class="input-field">
-                        <input id="searchMobile" type="search" required>
-                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <input id="searchMobile" class="searchBar" type="search" required>
+                        <label class="label-icon" for="searchMobile"><i class="material-icons">search</i></label>
                         <i class="material-icons">close</i>
                     </div>
                 </form>
 
             </li>
-            <li><a onclick="loadHomePage()" href="#"><i class="material-icons">home</i>Accueil</a></li>
-            <li><a onclick="loadWatchlistsPage()" href="#"><i class="material-icons">theaters</i>Watchlist</a></li>
-            <li><a onclick="loadSeriesPage()" href="#"><i class="material-icons">videocam</i>Series</a></li>
-            <li><a onclick="loadSettingsPage()" href="#"><i class="material-icons">settings</i>Paramètres</a></li>
-            <li><a onclick="userLogout()" href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a></li>
+            <li><a class="buttonHome" href="#"><i class="material-icons">home</i>Accueil</a></li>
+            <li><a class="buttonWatchlistsPage" href="#"><i class="material-icons">theaters</i>Watchlist</a></li>
+            <li><a class="buttonTVShowPage" href="#"><i class="material-icons">videocam</i>Series</a></li>
+            <li><a class="buttonUserParameters" href="#"><i class="material-icons">settings</i>Paramètres</a></li>
+            <li><a class="buttonUserLogout" href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a></li>
         </ul>
     </div>
 </nav>
@@ -72,19 +72,20 @@
             <div class="col s12">
 
                 <h3> Projet de session - 1ère remise</h3>
-                <p class="flow-text">Comme la barre de recherche n'a pas encore été implantée à ce stade, seul les onglets Accueil et Séries
+                <p class="flow-text">Comme la barre de recherche n'a pas encore été implantée à ce stade, seul les
+                    onglets Accueil et Séries
                     sont fonctionnels. Les autres pages sont accessibles via les liens ci-dessous.</p>
                 <div class="space"></div>
                 <h5> Pages de démonstration: </h5>
                 <ul>
                     <li>
-                        <a class="flow-text" href="#" onclick="loadMoviePage()"> Exemple de page de film </a>
+                        <a class="buttonMoviePage flow-text" href="#"> Exemple de page de film </a>
                     </li>
                     <li>
-                        <a class="flow-text" href="#" onclick="loadSeriesPage()"> Exemple de page de série télévisée</a>
+                        <a class="buttonTVShowPage flow-text" href="#"> Exemple de page de série télévisée</a>
                     </li>
                     <li>
-                        <a class="flow-text" href="#" onclick="loadActorPage()"> Exemple de page d'acteur </a>
+                        <a class="buttonActorPage flow-text" href="#"> Exemple de page d'acteur </a>
                     </li>
                 </ul>
             </div>
@@ -103,7 +104,7 @@
                     Charlie et la chocolaterie
                 </h1>
                 <a href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr"
-                   class="iTunesBtn"></a>
+                   class="buttoniTunes"></a>
                 <div class="col s12 m12 l4">
                     <img class="materialboxed responsive-img" src="images/Charlie-et-la-chocolaterie.jpg">
                 </div>
@@ -160,7 +161,7 @@
                 <h1>
                     Johnny Depp
                 </h1>
-                <a class="iTunesBtn"
+                <a class="buttoniTunes"
                    href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr"></a>
                 <div class="divider"></div>
                 <h5> À propos de l'acteur</h5>
@@ -210,7 +211,7 @@
         <div class="row flex-s">
             <div class="col s12 m12 l6 info-box">
                 <a href="https://itunes.apple.com/ca/tv-season/silicon-valley-season-1/id849050573?l=fr"
-                   class="iTunesBtn"></a>
+                   class="buttoniTunes"></a>
                 <h5> À propos de l'émission </h5>
                 <p>
                     La série décrit les aventures de quatre programmeurs vivant ensemble et essayant
@@ -295,18 +296,19 @@
                     <li>
                         <form>
                             <div class="input-field">
-                                <input id="searchFooter" type="search" required>
-                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <input id="searchFooter" class="searchBar" type="search" required>
+                                <label class="label-icon" for="searchFooter"><i
+                                        class="material-icons">search</i></label>
                                 <i class="material-icons">close</i>
                             </div>
                         </form>
 
                     </li>
-                    <li><a onclick="loadHomePage()" href="#">Accueil</a></li>
-                    <li><a onclick="loadWatchlistsPage()" href="#">Watchlist</a></li>
-                    <li><a onclick="loadSeriesPage()" href="#">Séries</a></li>
-                    <li><a onclick="loadSettingsPage()" href="#">Paramètres</a></li>
-                    <li><a onclick="userLogout()" href="#">Se déconnecter</a></li>
+                    <li><a class="buttonHome" href="#">Accueil</a></li>
+                    <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
+                    <li><a class="buttonTVShowPage" href="#">Séries</a></li>
+                    <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
+                    <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
                 </ul>
             </div>
         </div>

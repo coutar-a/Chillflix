@@ -54,7 +54,7 @@
 /**
  * iTunes button link
  */
-.iTunesBtn {
+.buttoniTunes {
     background: url('../images/link-badge-itunes.png') no-repeat;
     display: block;
     height: 40px;
