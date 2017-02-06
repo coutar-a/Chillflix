@@ -2,8 +2,8 @@
  * Created by Charles on 25/01/2017.
  */
 
-// Services :
 var pageLoader;
+var user;
 
 //
 
@@ -12,8 +12,9 @@ function $init() {
     // jQuery initialisation :
     $( document ).ready(function(){
 
-        // Services :
         pageLoader = new PageLoader();
+        user = new User("johnsmith@ulaval.ca", "motdepasse");
+        user.login(); // Génère un nouveau token pour l'utilisateur.
 
         // Navigation :
         $(".button-collapse").sideNav();

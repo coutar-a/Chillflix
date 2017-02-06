@@ -77,6 +77,10 @@ function PageLoader() {
         collapseSideNav()
     };
 
+    this.userLogin = function() {
+
+    };
+
     this.userLogout = function () {
         // TODO (Remise 3)
 
