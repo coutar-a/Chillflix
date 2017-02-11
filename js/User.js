@@ -3,14 +3,16 @@
  */
 
 function User(email, password) {
+
     this.email = email;
-    this.password = password;
     this.token = undefined;
+
+    //
 
     this.login = function () {
         log(this);
         function log(_this) {
-            $.post('http://umovie.herokuapp.com/login', {email: _this.email, password: _this.password},
+            $.post('http://umovie.herokuapp.com/login', {email: _this.email, password: password},
                 function (returnedData) {
                     console.log(returnedData.token);
                     _this.token = returnedData.token;

@@ -4,7 +4,6 @@
     <!-- Imports -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -13,9 +12,11 @@
     <script src="js/init.js"></script>
     <script src="js/PageLoader.js"></script>
     <script src="js/User.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <script src="js/Movie.js"></script>
+    <script src="js/UMovie.js"></script>
+    <script src="js/Utils.js"></script>
     <!-- App setup -->
-    <title>U-Movie</title>
+    <title>Chillflix</title>
 </head>
 
 <!-- Initialisation -->
@@ -24,18 +25,17 @@
 <!--Navigation bar and side menu (mobile)-->
 <nav>
     <div class="nav-wrapper">
-        <a id="Logo" href="#!" class="buttonHome brand-logo">Chillflix</a>
+        <a id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
         <ul class="right hide-on-med-and-down valign">
             <li>
-                <form>
+                <form onsubmit="return false">
                     <div class="input-field">
-                        <input id="search" class="searchBar" type="search" required>
+                        <input id="search" class="searchBar" type="text" required>
                         <label class="label-icon" for="search"><i class="material-icons">search</i></label>
                         <i class="material-icons">close</i>
                     </div>
                 </form>
-
             </li>
             <li><a class="buttonUserProfile" href="#"><i class="material-icons left">perm_identity</i>John Smith</a>
             </li>
@@ -48,9 +48,9 @@
         <ul class="side-nav" id="mobile-demo">
             <li><a class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a></li>
             <li>
-                <form>
+                <form onsubmit="return false">
                     <div class="input-field">
-                        <input id="searchMobile" class="searchBar" type="search" required>
+                        <input id="searchMobile" class="searchBar" type="text" required>
                         <label class="label-icon" for="searchMobile"><i class="material-icons">search</i></label>
                         <i class="material-icons">close</i>
                     </div>
@@ -67,28 +67,13 @@
 </nav>
 
 <!-- Home page layout -->
-<div id="homePage">
+<div id="homePage" class="">
     <div class="container space">
         <div class="row  center-align">
             <div class="col s12">
 
-                <h3> Projet de session - 1ère remise</h3>
-                <p class="flow-text">Comme la barre de recherche n'a pas encore été implantée à ce stade, seul les
-                    onglets Accueil et Séries
-                    sont fonctionnels. Les autres pages sont accessibles via les liens ci-dessous.</p>
                 <div class="space"></div>
-                <h5> Pages de démonstration: </h5>
-                <ul>
-                    <li>
-                        <a class="buttonMoviePage flow-text" href="#"> Exemple de page de film </a>
-                    </li>
-                    <li>
-                        <a class="buttonTVShowPage flow-text" href="#"> Exemple de page de série télévisée</a>
-                    </li>
-                    <li>
-                        <a class="buttonActorPage flow-text" href="#"> Exemple de page d'acteur </a>
-                    </li>
-                </ul>
+
             </div>
         </div>
         <div class="space"></div>
@@ -283,6 +268,20 @@
     </div>
 </div>
 
+<!-- Home page layout -->
+<div id="searchPage" class="hide">
+    <div class="row  center-align">
+        <div class="col s12">
+
+            <h3> Résultats de la recherche :</h3>
+            <ul id="searchResultsList">
+
+            </ul>
+        </div>
+    </div>
+    <div class="space"></div>
+</div>
+
 <!-- Footer layout -->
 <footer class="page-footer">
     <div class="container">
@@ -295,7 +294,7 @@
                 <h5 class="white-text">Liens</h5>
                 <ul>
                     <li>
-                        <form>
+                        <form onsubmit="return false">
                             <div class="input-field">
                                 <input id="searchFooter" class="searchBar" type="search" required>
                                 <label class="label-icon" for="searchFooter"><i

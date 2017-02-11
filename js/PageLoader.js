@@ -1,7 +1,7 @@
 /**
- * Created by Charles on 25/01/2017.
+ * Classe fesant la gestion de l'affichage des pages
+ * TODO : Voir si on garde ce concept ou pas.
  */
-
 function PageLoader() {
 
     this.loadHomePage = function () {
@@ -9,17 +9,20 @@ function PageLoader() {
         $("#actorPage").addClass('hide');
         $("#moviePage").addClass('hide');
         $("#seriesPage").addClass('hide');
+        $("#searchPage").addClass('hide');
         //
         collapseSideNav()
     };
 
-    this.loadMoviePage = function () {
+    this.loadMoviePage = function (movie) {
         $("#homePage").addClass('hide');
         $("#actorPage").addClass('hide');
         $("#moviePage").removeClass('hide');
         $("#seriesPage").addClass('hide');
+        $("#searchPage").addClass('hide');
+        collapseSideNav();
         //
-        collapseSideNav()
+        // TODO : Afficher le contenu de la page avec l'objet movie
     };
 
     this.loadActorPage = function () {
@@ -27,6 +30,7 @@ function PageLoader() {
         $("#actorPage").removeClass('hide');
         $("#moviePage").addClass('hide');
         $("#seriesPage").addClass('hide');
+        $("#searchPage").addClass('hide');
         //
         collapseSideNav()
     };
@@ -36,8 +40,23 @@ function PageLoader() {
         $("#actorPage").addClass('hide');
         $("#moviePage").addClass('hide');
         $("#seriesPage").removeClass('hide');
+        $("#searchPage").addClass('hide');
         //
         collapseSideNav();
+    };
+
+    this.loadSearchPage = function (searchResults) {
+        $("#homePage").addClass('hide');
+        $("#actorPage").addClass('hide');
+        $("#moviePage").addClass('hide');
+        $("#seriesPage").addClass('hide');
+        $("#searchPage").removeClass('hide');
+        collapseSideNav();
+        //
+        clearResultsList();
+        for (var i = 0; i < searchResults.length; ++i) {
+            addListItem(searchResults[i]);
+        }
     };
 
     this.loadUserProfilePage = function () {
@@ -45,6 +64,7 @@ function PageLoader() {
         $("#actorPage").addClass('hide');
         $("#moviePage").addClass('hide');
         $("#seriesPage").addClass('hide');
+        $("#searchPage").addClass('hide');
         /** TODO :
          *  Ajouter $("#userProfilePage").addClass('hide')
          *  dans les autres méthodes lorsque la page
@@ -60,6 +80,7 @@ function PageLoader() {
         $("#actorPage").addClass('hide');
         $("#moviePage").addClass('hide');
         $("#seriesPage").addClass('hide');
+        $("#searchPage").addClass('hide');
         /** TODO :
          *  Ajouter $("#watchlistsPage").addClass('hide')
          *  dans les autres méthodes lorsque la page
@@ -77,7 +98,7 @@ function PageLoader() {
         collapseSideNav()
     };
 
-    this.userLogin = function() {
+    this.userLogin = function () {
 
     };
 
@@ -91,10 +112,32 @@ function PageLoader() {
     this.goToURL = function (URL) {
         location.href = URL;
     };
+
+    // TODO : Améliorer et réfactor
+    var addListItem = function (media) {
+        var item = document.createElement('li');
+        //
+        var name;
+        if (Utils.objectIsMovie(media)) {
+            name = media.trackName;
+        } else {
+            name = media.collectionName;
+        }
+        item.appendChild(document.createTextNode(name));
+        //
+        document.getElementById('searchResultsList').appendChild(item);
+    };
+
+    var clearResultsList = function() {
+        $("#searchResultsList").empty();
+    }
 }
 
 //
 
+/**
+ * Ferme le menu rétractable mobile.
+ */
 function collapseSideNav() {
     $('.button-collapse').sideNav('hide');
 }
