@@ -2,7 +2,7 @@
  * Created by Charles on 25/01/2017.
  */
 
-var pageLoader;
+var appView;
 var user;
 
 //
@@ -11,47 +11,43 @@ function $init() {
 
     // jQuery initialisation :
     $(document).ready(function () {
-        console.log("?");
         // Services :
-        pageLoader = new PageLoader();
-        pageLoader.loadHomePage();
         user = new User("johnsmith@ulaval.ca", "motdepasse"); // Dummy user
 
-        // Navigation :
+        // Side-Nav:
         $(".button-collapse").sideNav();
         // Events :
         $(".buttonHome").click(function (e) {
-            pageLoader.loadHomePage();
+            appView.loadPage("home");
         });
         $(".buttonWatchlistsPage").click(function (e) {
-            pageLoader.loadWatchlistsPage();
+            appView.loadPage("watchlist");
         });
         $(".buttonMoviePage").click(function (e) {
-            pageLoader.loadMoviePage();
+            appView.loadPage("movie");
         });
         $(".buttonActorPage").click(function (e) {
-            pageLoader.loadActorPage();
+            appView.loadPage("actor");
         });
         $(".buttonTVShowPage").click(function (e) {
-            pageLoader.loadTVShowPage();
+            appView.loadPage("tvshow");
         });
         $(".buttonUserProfile").click(function (e) {
-            pageLoader.loadUserProfilePage();
+            appView.loadPage("userprofile");
         });
         $(".buttonUserParameters").click(function (e) {
-            pageLoader.loadUserSettingsPage();
+            appView.loadPage("settings");
         });
         $(".buttonUserLogout").click(function (e) {
-            pageLoader.userLogout();
+            appView.loadPage("login");
         });
         $(".buttoniTunes").click(function (e) {
             pageLoader.goToURL($(this).attr('href'));
         });
         $(".searchBar").keyup(function (e) {
-            console.log(e);
             if (e.keyCode == 13) {
                 var keywords = $(this).context.value;
-                UMovie.searchByKeywords(keywords, pageLoader.loadSearchPage, 25);
+                // UMovie.searchByKeywords(keywords, appView.loadPage, 25); // TODO : Revoir
             }
             return false;
         });

@@ -1,5 +1,6 @@
 /**
  * Classe statique encapsulant les appels à l'API de UMovie.
+ * Documentation de l'API : https://github.com/GLO3102/UMovie/wiki/2-API
  */
 var UMovie = {
 
@@ -23,7 +24,7 @@ var UMovie = {
      * Retourne une liste de média selon les mots clés passés en argument
      * @param keywords : string | Mot-clés pour la recherche
      * @param callback : function | Fonction à exécuter une fois le traitement terminé
-     * @param limit : int | Nombre maximum d'objets à retourner par la recherche
+     * @param limit : int | (Facultatif) Nombre maximum d'objets à retourner par la recherche
      */
     searchByKeywords: function (keywords, callback, limit) {
 
