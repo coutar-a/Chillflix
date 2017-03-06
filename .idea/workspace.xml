@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bf40fd29-1e97-4be7-9285-78e39c22136b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/AppView.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/home.html" afterPath="$PROJECT_DIR$/home.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/UMovie.js" afterPath="$PROJECT_DIR$/js/UMovie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/init.js" afterPath="$PROJECT_DIR$/js/init.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -81,8 +77,8 @@
       <file leaf-file-name="AppView.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/AppView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+            <state relative-caret-position="520">
+              <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
               <folding>
                 <element signature="e#649#657#0" expanded="true" />
                 <element signature="e#2066#2607#0" expanded="true" />
@@ -124,6 +120,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="dev" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -363,7 +364,7 @@
       <workItem from="1486850080738" duration="1068000" />
       <workItem from="1486851333910" duration="39000" />
       <workItem from="1487180174461" duration="600000" />
-      <workItem from="1488764828906" duration="5666000" />
+      <workItem from="1488764828906" duration="5822000" />
     </task>
     <task id="LOCAL-00001" summary="Changements pour le responsiveness pour tablette">
       <created>1486223173276</created>
@@ -393,11 +394,18 @@
       <option name="project" value="LOCAL" />
       <updated>1486795158146</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Migration vers backbone">
+      <created>1488770531769</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1488770531769</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48631000" />
+    <option name="totallyTimeSpent" value="48787000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -458,7 +466,8 @@
     <MESSAGE value="Gestion des events avec jQuery et refactor de pageLoader.js en classe -&gt; PageLoader.js" />
     <MESSAGE value="Ajout de la classe User" />
     <MESSAGE value="Ajout des classes UMovie, Utils, et Movie. Barres de recherche semi-fonctionnels" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout des classes UMovie, Utils, et Movie. Barres de recherche semi-fonctionnels" />
+    <MESSAGE value="Migration vers backbone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migration vers backbone" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1164,8 +1173,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/AppView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        <state relative-caret-position="520">
+          <caret line="26" column="31" lean-forward="true" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
           <folding>
             <element signature="e#649#657#0" expanded="true" />
             <element signature="e#2066#2607#0" expanded="true" />
