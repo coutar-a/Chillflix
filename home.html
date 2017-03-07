@@ -7,11 +7,181 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/x-handlebars-template" id="HomeTemplate">
+        <!--Navigation bar and side menu (mobile)-->
+        <nav>
+            <div class="nav-wrapper">
+                <a id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down valign">
+                    <li>
+                        <form onsubmit="return false">
+                            <div class="input-field">
+                                <input id="search" class="searchBar" type="text" required>
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a class="buttonUserProfile" href="#"><i class="material-icons left">perm_identity</i>John Smith</a>
+                    </li>
+                    <li><a class="buttonHome" href="#">Accueil</a></li>
+                    <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
+                    <li><a class="buttonTVShowPage" href="#">Séries</a></li>
+                    <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
+                    <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a></li>
+                    <li>
+                        <form onsubmit="return false">
+                            <div class="input-field">
+                                <input id="searchMobile" class="searchBar" type="text" required>
+                                <label class="label-icon" for="searchMobile"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+
+                    </li>
+                    <li><a class="buttonHome" href="#"><i class="material-icons">home</i>Accueil</a></li>
+                    <li><a class="buttonWatchlistsPage" href="#"><i class="material-icons">theaters</i>Watchlist</a></li>
+                    <li><a class="buttonTVShowPage" href="#"><i class="material-icons">videocam</i>Series</a></li>
+                    <li><a class="buttonUserParameters" href="#"><i class="material-icons">settings</i>Paramètres</a></li>
+                    <li><a class="buttonUserLogout" href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h5>Bienvenue sur Chillflix</h5>
+        <!-- Footer layout -->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Chillflix</h5>
+                        <p class="grey-text text-lighten-4">Vous ne pourrez plus vous en passer.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Liens</h5>
+                        <ul>
+                            <li>
+                                <form onsubmit="return false">
+                                    <div class="input-field">
+                                        <input id="searchFooter" class="searchBar" type="search" required>
+                                        <label class="label-icon" for="searchFooter"><i
+                                                class="material-icons">search</i></label>
+                                        <i class="material-icons">close</i>
+                                    </div>
+                                </form>
+
+                            </li>
+                            <li><a class="buttonHome" href="#">Accueil</a></li>
+                            <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
+                            <li><a class="buttonTVShowPage" href="#">Séries</a></li>
+                            <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
+                            <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2017 Copyright Équipe 13
+                </div>
+            </div>
+        </footer>
+
+    </script>
+    <script type="text/x-handlebars-template" id="UserProfileTemplate">
+        <!--Navigation bar and side menu (mobile)-->
+        <nav>
+            <div class="nav-wrapper">
+                <a id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down valign">
+                    <li>
+                        <form onsubmit="return false">
+                            <div class="input-field">
+                                <input id="search" class="searchBar" type="text" required>
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+                    </li>
+                    <li><a class="buttonUserProfile" href="#"><i class="material-icons left">perm_identity</i>John Smith</a>
+                    </li>
+                    <li><a class="buttonHome" href="#">Accueil</a></li>
+                    <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
+                    <li><a class="buttonTVShowPage" href="#">Séries</a></li>
+                    <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
+                    <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a></li>
+                    <li>
+                        <form onsubmit="return false">
+                            <div class="input-field">
+                                <input id="searchMobile" class="searchBar" type="text" required>
+                                <label class="label-icon" for="searchMobile"><i class="material-icons">search</i></label>
+                                <i class="material-icons">close</i>
+                            </div>
+                        </form>
+
+                    </li>
+                    <li><a class="buttonHome" href="#"><i class="material-icons">home</i>Accueil</a></li>
+                    <li><a class="buttonWatchlistsPage" href="#"><i class="material-icons">theaters</i>Watchlist</a></li>
+                    <li><a class="buttonTVShowPage" href="#"><i class="material-icons">videocam</i>Series</a></li>
+                    <li><a class="buttonUserParameters" href="#"><i class="material-icons">settings</i>Paramètres</a></li>
+                    <li><a class="buttonUserLogout" href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a></li>
+                </ul>
+            </div>
+        </nav>
+        <h5>{{title}}</h5>
+        <!-- Footer layout -->
+        <footer class="page-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col l6 s12">
+                        <h5 class="white-text">Chillflix</h5>
+                        <p class="grey-text text-lighten-4">Vous ne pourrez plus vous en passer.</p>
+                    </div>
+                    <div class="col l4 offset-l2 s12">
+                        <h5 class="white-text">Liens</h5>
+                        <ul>
+                            <li>
+                                <form onsubmit="return false">
+                                    <div class="input-field">
+                                        <input id="searchFooter" class="searchBar" type="search" required>
+                                        <label class="label-icon" for="searchFooter"><i
+                                                class="material-icons">search</i></label>
+                                        <i class="material-icons">close</i>
+                                    </div>
+                                </form>
+
+                            </li>
+                            <li><a class="buttonHome" href="#">Accueil</a></li>
+                            <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
+                            <li><a class="buttonTVShowPage" href="#">Séries</a></li>
+                            <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
+                            <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2017 Copyright Équipe 13
+                </div>
+            </div>
+        </footer>
+    </script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="js/handlebars-v4.0.5.js"></script>
     <script src="js/underscore-min.js"></script>
     <script src="js/backbone-min.js"></script>
     <script src="js/init.js"></script>
+    <script src="js/HomeView.js"></script>
+    <script src="js/UserProfileView.js"></script>
     <script src="js/AppView.js"></script>
     <script src="js/PageLoader.js"></script>
     <script src="js/User.js"></script>
@@ -25,90 +195,11 @@
 <!-- Initialisation -->
 <body onload="$init()">
 
-<!--Navigation bar and side menu (mobile)-->
-<nav>
-    <div class="nav-wrapper">
-        <a id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-        <ul class="right hide-on-med-and-down valign">
-            <li>
-                <form onsubmit="return false">
-                    <div class="input-field">
-                        <input id="search" class="searchBar" type="text" required>
-                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                        <i class="material-icons">close</i>
-                    </div>
-                </form>
-            </li>
-            <li><a class="buttonUserProfile" href="#"><i class="material-icons left">perm_identity</i>John Smith</a>
-            </li>
-            <li><a class="buttonHome" href="#">Accueil</a></li>
-            <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
-            <li><a class="buttonTVShowPage" href="#">Séries</a></li>
-            <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
-            <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
-        </ul>
-        <ul class="side-nav" id="mobile-demo">
-            <li><a class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a></li>
-            <li>
-                <form onsubmit="return false">
-                    <div class="input-field">
-                        <input id="searchMobile" class="searchBar" type="text" required>
-                        <label class="label-icon" for="searchMobile"><i class="material-icons">search</i></label>
-                        <i class="material-icons">close</i>
-                    </div>
-                </form>
-
-            </li>
-            <li><a class="buttonHome" href="#"><i class="material-icons">home</i>Accueil</a></li>
-            <li><a class="buttonWatchlistsPage" href="#"><i class="material-icons">theaters</i>Watchlist</a></li>
-            <li><a class="buttonTVShowPage" href="#"><i class="material-icons">videocam</i>Series</a></li>
-            <li><a class="buttonUserParameters" href="#"><i class="material-icons">settings</i>Paramètres</a></li>
-            <li><a class="buttonUserLogout" href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a></li>
-        </ul>
-    </div>
-</nav>
-
 <!--AppView Container-->
-<div id="container"></div>
+<div class="appViewContainer">
 
-<!-- Footer layout -->
-<footer class="page-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Chillflix</h5>
-                <p class="grey-text text-lighten-4">Vous ne pourrez plus vous en passer.</p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Liens</h5>
-                <ul>
-                    <li>
-                        <form onsubmit="return false">
-                            <div class="input-field">
-                                <input id="searchFooter" class="searchBar" type="search" required>
-                                <label class="label-icon" for="searchFooter"><i
-                                        class="material-icons">search</i></label>
-                                <i class="material-icons">close</i>
-                            </div>
-                        </form>
 
-                    </li>
-                    <li><a class="buttonHome" href="#">Accueil</a></li>
-                    <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
-                    <li><a class="buttonTVShowPage" href="#">Séries</a></li>
-                    <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
-                    <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2017 Copyright Équipe 13
-        </div>
-    </div>
-</footer>
+</div>
 
 </body>
 </html>

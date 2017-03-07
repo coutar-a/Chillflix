@@ -1,114 +1,100 @@
 /**
- * Created by Charles on 05/03/2017.
+ * Main view of the application. Handles the events
+ * of the navigation bar, the side-menu (mobile) and
+ * the footer.
+ *
  */
+(function ($) {
 
+    AppView = Backbone.View.extend({
 
+        el: '.appViewContainer',
+        currentUser : {title : "john smith"}, // Dummy user.
 
-var AppView = Backbone.View.extend({
+        // *******************************************************
 
-    el: '#container',
+        //navbarTemplate : _.template($('#NavbarTemplate').html()),
+        //footerTemplate : _.template($('#FooterTemplate').html()),
 
-    //homeTemplate : _.template($('#HomeTemplate').html()),
-    //movieTemplate : _.template($('#MovieTemplate').html()),
-    //tvShowTemplate : _.template($('#TVShowTemplate').html()),
-    //actorTemplate : _.template($('#ActorTemplate').html()),
-    //watchlistTemplate : _.template($('#WatchlistTemplate').html()),
+        homeView : new HomeView({}),
+        //movieView : new MovieView({}),
+        //tvShowView : new TVShowView({}),
+        //actorView : new ActorView({}),
+        //watchlistView : new WatchlistView({}),
+        userProfileView : new UserProfileView(),
 
-    //homeView : new HomeView({}),
-    //movieView : new MovieView({}),
-    //tvShowView : new TVShowView({}),
-    //actorView : new ActorView({}),
-    //watchlistView : new WatchlistView({}),
+        // *******************************************************
 
-    initialize: function() {
+        events: {
+            "click .buttonHome": "eventsDelegate",
+            "click .buttonWatchlistsPage": "eventsDelegate",
+            "click .buttonMoviePage": "eventsDelegate",
+            "click .buttonTVShowPage": "eventsDelegate",
+            "click .buttonActorPage": "eventsDelegate",
+            "click .buttonUserProfile": "eventsDelegate",
+            "click .buttonUserParameters": "eventsDelegate"
+        },
 
-    },
+        // *******************************************************
 
-    load: function (objectID) {
+        /**
+         * Called on initialisation.
+         */
+        initialize: function () {
+            this.$el.html(this.homeView.render().el);
+        },
 
-    },
+        /**
+         * Do the events handling and routing.
+         * @param event : Event event -> event to process
+         */
+        eventsDelegate: function (event) {
+            var eventClassName = event.target.className;
+            switch (eventClassName) {
 
-    /**
-     * Load the page with the
-     * name passed as argument.
-     * @param page : String page -> name of the page.
-     *
-     * ex :
-     *      appView.loadPage("movie");
-     */
-    loadPage : function(page) {
-        switch (page.toLowerCase()) {
+                case "buttonHome" : {
+                    this.$el.html(this.homeView.render().el);
+                    break;
+                }
 
-            case "home" : {
-                //this.$el.html(this.homeTemplate());
-                break;
+                case "buttonMoviePage" : {
+                    //this.$el.html(this.movieTemplate());
+                    break;
+                }
+
+                case "buttonTVShowPage" : {
+                    //this.$el.html(this.tvShowTemplate());
+                    break;
+                }
+
+                case "buttonActorPage" : {
+                    //this.$el.html(this.actorTemplate());
+                    break;
+                }
+
+                case "buttonWatchlistsPage" : {
+                    //this.$el.html(this.watchlistTemplate());
+                    break;
+                }
+
+                case "buttonUserProfile" : {
+                    this.$el.html(this.userProfileView.render(this.currentUser).el);
+                    break;
+                }
+
+                case "buttonUserParameters" : {
+                    //this.$el.html(this.settingsTemplate());
+                    break;
+                }
+
+                case "buttonLogin" : {
+                    //this.$el.html(this.loginTemplate());
+                    break;
+                }
+
             }
-
-            case "movie" : {
-                console.log("lol");
-                //this.$el.html(this.movieTemplate());
-                break;
-            }
-
-            case "tvshow" : {
-                //this.$el.html(this.tvShowTemplate());
-                break;
-            }
-
-            case "actor" : {
-                //this.$el.html(this.actorTemplate());
-                break;
-            }
-
-            case "watchlist" : {
-                //this.$el.html(this.watchlistTemplate());
-                break;
-            }
-
-            case "userprofile" : {
-                //this.$el.html(this.userProfileTemplate());
-                break;
-            }
-
-            case "settings" : {
-                //this.$el.html(this.settingsTemplate());
-                break;
-            }
-
-            case "login" : {
-                //this.$el.html(this.loginTemplate());
-                break;
-            }
-
-        }
-    },
-
-    loadPageWithObject : function(page, object) {
-
-        switch (page) {
-
-            case "movie" : {
-                console.log(object);
-                //this.$el.html(this.movieTemplate(object));
-                break;
-            }
-
-            case "tvshow" : {
-                console.log(object);
-                //this.$el.html(this.tvShowTemplate(object));
-                break;
-            }
-
-            case "actor" : {
-                console.log(object);
-                //this.$el.html(this.actorTemplate(object));
-                break;
-            }
-
         }
 
-    }
+    });
 
-});
-
-var appView = new AppView();
+})(jQuery);

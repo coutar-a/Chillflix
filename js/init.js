@@ -13,11 +13,11 @@ function $init() {
     $(document).ready(function () {
         // Services :
         user = new User("johnsmith@ulaval.ca", "motdepasse"); // Dummy user
-
+        new AppView();
         // Side-Nav:
         $(".button-collapse").sideNav();
         // Events :
-        $(".buttonHome").click(function (e) {
+       /* $(".buttonHome").click(function (e) {
             appView.loadPage("home");
         });
         $(".buttonWatchlistsPage").click(function (e) {
@@ -50,7 +50,7 @@ function $init() {
                 // UMovie.searchByKeywords(keywords, appView.loadPage, 25); // TODO : Revoir
             }
             return false;
-        });
+        });*/
 
     });
 
