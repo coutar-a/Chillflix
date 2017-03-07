@@ -5,7 +5,7 @@
 
 (function ($) {
 
-    UserProfile = Backbone.Model.extend({
+    UserProfileModel = Backbone.Model.extend({
 
         defaults: {
             title : "jeanguy"
