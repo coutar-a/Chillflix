@@ -43,11 +43,12 @@
          * Called on initialisation.
          */
         initialize: function () {
-            this.$el.append(this.navbarView.render().el);
-            this.$el.append(this.homeView.render().el);
-            this.$el.append(this.footerView.render().el);
 
             userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
+            //
+            this.$el.append(this.navbarView.render().el);
+            this.$el.append(this.homeView.render(userProfile).el);
+            this.$el.append(this.footerView.render().el);
         },
 
         /**
@@ -59,7 +60,7 @@
             switch (eventClassName) {
 
                 case "buttonHome" : {
-                    this.$el.find(" .Page")[0].innerHTML = $(this.homeView.render().el).html();
+                    this.$el.find(" .Page")[0].innerHTML = $(this.homeView.render(userProfile).el).html();
                     break;
                 }
 

@@ -103,7 +103,7 @@
                 <div class="column s12">
                     <div class="row center">
                         <div class="space"></div>
-                        <h1>Bienvenue sur Chillflix</h1>
+                        <h1>Bienvenue sur Chillflix.</h1>
                         <div class="space"></div>
                     </div>
                 </div>
@@ -115,8 +115,19 @@
         <div class="Page">
             <div class="container">
                 <div class="column s12">
-                    <div class="row">
-                        <h5>{{email}}</h5>
+                    <div class="row center">
+                        <div class="space"></div>
+                        <h3>{{email}}</h3>
+                        <h4>ID : {{id}}</h4>
+                        <div class="space"></div>
+
+                        <h5>Utilisateurs que vous suivez :</h5>
+                        <div class="collection">
+                            {{#each following}}
+                            <a href="#!" class="collection-item">{{email}}</a>
+                            {{/each}}
+                        </div>
+                        <div class="space"></div>
                     </div>
                 </div>
             </div>
