@@ -18,11 +18,10 @@
         },
 
         render: function(userProfile) {
-
             this.$el.html(this.template(userProfile));
             return this;
-
         }
+
 
     })
 

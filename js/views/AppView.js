@@ -10,7 +10,6 @@
     AppView = Backbone.View.extend({
 
         el: '.appViewContainer',
-        currentUser : {title : "john smith"}, // Dummy user.
 
         // *******************************************************
 
@@ -20,7 +19,7 @@
         //movieView : new MovieView({}),
         //tvShowView : new TVShowView({}),
         //actorView : new ActorView({}),
-        //watchlistView : new WatchlistView({}),
+        //watchlistsView : new WatchlistsView({}),
         userProfileView : new UserProfileView(),
         //userParametersView : new UserParametersView(),
         footerView : new FooterView({}),
@@ -47,6 +46,8 @@
             this.$el.append(this.navbarView.render().el);
             this.$el.append(this.homeView.render().el);
             this.$el.append(this.footerView.render().el);
+
+            userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
         },
 
         /**
@@ -58,43 +59,43 @@
             switch (eventClassName) {
 
                 case "buttonHome" : {
-                    console.log((this.$el.find(" .Page"))[0].innerHTML);
-                    $(this.$el).find(" .Page")[0].replaceWith(this.homeView.render().el);
+                    this.$el.find(" .Page")[0].innerHTML = $(this.homeView.render().el).html();
                     break;
                 }
 
                 case "buttonMoviePage" : {
-                    //$(this.$el).find(" .Page")[0].replaceWith(this.movieView.render().el);
+                    //this.$el.find(" .Page")[0].innerHTML = $(this.movieView.render(this.currentUser).el).html();
                     break;
                 }
 
                 case "buttonTVShowPage" : {
-                    //$(this.$el).find(" .Page")[0].replaceWith(this.tvShowView.render().el);
+                    //this.$el.find(" .Page")[0].innerHTML = $(this.tvShowView.render().el).html();
                     break;
                 }
 
                 case "buttonActorPage" : {
-                    //$(this.$el).find(" .Page")[0].replaceWith(this.actorView.render().el);
+                    //this.$el.find(" .Page")[0].innerHTML = $(this.actorView.render().el).html();
                     break;
                 }
 
                 case "buttonWatchlistsPage" : {
-                    //$(this.$el).find(" .Page")[0].replaceWith(this.watchlistView.render(this.currentUser).el);
+                    //this.$el.find(" .Page")[0].innerHTML = $(this.watchlistsView.render(this.currentUser).el).html();
                     break;
                 }
 
                 case "buttonUserProfile" : {
-                    $(this.$el).find(" .Page")[0].replaceWith(this.userProfileView.render(this.currentUser).el);
+                    this.$el.find(" .Page")[0].innerHTML = $(this.userProfileView.render(userProfile).el).html();
+
                     break;
                 }
 
                 case "buttonUserParameters" : {
-                    //$(this.$el).find(" .Page")[0].replaceWith(this.userParametersView.render(this.currentUser).el);
+                    //this.$el.find(" .Page")[0].innerHTML = $(this.userParameters.render(this.currentUser).el).html();
                     break;
                 }
 
                 case "buttonUserLogout" : {
-                    //$(this.$el).find(" .Page")[0].replaceWith(this.loginView.render().el);
+                    //this.$el.find(" .Page")[0].innerHTML = $(this.loginView.render().el).html();
                     break;
                 }
 
