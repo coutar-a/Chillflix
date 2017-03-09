@@ -19,7 +19,9 @@
 
         render: function(userProfile) {
 
-            var data = {email : userProfile.attributes.email, id : userProfile.attributes.id, following : userProfile.attributes.following};
+            var data = {email : userProfile.attributes.email,
+                        id : userProfile.attributes.id,
+                        following : userProfile.attributes.following};
             this.$el.html(this.template(data));
             return this;
         }

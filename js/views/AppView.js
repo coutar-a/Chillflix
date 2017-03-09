@@ -51,7 +51,7 @@
             console.log(actorModel);
 
             this.$el.append(this.navbarView.render().el);
-            this.$el.append(this.actorView.render().el);
+            this.$el.append(this.homeView.render(userProfile).el);
             this.$el.append(this.footerView.render().el);
         },
 
@@ -79,7 +79,7 @@
                 }
 
                 case "buttonActorPage" : {
-                    this.$el.find(" .Page")[0].innerHTML = $(this.actorView.render().el).html();
+                    this.$el.find(" .Page")[0].innerHTML = $(this.actorView.render(actorModel).el).html();
                     break;
                 }
 
@@ -89,8 +89,8 @@
                 }
 
                 case "buttonUserProfile" : {
-                    this.$el.find(" .Page")[0].innerHTML = $(this.userProfileView.render(userProfile).el).html();
-
+                    //this.$el.find(" .Page")[0].innerHTML = $(this.userProfileView.render(userProfile).el).html();
+                    this.$el.find(" .Page")[0].innerHTML = $(this.actorView.render(actorModel).el).html();
                     break;
                 }
 

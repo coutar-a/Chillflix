@@ -14,7 +14,7 @@
             })
         },
 
-        fetchUserName: function (name) {
+        fetchUsersByName: function (name) {
             this.url = "http://umovie.herokuapp.com/search/users?q=" + name.replace(" ", "%20");
             this.fetch({
                 headers: {

@@ -16,7 +16,7 @@
 
         render: function(actor) {
 
-            var data = {actorName :"test"};
+            var data = {actorName : actor.artistName};
             this.$el.html(this.template(data));
             return this;
         }
