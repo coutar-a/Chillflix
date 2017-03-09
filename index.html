@@ -133,6 +133,46 @@
             </div>
         </div>
     </script>
+    <script type="text/x-handlebars-template" id="ActorTemplate">
+    <div class="Page">
+     <div class="col s12 m6 l6">
+                <h1 id="actor_name">
+                    {{actorName}}
+                </h1>
+                <a class="iTunesBtn"
+                   href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr"
+                   id="itunes_link"></a>
+                <div class="divider"></div>
+                <h5> À propos de l'acteur</h5>
+                <p id="actor_about">
+                    Johnny Depp est un acteur, réalisateur, guitariste, scénariste et producteur de cinéma américain,
+                    né le 9 juin 1963 à Owensboro, Kentucky.
+                </p>
+                <div class="divider"></div>
+                <h5> Films </h5>
+
+                <ul id="actor_movies">
+                    <li> Alice au pays des merveilles</li>
+                    <li> Pirate des caraîbes</li>
+                    <li> Le gardien</li>
+                </ul>
+
+                <div class="divider"></div>
+                <h5> Genre primaire</h5>
+
+                <ul id="actor_genre">
+                    <li> Films fantastic</li>
+                </ul>
+
+                <div class="divider"></div>
+
+            </div>
+            <div class="col s12 m6 l6">
+                <img id="actor_image" class="materialboxed responsive-img" src="images/johnny-depp.jpg">
+            </div>
+
+        </div>
+</script>
     <!-- Lib imports -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>
@@ -142,12 +182,15 @@
     <!-- Home made scripts -->
     <script src="js/app.js"></script>
     <script src="js/models/UserProfileModel.js"></script>
+    <script src="js/models/ActorModel.js"></script>
     <script src="js/views/NavbarView.js"></script>
     <script src="js/views/FooterView.js"></script>
     <script src="js/views/HomeView.js"></script>
     <script src="js/views/UserProfileView.js"></script>
+    <script src="js/views/ActorView.js"></script>
     <script src="js/views/AppView.js"></script>
     <script src="js/collections/UsersCollection.js"></script>
+    <script src="js/collections/ActorsCollection.js"></script>
     <script src="js/Legacy/UMovie.js"></script>
     <script src="js/Legacy/Utils.js"></script>
     <!-- App setup -->
