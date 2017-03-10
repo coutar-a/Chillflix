@@ -16,7 +16,7 @@
         //loginView : new LoginView({}),
         navbarView : new NavbarView({}),
         homeView : new HomeView({}),
-        //movieView : new MovieView({}),
+        movieView : new MovieView({}),
         //tvShowView : new TVShowView({}),
         actorView : new ActorView({}),
         //watchlistsView : new WatchlistsView({}),
@@ -47,6 +47,8 @@
             userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
             actorModel.fetchActor(253584821);
             console.log(actorModel);
+            movieModel.fetchMovie(265727087);
+            console.log(movieModel);
 
             this.$el.append(this.navbarView.render().el);
             this.$el.append(this.homeView.render(userProfile).el);
@@ -67,6 +69,7 @@
                 }
 
                 case "buttonMoviePage" : {
+                    this.$el.find(" .Page")[0].innerHTML = $(this.movieView.render(movieModel).el).html();
                     //this.$el.find(" .Page")[0].innerHTML = $(this.movieView.render(this.currentUser).el).html();
                     break;
                 }
