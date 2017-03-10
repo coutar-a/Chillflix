@@ -10,7 +10,7 @@
     <!-- Templates -->
     <script type="text/template" id="NavbarTemplate">
         <nav>
-            <div class="nav-wrapper">
+            <div class="nav-wrapper blue">
                 <a id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down valign">
@@ -19,7 +19,7 @@
                             <div class="input-field">
                                 <input id="search" class="searchBar" type="text" required>
                                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-                                <i class="material-icons">close</i>
+   
                             </div>
                         </form>
                     </li>
@@ -60,7 +60,7 @@
     <script type="text/template" id="FooterTemplate">
 
         <!-- Footer layout -->
-        <footer class="page-footer">
+        <footer class="page-footer grey darken-4">
             <div class="container">
                 <div class="row">
                     <div class="col l6 s12">
@@ -134,45 +134,31 @@
         </div>
     </script>
     <script type="text/x-handlebars-template" id="ActorTemplate">
-    <div class="Page">
-     <div class="col s12 m6 l6">
-                <h1 id="actor_name">
-                    {{actorName}}
-                </h1>
-                <a class="iTunesBtn"
-                   href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr"
-                   id="itunes_link"></a>
-                <div class="divider"></div>
-                <h5> À propos de l'acteur</h5>
-                <p id="actor_about">
-                    Johnny Depp est un acteur, réalisateur, guitariste, scénariste et producteur de cinéma américain,
-                    né le 9 juin 1963 à Owensboro, Kentucky.
-                </p>
-                <div class="divider"></div>
-                <h5> Films </h5>
-
-                <ul id="actor_movies">
-                    <li> Alice au pays des merveilles</li>
-                    <li> Pirate des caraîbes</li>
-                    <li> Le gardien</li>
-                </ul>
-
-                <div class="divider"></div>
-                <h5> Genre primaire</h5>
-
-                <ul id="actor_genre">
-                    <li> Films fantastic</li>
-                </ul>
-
-                <div class="divider"></div>
-
-            </div>
-            <div class="col s12 m6 l6">
+        <div class="Page">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <h1 id="actor_name">{{actorName}}</h1>
+                    <a class="buttoniTunes" href="https://itunes.apple.com/ca/movie/charlie-et-la-chocolaterie/id366613931?l=fr" id="itunes_link"></a>
+                    <div class="divider"></div>
+                    <h5> Films </h5>
+                        <ul id="actor_movies">
+                            <li> Alice au pays des merveilles</li>
+                            <li> Pirate des caraîbes</li>
+                            <li> Le gardien</li>
+                        </ul>
+                    <div class="divider"></div>
+                    <h5> Genre primaire</h5>
+                        <ul id="actor_genre">
+                            <li>{{primaryGenre}}</li>
+                        </ul>
+                    <div class="divider"></div>
+                </div>
+                <div class="col s12 m6 l6">
                 <img id="actor_image" class="materialboxed responsive-img" src="images/johnny-depp.jpg">
+                </div>
             </div>
-
         </div>
-</script>
+    </script>
     <!-- Lib imports -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>

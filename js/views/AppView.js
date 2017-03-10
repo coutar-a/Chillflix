@@ -45,8 +45,6 @@
         initialize: function () {
 
             userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
-            //
-            console.log("tata");
             actorModel.fetchActor(253584821);
             console.log(actorModel);
 

@@ -6,7 +6,7 @@
         template : null,
 
         events: {
-
+            
 
         },
 
@@ -16,7 +16,7 @@
 
         render: function(actor) {
 
-            var data = {actorName : actor.artistName};
+            var data = {actorName: actor.artistName, primaryGenre: actor.primaryGenreName};
             this.$el.html(this.template(data));
             return this;
         }
