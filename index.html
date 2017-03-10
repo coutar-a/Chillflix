@@ -23,16 +23,16 @@
                             </div>
                         </form>
                     </li>
-                    <li><a class="buttonUserProfile" href="#"><i class="material-icons left">perm_identity</i>John Smith</a>
+                    <li><a data-actor-id="272994458" data-action="buttonUserProfile" class="buttonUserProfile" href="#"><i class="material-icons left">perm_identity</i>John Smith</a>
                     </li>
-                    <li><a class="buttonHome" href="#">Accueil</a></li>
-                    <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
-                    <li><a class="buttonTVShowPage" href="#">Séries</a></li>
-                    <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
-                    <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
+                    <li><a data-action="buttonHome" class="buttonHome" href="#">Accueil</a></li>
+                    <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage" href="#">Watchlist</a></li>
+                    <li><a data-action="buttonTVShowPage" class="buttonTVShowPage" href="#">Séries</a></li>
+                    <li><a data-action="buttonUserParameters" class="buttonUserParameters" href="#">Paramètres</a></li>
+                    <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#">Se déconnecter</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a>
+                    <li><a data-action="buttonUserProfile" class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a>
                     </li>
                     <li>
                         <form onsubmit="return false">
@@ -45,13 +45,13 @@
                         </form>
 
                     </li>
-                    <li><a class="buttonHome" href="#"><i class="material-icons">home</i>Accueil</a></li>
-                    <li><a class="buttonWatchlistsPage" href="#"><i class="material-icons">theaters</i>Watchlist</a>
+                    <li><a data-action="buttonHome" class="buttonHome" href="#"><i class="material-icons">home</i>Accueil</a></li>
+                    <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage" href="#"><i class="material-icons">theaters</i>Watchlist</a>
                     </li>
-                    <li><a class="buttonTVShowPage" href="#"><i class="material-icons">videocam</i>Series</a></li>
-                    <li><a class="buttonUserParameters" href="#"><i class="material-icons">settings</i>Paramètres</a>
+                    <li><a data-action="buttonTVShowPage" class="buttonTVShowPage" href="#"><i class="material-icons">videocam</i>Series</a></li>
+                    <li><a data-action="buttonUserParameters" class="buttonUserParameters" href="#"><i class="material-icons">settings</i>Paramètres</a>
                     </li>
-                    <li><a class="buttonUserLogout" href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a>
+                    <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#"><i class="material-icons">vpn_key</i>Se déconnecter</a>
                     </li>
                 </ul>
             </div>
@@ -81,11 +81,11 @@
                                 </form>
 
                             </li>
-                            <li><a class="buttonHome" href="#">Accueil</a></li>
-                            <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
-                            <li><a class="buttonTVShowPage" href="#">Séries</a></li>
-                            <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
-                            <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
+                            <li><a data-action="" class="buttonHome" href="#">Accueil</a></li>
+                            <li><a data-action="" class="buttonWatchlistsPage" href="#">Watchlist</a></li>
+                            <li><a data-action="" class="buttonTVShowPage" href="#">Séries</a></li>
+                            <li><a data-action="" class="buttonUserParameters" href="#">Paramètres</a></li>
+                            <li><a data-action="" class="buttonUserLogout" href="#">Se déconnecter</a></li>
                         </ul>
                     </div>
                 </div>
@@ -154,7 +154,9 @@
                     <div class="divider"></div>
                 </div>
                 <div class="col s12 m6 l6">
-                <img id="actor_image" class="materialboxed responsive-img" src="{{artistImage}}">
+                    <div class="card-panel">
+                        <img id="actor_image" class="materialboxed responsive-img" src="{{artistImage}}">
+                    </div>
                 </div>
             </div>
         </div>

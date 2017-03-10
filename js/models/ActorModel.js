@@ -4,7 +4,7 @@
         fetchActor: function(id){
             this.url = "https://umovie.herokuapp.com/unsecure/actors/" + id;
             var self = this;
-            this.fetch({
+            return this.fetch({
                 headers: {
                     'Authorization': userProfile.token
                 }}).success(function(_data, success, result){
@@ -15,10 +15,11 @@
 
             })
         },
-        fetchImage: function(){
-            this.url = "https://jsonplaceholder.typicode.com/photos/1";
+        fetchImage: function(id){
+            this.url = "https://jsonplaceholder.typicode.com/photos/" + id;
             var self = this;
-            this.fetch().success(function(_data, success, result){
+            
+            return this.fetch().success(function(_data, success, result){
                 console.log("image", result.responseJSON);
                 self.artistImage = result.responseJSON.thumbnailUrl;
 

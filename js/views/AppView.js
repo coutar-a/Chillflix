@@ -45,9 +45,8 @@
         initialize: function () {
 
             userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
-            actorModel.fetchActor(272994458);
-            actorModel.fetchImage();
-            console.log(actorModel);
+
+ 
 
             this.$el.append(this.navbarView.render().el);
             this.$el.append(this.homeView.render(userProfile).el);
@@ -59,7 +58,7 @@
          * @param event : Event event -> event to process
          */
         eventsDelegate: function (event) {
-            var eventClassName = event.target.className;
+            var eventClassName = event.target.dataset.action;
             switch (eventClassName) {
 
                 case "buttonHome" : {
@@ -78,7 +77,16 @@
                 }
 
                 case "buttonActorPage" : {
-                    this.$el.find(" .Page")[0].innerHTML = $(this.actorView.render(actorModel).el).html();
+                    /*var actorId =event.target.dataset.actorId; 
+                    var self = this;
+                    actorModel.fetchActor(actorId)
+                    .then(function(){
+                       return actorModel.fetchImage(1);//L'api ne retourne pas d'image on utilise un api bidon
+                    })
+                    .then(function(){
+                        self.$el.find(" .Page")[0].innerHTML = $(self.actorView.render(actorModel).el).html();
+                    });*/
+
                     break;
                 }
 
@@ -88,8 +96,17 @@
                 }
 
                 case "buttonUserProfile" : {
+                    var actorId =event.target.dataset.actorId; 
+                    var self = this;
+                    actorModel.fetchActor(actorId)
+                    .then(function(){
+                       return actorModel.fetchImage(1);//L'api ne retourne pas d'image on utilise un api bidon
+                    })
+                    .then(function(){
+                        self.$el.find(" .Page")[0].innerHTML = $(self.actorView.render(actorModel).el).html();
+                    });
+                    
                     //this.$el.find(" .Page")[0].innerHTML = $(this.userProfileView.render(userProfile).el).html();
-                    this.$el.find(" .Page")[0].innerHTML = $(this.actorView.render(actorModel).el).html();
                     break;
                 }
 
