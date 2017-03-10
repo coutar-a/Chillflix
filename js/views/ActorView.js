@@ -16,7 +16,7 @@
 
         render: function(actor) {
 
-            var data = {actorName: actor.artistName, primaryGenre: actor.primaryGenreName, artistLink: actor.artistLinkUrl};
+            var data = {actorName: actor.artistName, primaryGenre: actor.primaryGenreName, artistLink: actor.artistLinkUrl, artistImage: actor.artistImage};
             this.$el.html(this.template(data));
             return this;
         }
