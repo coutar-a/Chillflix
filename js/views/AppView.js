@@ -16,8 +16,8 @@
         //loginView : new LoginView({}),
         navbarView : new NavbarView({}),
         homeView : new HomeView({}),
-        //movieView : new MovieView({}),
-        //tvShowView : new TVShowView({}),
+        movieView : new MovieView({}),
+        tvShowView : new TVShowView({}),
         actorView : new ActorView({}),
         //watchlistsView : new WatchlistsView({}),
         userProfileView : new UserProfileView(),
@@ -45,8 +45,11 @@
         initialize: function () {
 
             userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
-
- 
+            actorModel.fetchActor(272994458);
+            actorModel.fetchImage();
+            tvShowModel.fetchSeason(1027617029);
+            tvShowModel.setVideoUrl("https://www.youtube.com/embed/5NbsjMFI8Cc");
+            movieModel.fetchMovie(265727087);
 
             this.$el.append(this.navbarView.render().el);
             this.$el.append(this.homeView.render(userProfile).el);
@@ -60,19 +63,18 @@
         eventsDelegate: function (event) {
             var eventClassName = event.target.dataset.action;
             switch (eventClassName) {
-
                 case "buttonHome" : {
                     this.$el.find(" .Page")[0].innerHTML = $(this.homeView.render(userProfile).el).html();
                     break;
                 }
 
                 case "buttonMoviePage" : {
-                    //this.$el.find(" .Page")[0].innerHTML = $(this.movieView.render(this.currentUser).el).html();
+                    this.$el.find(" .Page")[0].innerHTML = $(this.movieView.render(movieModel).el).html();
                     break;
                 }
 
                 case "buttonTVShowPage" : {
-                    //this.$el.find(" .Page")[0].innerHTML = $(this.tvShowView.render().el).html();
+                    this.$el.find(" .Page")[0].innerHTML = $(this.tvShowView.render(tvShowModel).el).html();
                     break;
                 }
 

@@ -9,6 +9,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Templates -->
     <script type="text/template" id="NavbarTemplate">
+        <!-- Navigation bar layout -->
         <nav>
             <div class="nav-wrapper blue">
                 <a id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
@@ -19,7 +20,7 @@
                             <div class="input-field">
                                 <input id="search" class="searchBar" type="text" required>
                                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-   
+
                             </div>
                         </form>
                     </li>
@@ -33,6 +34,15 @@
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a data-action="buttonUserProfile" class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a>
+                    <li><a class="buttonHome" href="#">Accueil</a></li>
+                    <li><a class="buttonWatchlistsPage" href="#">Watchlist</a></li>
+                    <li><a class="buttonTVShowPage" href="#">Séries</a></li>
+                    <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
+                    <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
+                    <li><a class="buttonMoviePage" href="#">MOVIE_TEST</a></li>
+                </ul>
+                <ul class="side-nav blue" id="mobile-demo">
+                    <li><a class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a>
                     </li>
                     <li>
                         <form onsubmit="return false">
@@ -58,7 +68,6 @@
         </nav>
     </script>
     <script type="text/template" id="FooterTemplate">
-
         <!-- Footer layout -->
         <footer class="page-footer grey darken-4">
             <div class="container">
@@ -141,16 +150,16 @@
                     <a class="buttoniTunes" href="{{artistLink}}" id="itunes_link"></a>
                     <div class="divider"></div>
                     <h5> Films </h5>
-                        <ul id="actor_movies">
-                            <li> Alice au pays des merveilles</li>
-                            <li> Pirate des caraîbes</li>
-                            <li> Le gardien</li>
-                        </ul>
+                    <ul id="actor_movies">
+                        <li> Alice au pays des merveilles</li>
+                        <li> Pirate des caraîbes</li>
+                        <li> Le gardien</li>
+                    </ul>
                     <div class="divider"></div>
                     <h5> Genre </h5>
-                        <ul id="actor_genre">
-                            <li>{{primaryGenre}}</li>
-                        </ul>
+                    <ul id="actor_genre">
+                        <li>{{primaryGenre}}</li>
+                    </ul>
                     <div class="divider"></div>
                 </div>
                 <div class="col s12 m6 l6">
@@ -161,19 +170,78 @@
             </div>
         </div>
     </script>
+    <script type="text/x-handlebars-template" id="TVShowTemplate">
+        <div class="Page">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <h1>{{seasonTitle}}</h1>
+                    <a class="buttoniTunes" href="{{seasonLink}}" id="season_link"></a>
+                    <div class="divider"></div>
+                    <h5> Genre </h5>
+                    <ul>
+                        <li>{{primaryGenre}}</li>
+                    </ul>
+                    <div class="divider"></div>
+                    <h5> Description </h5>
+                    <p>{{longDescription}}</p>
+                </div>
+                <div class="col s12 m6 l6">
+                    <img id="tvshow_image" class="materialboxed responsive-img" src="{{artwork}}">
+                    <div class="video-container">
+                        <iframe width="600" height="400" src="{{sourceVideo}}" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script type="text/x-handlebars-template" id="MovieTemplate">
+        <div class="Page">
+            <div class="row">
+                <div class="col s12 m6 16">
+                    <h3>TODO: ADD TO WATCHLIST</h3>
+                    <h1 id="movie_name">{{movieName}}</h1><p>({{releaseDate}})</p>
+                    <p>Rating - {{contentAdvisoryRating}}</p>
+                    <p>Genre - {{primaryGenreName}}</p>
+                    <a class="buttoniTunes" href="{{movieViewUrl}}"></a>
+                    <div class="col s12 m12 14">
+                        <img class="materialboxed responsive-img" src="{{artworkUrl100}}">
+                    </div>
+
+                    <div class="divider"></div>
+                    <p>{{longDescription}}</p>
+                    <div class="divider"></div>
+                    <br><br><br>
+
+                </div>
+
+                <div class="col s12 m6 16">
+                    <h5><i class="material-icons left"> video_library </i> Trailer </h5>
+                    <div class="divider"></div>
+                    <div class="video-container">
+                        <iframe width="853" height="480" src="https://www.youtube.com/results?search_query={{movieName}}+trailer" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
     <!-- Lib imports -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>
+    <script src="https:apis.google.com" async></script>
     <script src="js/libs/handlebars-v4.0.5.js"></script>
     <script src="js/libs/underscore-min.js"></script>
     <script src="js/libs/backbone-min.js"></script>
     <!-- Home made scripts -->
     <script src="js/app.js"></script>
     <script src="js/models/UserProfileModel.js"></script>
+    <script src="js/models/TVShowModel.js"></script>
+    <script src="js/models/MovieModel.js"></script>
     <script src="js/models/ActorModel.js"></script>
     <script src="js/views/NavbarView.js"></script>
     <script src="js/views/FooterView.js"></script>
     <script src="js/views/HomeView.js"></script>
+    <script src="js/views/MovieView.js"></script>
+    <script src="js/views/TVShowView.js"></script>
     <script src="js/views/UserProfileView.js"></script>
     <script src="js/views/ActorView.js"></script>
     <script src="js/views/AppView.js"></script>

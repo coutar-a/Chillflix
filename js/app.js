@@ -6,11 +6,11 @@ function $init() {
     // jQuery initialisation :
     $(document).ready(function () {
 
-        // CSS initialisation :
-        $(".button-collapse").sideNav();
 
         // App start :
         new AppView();
+        // CSS initialisation : must be called *last*
+        $(".button-collapse").sideNav();
 
     });
 
