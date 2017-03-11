@@ -34,7 +34,8 @@
             "click .buttonWatchlistsPage" : "eventsDelegate",
             "click .buttonUserProfile" : "eventsDelegate",
             "click .buttonUserParameters" : "eventsDelegate",
-            "click .buttonUserLogout" : "eventsDelegate"
+            "click .buttonUserLogout" : "eventsDelegate",
+            "click .buttonAddToWatchlist" : "eventsDelegate"
         },
 
         // *******************************************************
@@ -121,6 +122,11 @@
                     break;
                 }
 
+                case "buttonAddToWatchlist" : {
+                    console.log("buttonAddToWatchlist in AppView.js")
+                    alert("buttonAddToWatchlist in AppView.js")
+                    break;
+                }
             }
         }
 
