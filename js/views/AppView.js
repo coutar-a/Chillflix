@@ -45,8 +45,6 @@
         initialize: function () {
 
             userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
-            actorModel.fetchActor(272994458);
-            actorModel.fetchImage();
             tvShowModel.fetchSeason(1027617029);
             tvShowModel.setVideoUrl("https://www.youtube.com/embed/5NbsjMFI8Cc");
             movieModel.fetchMovie(265727087);
