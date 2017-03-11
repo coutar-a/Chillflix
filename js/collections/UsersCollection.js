@@ -1,6 +1,3 @@
-/**
- * Created by Charles on 07/03/2017.
- */
 (function ($) {
 
     UsersCollection = Backbone.Collection.extend({

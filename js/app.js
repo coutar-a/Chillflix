@@ -1,6 +1,3 @@
-/**
- * Created by Charles on 25/01/2017.
- */
 function $init() {
 
     // jQuery initialisation :

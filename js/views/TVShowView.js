@@ -1,6 +1,3 @@
-/**
- * Created by Nadia on 2017-03-10.
- */
 (function ($) {
 
     TVShowView = Backbone.View.extend({
