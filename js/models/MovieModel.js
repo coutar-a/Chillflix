@@ -37,6 +37,11 @@
                     self.longDescription = result.responseJSON.results[0].longDescription;
                     self.radioStationUrl = result.responseJSON.results[0].radioStationUrl;
                 })
+        },
+
+        setVideoUrl: function(url) {
+            var self = this;
+            self.youtubePreviewUrl = url;
         }
 
     });

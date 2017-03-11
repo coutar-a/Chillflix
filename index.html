@@ -31,6 +31,7 @@
                     <li><a data-action="buttonTVShowPage" class="buttonTVShowPage" href="#">Séries</a></li>
                     <li><a data-action="buttonUserParameters" class="buttonUserParameters" href="#">Paramètres</a></li>
                     <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#">Se déconnecter</a></li>
+                    <li><a data-action="buttonMoviePage" class="buttonMoviePage" href="#">MOVIE_TEST</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a data-action="buttonUserProfile" class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a>
@@ -199,7 +200,7 @@
             <div class="row">
                 <div class="col s12 m6 16">
                     <h3>TODO: ADD TO WATCHLIST</h3>
-                    <h1 id="movie_name">{{movieName}}</h1><p>({{releaseDate}})</p>
+                    <h1 id="movie_name">{{movieName}}</h1>
                     <p>Rating - {{contentAdvisoryRating}}</p>
                     <p>Genre - {{primaryGenreName}}</p>
                     <a class="buttoniTunes" href="{{movieViewUrl}}"></a>
@@ -218,7 +219,7 @@
                     <h5><i class="material-icons left"> video_library </i> Trailer </h5>
                     <div class="divider"></div>
                     <div class="video-container">
-                        <iframe width="853" height="480" src="https://www.youtube.com/results?search_query={{movieName}}+trailer" frameborder="0" allowfullscreen></iframe>
+                        <iframe width="600" height="400" src="{{youtubePreviewUrl}}" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>

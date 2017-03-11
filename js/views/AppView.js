@@ -48,6 +48,7 @@
             tvShowModel.fetchSeason(1027617029);
             tvShowModel.setVideoUrl("https://www.youtube.com/embed/5NbsjMFI8Cc");
             movieModel.fetchMovie(265727087);
+            movieModel.setVideoUrl("https://www.youtube.com/embed/S-1QgOMQ-ls")
 
             this.$el.append(this.navbarView.render().el);
             this.$el.append(this.homeView.render(userProfile).el);

@@ -26,6 +26,7 @@
                     movieCensoredName: movie.trackCensoredName,
                     movieViewUrl: movie.trackViewUrl,
                     previewUrl: movie.previewUrl,
+                    youtubePreviewUrl: movie.youtubePreviewUrl,
                     artworkUrl30: movie.artworkUrl30,
                     artworkUrl60: movie.artworkUrl60,
                     artworkUrl100: movie.artworkUrl100,
