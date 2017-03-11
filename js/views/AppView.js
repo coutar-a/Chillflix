@@ -16,7 +16,7 @@
         //loginView : new LoginView({}),
         navbarView : new NavbarView({}),
         homeView : new HomeView({}),
-        //movieView : new MovieView({}),
+        movieView : new MovieView({}),
         tvShowView : new TVShowView({}),
         actorView : new ActorView({}),
         //watchlistsView : new WatchlistsView({}),
@@ -49,6 +49,7 @@
             actorModel.fetchImage();
             tvShowModel.fetchSeason(1027617029);
             tvShowModel.setVideoUrl("https://www.youtube.com/embed/5NbsjMFI8Cc");
+            movieModel.fetchMovie(265727087);
 
             this.$el.append(this.navbarView.render().el);
             this.$el.append(this.homeView.render(userProfile).el);
@@ -68,7 +69,7 @@
                 }
 
                 case "buttonMoviePage" : {
-                    //this.$el.find(" .Page")[0].innerHTML = $(this.movieView.render(this.currentUser).el).html();
+                    this.$el.find(" .Page")[0].innerHTML = $(this.movieView.render(movieModel).el).html();
                     break;
                 }
 
