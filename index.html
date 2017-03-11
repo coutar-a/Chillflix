@@ -31,6 +31,7 @@
                     <li><a class="buttonTVShowPage" href="#">Séries</a></li>
                     <li><a class="buttonUserParameters" href="#">Paramètres</a></li>
                     <li><a class="buttonUserLogout" href="#">Se déconnecter</a></li>
+                    <li><a class="buttonMoviePage" href="#">MOVIE_TEST</a></li>
                 </ul>
                 <ul class="side-nav blue" id="mobile-demo">
                     <li><a class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a>
@@ -183,9 +184,40 @@
             </div>
         </div>
     </script>
+    <script type="text/x-handlebars-template" id="MovieTemplate">
+        <div class="Page">
+            <div class="row">
+                <div class="col s12 m6 16">
+                    <h3>TODO: ADD TO WATCHLIST</h3>
+                    <h1 id="movie_name">{{movieName}}</h1><p>({{releaseDate}})</p>
+                    <p>Rating - {{contentAdvisoryRating}}</p>
+                    <p>Genre - {{primaryGenreName}}</p>
+                    <a class="buttoniTunes" href="{{movieViewUrl}}"></a>
+                    <div class="col s12 m12 14">
+                        <img class="materialboxed responsive-img" src="{{artworkUrl100}}">
+                    </div>
+
+                    <div class="divider"></div>
+                    <p>{{longDescription}}</p>
+                    <div class="divider"></div>
+                    <br><br><br>
+
+                </div>
+
+                <div class="col s12 m6 16">
+                    <h5><i class="material-icons left"> video_library </i> Trailer </h5>
+                    <div class="divider"></div>
+                    <div class="video-container">
+                        <iframe width="853" height="480" src="https://www.youtube.com/results?search_query={{movieName}}+trailer" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
     <!-- Lib imports -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>
+    <script src="https:apis.google.com" async></script>
     <script src="js/libs/handlebars-v4.0.5.js"></script>
     <script src="js/libs/underscore-min.js"></script>
     <script src="js/libs/backbone-min.js"></script>
@@ -193,13 +225,11 @@
     <script src="js/app.js"></script>
     <script src="js/models/UserProfileModel.js"></script>
     <script src="js/models/ActorModel.js"></script>
-    <script src="js/models/TVShowModel.js"></script>
     <script src="js/views/NavbarView.js"></script>
     <script src="js/views/FooterView.js"></script>
     <script src="js/views/HomeView.js"></script>
     <script src="js/views/UserProfileView.js"></script>
     <script src="js/views/ActorView.js"></script>
-    <script src="js/views/TVShowView.js"></script>
     <script src="js/views/AppView.js"></script>
     <script src="js/collections/UsersCollection.js"></script>
     <script src="js/collections/ActorsCollection.js"></script>
