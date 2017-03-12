@@ -6,8 +6,9 @@
         template : null,
 
         events: {
-
-
+            "click .buttonMoviePage" : "eventsDelegate",
+            "click .buttonTVShowPage" : "eventsDelegate",
+            "click .buttonActorPage" : "eventsDelegate"
         },
 
         initialize: function () {
@@ -24,6 +25,9 @@
             this.$el.html(this.template(data));
             return this;
         }
+
+
+
 
     })
 

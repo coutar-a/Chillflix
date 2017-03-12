@@ -19,7 +19,7 @@
                 seasonLink: tvshow.seasonLink,
                 primaryGenre: tvshow.primaryGenreName,
                 longDescription: tvshow.longDescription,
-                sourceVideo: tvshow.videoURL
+                sourceVideo: tvshow.sourceVideo
             };
 
             this.$el.html(this.template(data));
