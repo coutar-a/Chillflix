@@ -48,7 +48,7 @@
             };
             this.$el.html(this.template(data));
             return this;
-        }
+        },
 
 
     });
