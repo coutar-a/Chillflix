@@ -31,7 +31,6 @@
                     <li><a data-action="buttonTVShowPage" class="buttonTVShowPage" href="#">Series</a></li>
                     <li><a data-action="buttonUserParameters" class="buttonUserParameters" href="#">Parameters</a></li>
                     <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#">Logout</a></li>
-                    <li><a data-action="buttonMoviePage" class="buttonMoviePage" href="#">MOVIE_TEST</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a data-action="buttonUserProfile" class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a>
@@ -40,7 +39,6 @@
                     <li><a class="buttonTVShowPage" href="#">Series</a></li>
                     <li><a class="buttonUserParameters" href="#">Parameters</a></li>
                     <li><a class="buttonUserLogout" href="#">Logout</a></li>
-                    <li><a class="buttonMoviePage" href="#">MOVIE_TEST</a></li>
                 </ul>
                 <ul class="side-nav blue" id="mobile-demo">
                     <li><a class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a>
@@ -75,7 +73,7 @@
                 <div class="row">
                     <div class="col l6 s12">
                         <h5 class="white-text">Chillflix</h5>
-                        <p class="grey-text text-lighten-4">When you want to watch videos and actually chill.</p>
+                        <p class="grey-text text-lighten-4">When you want to watch movies and actually chill.</p>
                     </div>
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Links</h5>
@@ -113,21 +111,19 @@
                 <div class="column s12">
                     <div class="row center">
                         <div class="space"></div>
-                        <h1>Bienvenue sur Chillflix.</h1>
+                        <h1>Welcome to Chillflix.</h1>
 
-                        <p class="flow-text">Comme la barre de recherche n'a pas encore été implantée à ce stade, seul les onglets Accueil et Séries
-                            sont fonctionnels. Les autres pages sont accessibles via les liens ci-dessous.</p>
                         <div class="space"></div>
-                        <h5> Pages de démonstration: </h5>
+                        <h5> Demo pages : </h5>
                         <ul>
                             <li>
-                                <a class="buttonMoviePage" href="#"> Exemple de page de film </a>
+                                <a data-action="buttonMoviePage" class="buttonMoviePage flow-text" href="#"> Movie page example </a>
                             </li>
                             <li>
-                                <a class="buttonTVShowPage" href="#"> Exemple de page de série télévisée </a>
+                                <a data-action="buttonTVShowPage" class="buttonTVShowPage flow-text" href="#"> TV Show page example </a>
                             </li>
                             <li>
-                                <a class="buttonActorPage" href="#"> Exemple de page d'acteur </a>
+                                <a data-action="buttonActorPage" class="buttonActorPage flow-text" href="#"> Actor page example </a>
                             </li>
                         </ul>
                         <div class="space"></div>
@@ -215,7 +211,6 @@
         <div class="Page">
             <div class="row">
                 <div class="col s12 m6 16">
-                    <h3><a class="buttonAddToWatchlist" href="#"></a></h3>
                     <h1 id="movie_name">{{movieName}}</h1>
                     <p>Rating - {{contentAdvisoryRating}}</p>
                     <p>Genre - {{primaryGenreName}}</p>
@@ -237,6 +232,7 @@
                     <div class="video-container">
                         <iframe width="600" height="400" src="{{youtubePreviewUrl}}" frameborder="0" allowfullscreen></iframe>
                     </div>
+                    <a data-action="buttonAddToWatchlist" class="waves-effect waves-light btn buttonAddToWatchlist right"><i class="material-icons left">add</i>Add to watchlists</a>
                 </div>
             </div>
         </div>

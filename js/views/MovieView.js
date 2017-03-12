@@ -6,11 +6,10 @@
         template : null,
 
         events: {
-
+            "click .buttonAddToWatchlist" : "addToWatchlist"
 
         },
 
-        //TODO: button to add a the film to an existing watchlist
         initialize: function () {
             this.template = Handlebars.compile(this.source);
         },

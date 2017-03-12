@@ -5,11 +5,7 @@
         source: ($("#HomeTemplate").html()),
         template : null,
 
-        events: {
-            "click .buttonMoviePage" : "eventsDelegate",
-            "click .buttonTVShowPage" : "eventsDelegate",
-            "click .buttonActorPage" : "eventsDelegate"
-        },
+
 
         initialize: function () {
             this.template = Handlebars.compile(this.source);
@@ -25,7 +21,6 @@
             this.$el.html(this.template(data));
             return this;
         }
-
 
 
 
