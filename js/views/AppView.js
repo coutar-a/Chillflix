@@ -19,7 +19,7 @@
         movieView : new MovieView({}),
         tvShowView : new TVShowView({}),
         actorView : new ActorView({}),
-        //watchlistsView : new WatchlistsView({}),
+        watchlistCollectionView : new WatchlistCollectionView({}),
         userProfileView : new UserProfileView(),
         //userParametersView : new UserParametersView(),
         footerView : new FooterView({}),
@@ -48,6 +48,7 @@
             tvShowModel.fetchSeason(1027617029);
             tvShowModel.setVideoUrl("https://www.youtube.com/embed/5NbsjMFI8Cc");
             movieModel.fetchMovie(265727087);
+            //watchlistCollection.fetch();
 
             this.$el.append(this.navbarView.render().el);
             this.$el.append(this.homeView.render(userProfile).el);
@@ -91,7 +92,8 @@
                 }
 
                 case "buttonWatchlistsPage" : {
-                    //this.$el.find(" .Page")[0].innerHTML = $(this.watchlistsView.render(this.currentUser).el).html();
+                    console.log('ok');
+                    this.$el.find(" .Page")[0].innerHTML = $(this.watchlistCollectionView.render(watchlistCollection).el).html();
                     break;
                 }
 
