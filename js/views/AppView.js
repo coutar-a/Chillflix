@@ -110,8 +110,7 @@
                 }
 
                 case "buttonAddToWatchlist" : {
-                    console.log("buttonAddToWatchlist in AppView.js")
-                    alert("buttonAddToWatchlist in AppView.js")
+                    alert("buttonAddToWatchlist in AppView.js");
                     break;
                 }
             }

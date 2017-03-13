@@ -6,7 +6,6 @@
         template : null,
 
         events: {
-            "click .buttonAddToWatchlist" : "addToWatchlist"
 
         },
 
@@ -48,7 +47,7 @@
             };
             this.$el.html(this.template(data));
             return this;
-        },
+        }
 
 
     });
