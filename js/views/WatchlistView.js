@@ -13,10 +13,9 @@
             this.template = Handlebars.compile(this.source);
         },
 
-        render: function() {
+        render: function(watchlist) {
             var data = {
-                name: this.model.name,
-                movies: this.model.movies
+                name: watchlist.attributes.name
             };
             this.$el.html(this.template(data));
             return this;

@@ -48,7 +48,6 @@
             tvShowModel.fetchSeason(1027617029);
             tvShowModel.setVideoUrl("https://www.youtube.com/embed/5NbsjMFI8Cc");
             movieModel.fetchMovie(265727087);
-            //watchlistCollection.fetch();
 
             this.$el.append(this.navbarView.render().el);
             this.$el.append(this.homeView.render(userProfile).el);
@@ -92,7 +91,6 @@
                 }
 
                 case "buttonWatchlistsPage" : {
-                    console.log('ok');
                     this.$el.find(" .Page")[0].innerHTML = $(this.watchlistCollectionView.render(watchlistCollection).el).html();
                     break;
                 }
