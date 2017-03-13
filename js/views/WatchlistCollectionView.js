@@ -14,7 +14,6 @@
 
         render: function() {
             this.$el.html(this.template({}));
-            this.$('#watchlists').empty();
             this.refresh();
             return this;
         },
@@ -24,12 +23,10 @@
                 return;
             }
             console.log('creating watchlist: ' + this.input.val().trim());
-            this.model.create({name: this.input.val().trim()});
-            this.input.val('');
-            this.refresh();
         },
 
         refresh: function(){
+            this.$('#watchlists').empty();
             watchlistCollection.fetch({
                 success: function () {
                     watchlistCollection.each(function(watchlist){
