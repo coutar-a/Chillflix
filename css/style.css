@@ -19,6 +19,14 @@ li {
 }
 
 /**
+ * video
+ */
+.video-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/**
  * Side menu (Mobile view)
  */
 
@@ -59,7 +67,7 @@ li {
 /**
  * iTunes button link
  */
-.iTunesBtn {
+.buttoniTunes {
     background: url('../images/link-badge-itunes.png') no-repeat;
     display: block;
     height: 40px;
@@ -67,16 +75,40 @@ li {
 
 }
 
+/**
+ * Mobile layout :
+ */
 @media (max-width: 992px) {
     .flex-s {
         display: flex;
         flex-direction: column; /* Stack on top */
     }
+
     .info-box {
         order: 2; /* Go down, bring Box B up */
+    }
+
+    img {
+        margin-top: 20px;
+        margin-bottom:20px;
     }
 }
 
 .row {
     align-content: center;
 }
+
+.space {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+.carousel-slider {
+    height: 400px !important;
+}
+
+.btn {
+   color: #ffffff;
+    background-color: #2ab2f8;
+}
+
