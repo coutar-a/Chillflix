@@ -4,12 +4,12 @@
 
         template: _.template($("#WatchlistCollectionTemplate").html()),
 
-        events: {
-            'keypress #newWatchlist': 'createWatchlistOnEnter'
-        },
-
         initialize: function () {
             this.input = $("#newWatchlist");
+        },
+
+        events: {
+            "keypress #newWatchlist": "createWatchlistOnEnter"
         },
 
         render: function() {
