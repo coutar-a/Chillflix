@@ -5,7 +5,7 @@
         template: _.template($("#WatchlistCollectionTemplate").html()),
 
         events: {
-            'keypress #newTask': 'createWatchlistOnEnter'
+            'keypress #newWatchlist': 'createWatchlistOnEnter'
         },
 
         initialize: function () {
