@@ -34,7 +34,8 @@
             "click .buttonWatchlistsPage" : "eventsDelegate",
             "click .buttonUserProfile" : "eventsDelegate",
             "click .buttonUserParameters" : "eventsDelegate",
-            "click .buttonUserLogout" : "eventsDelegate"
+            "click .buttonUserLogout" : "eventsDelegate",
+            "click .buttonAddToWatchlist" : "eventsDelegate"
         },
 
         // *******************************************************
@@ -45,13 +46,20 @@
         initialize: function () {
 
             userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
+            actorModel.fetchActor(15506997);
             tvShowModel.fetchSeason(1027617029);
-            tvShowModel.setVideoUrl("https://www.youtube.com/embed/5NbsjMFI8Cc");
             movieModel.fetchMovie(265727087);
+
+            //
 
             this.$el.append(this.navbarView.render().el);
             this.$el.append(this.homeView.render(userProfile).el);
             this.$el.append(this.footerView.render().el);
+
+            //
+
+            this.listenTo(this.homeView, "click", this.eventsDelegate);
+
         },
 
         /**
@@ -77,16 +85,7 @@
                 }
 
                 case "buttonActorPage" : {
-                    /*var actorId =event.target.dataset.actorId; 
-                    var self = this;
-                    actorModel.fetchActor(actorId)
-                    .then(function(){
-                       return actorModel.fetchImage(1);//L'api ne retourne pas d'image on utilise un api bidon
-                    })
-                    .then(function(){
-                        self.$el.find(" .Page")[0].innerHTML = $(self.actorView.render(actorModel).el).html();
-                    });*/
-
+                    this.$el.find(" .Page")[0].innerHTML = $(this.actorView.render(actorModel).el).html();
                     break;
                 }
 
@@ -96,17 +95,7 @@
                 }
 
                 case "buttonUserProfile" : {
-                    var actorId =event.target.dataset.actorId; 
-                    var self = this;
-                    actorModel.fetchActor(actorId)
-                    .then(function(){
-                       return actorModel.fetchImage(1);//L'api ne retourne pas d'image on utilise un api bidon
-                    })
-                    .then(function(){
-                        self.$el.find(" .Page")[0].innerHTML = $(self.actorView.render(actorModel).el).html();
-                    });
-                    
-                    //this.$el.find(" .Page")[0].innerHTML = $(this.userProfileView.render(userProfile).el).html();
+                    this.$el.find(" .Page")[0].innerHTML = $(this.userProfileView.render(userProfile).el).html();
                     break;
                 }
 
@@ -120,6 +109,10 @@
                     break;
                 }
 
+                case "buttonAddToWatchlist" : {
+                    alert("buttonAddToWatchlist in AppView.js");
+                    break;
+                }
             }
         }
 

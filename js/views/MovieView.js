@@ -7,10 +7,8 @@
 
         events: {
 
-
         },
 
-        //TODO: button to add a the film to an existing watchlist
         initialize: function () {
             this.template = Handlebars.compile(this.source);
         },
@@ -26,6 +24,7 @@
                     movieCensoredName: movie.trackCensoredName,
                     movieViewUrl: movie.trackViewUrl,
                     previewUrl: movie.previewUrl,
+                    youtubePreviewUrl: movie.youtubePreviewUrl,
                     artworkUrl30: movie.artworkUrl30,
                     artworkUrl60: movie.artworkUrl60,
                     artworkUrl100: movie.artworkUrl100,

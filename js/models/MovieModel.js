@@ -36,8 +36,24 @@
                     self.contentAdvisoryRating = result.responseJSON.results[0].contentAdvisoryRating;
                     self.longDescription = result.responseJSON.results[0].longDescription;
                     self.radioStationUrl = result.responseJSON.results[0].radioStationUrl;
+                    self.fetchYoutubeVideo(self.trackName);
                 })
+        },
+
+        fetchYoutubeVideo : function (movieName) {
+            this.url = "https://www.googleapis.com/youtube/v3/search?" +
+                "part=snippet&" +
+                "key=AIzaSyB5Mzko--UQbWTNhxxGmMHQJVQt4ZW0YbM&" +
+                "maxResults=1&" +
+                "q= " + movieName + " movie trailer";
+            var self = this;
+            this.fetch().success(function(_data, success, result) {
+                self.youtubePreviewUrl = "https://www.youtube.com/embed/" + result.responseJSON.items[0].id.videoId;
+            })
+
         }
+
+
 
     });
 
