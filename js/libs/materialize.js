@@ -2832,7 +2832,7 @@ $(document).ready(function(){
 
     // Function to update labels of text fields
     Materialize.updateTextFields = function() {
-      var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
+      var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=searchByKeywords], textarea';
       $(input_selector).each(function(index, element) {
         if ($(element).val().length > 0 || element.autofocus ||$(this).attr('placeholder') !== undefined || $(element)[0].validity.badInput === true) {
           $(this).siblings('label').addClass('active');
@@ -2844,7 +2844,7 @@ $(document).ready(function(){
     };
 
     // Text based inputs
-    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=search], textarea';
+    var input_selector = 'input[type=text], input[type=password], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=searchByKeywords], textarea';
 
     // Add active if form auto complete
     $(document).on('change', input_selector, function () {
@@ -3145,7 +3145,7 @@ $(document).ready(function(){
             }
           };
 
-          // Perform search
+          // Perform searchByKeywords
           $input.on('keyup', function (e) {
             // Capture Enter
             if (e.which === 13) {
@@ -3393,7 +3393,7 @@ $(document).ready(function(){
         }
       };
 
-      // Allow user to search by typing
+      // Allow user to searchByKeywords by typing
       // this array is cleared after 1 second
       var filterQuery = [],
           onKeyDown = function(e){
@@ -3465,7 +3465,7 @@ $(document).ready(function(){
                 activateOption(options, newOption);
             }
 
-            // Automaticaly clean filter query so user can search again by starting letters
+            // Automaticaly clean filter query so user can searchByKeywords again by starting letters
             setTimeout(function(){ filterQuery = []; }, 1000);
           };
 

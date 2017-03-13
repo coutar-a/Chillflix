@@ -54,7 +54,7 @@
 /**
  * iTunes button link
  */
-.iTunesBtn {
+.buttoniTunes {
     background: url('../images/link-badge-itunes.png') no-repeat;
     display: block;
     height: 40px;
@@ -90,4 +90,12 @@
     margin-bottom: 100px;
 }
 
+.carousel-slider {
+    height: 400px !important;
+}
+
+.btn {
+   color: #ffffff;
+    background-color: #2ab2f8;
+}
 
