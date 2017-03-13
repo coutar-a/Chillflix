@@ -2,7 +2,6 @@
 
     WatchlistCollectionView = Backbone.View.extend({
 
-        tagName: 'ul',
         template: _.template($("#WatchlistCollectionTemplate").html()),
 
         events: {
