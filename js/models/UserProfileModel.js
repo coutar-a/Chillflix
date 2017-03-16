@@ -36,6 +36,16 @@
                     'Authorization': this.token
                 }
             });
+        },
+
+        addToWatchlist: function (movie) {
+            this.url = "http://umovie.herokuapp.com/watchlists/58c5f5ee1b8fb8040090bba3/movies";
+            this.save(movie, {
+                type: 'POST', dataType: 'application/json', headers: {
+                    'Authorization': this.token
+                }
+            })
+
         }
 
 

@@ -14,28 +14,31 @@
         // *******************************************************
 
         //loginView : new LoginView({}),
-        navbarView : new NavbarView({}),
-        homeView : new HomeView({}),
-        movieView : new MovieView({}),
-        tvShowView : new TVShowView({}),
-        actorView : new ActorView({}),
-        watchlistCollectionView : new WatchlistCollectionView({}),
-        userProfileView : new UserProfileView(),
+        navbarView: new NavbarView({}),
+        homeView: new HomeView({}),
+        movieView: new MovieView({}),
+        tvShowView: new TVShowView({}),
+        actorView: new ActorView({}),
+        watchlistCollectionView: new WatchlistCollectionView({}),
+        userProfileView: new UserProfileView(),
         //userParametersView : new UserParametersView(),
-        footerView : new FooterView({}),
+        searchResultsView: new SearchResultsView({}),
+        footerView: new FooterView({}),
 
         // *******************************************************
 
-        events : {
-            "click .buttonHome" : "eventsDelegate",
-            "click .buttonMoviePage" : "eventsDelegate",
-            "click .buttonTVShowPage" : "eventsDelegate",
-            "click .buttonActorPage" : "eventsDelegate",
-            "click .buttonWatchlistsPage" : "eventsDelegate",
-            "click .buttonUserProfile" : "eventsDelegate",
-            "click .buttonUserParameters" : "eventsDelegate",
-            "click .buttonUserLogout" : "eventsDelegate",
-            "click .buttonAddToWatchlist" : "eventsDelegate"
+        events: {
+            "click .buttonHome": "eventsDelegate",
+            "click .buttonMoviePage": "eventsDelegate",
+            "click .buttonTVShowPage": "eventsDelegate",
+            "click .buttonActorPage": "eventsDelegate",
+            "click .buttonWatchlistsPage": "eventsDelegate",
+            "click .buttonUserProfile": "eventsDelegate",
+            "click .buttonUserParameters": "eventsDelegate",
+            "click .buttonUserLogout": "eventsDelegate",
+            'keyup': 'processKey',
+            "click .searchResultsItem": "route"
+
         },
 
         // *******************************************************
@@ -67,8 +70,8 @@
          * @param event : Event event -> event to process
          */
         eventsDelegate: function (event) {
-            var eventClassName = event.target.dataset.action;
-            switch (eventClassName) {
+            var dataset = event.target.dataset.action;
+            switch (dataset) {
                 case "buttonHome" : {
                     this.$el.find(" .Page")[0].innerHTML = $(this.homeView.render(userProfile).el).html();
                     break;
@@ -110,10 +113,50 @@
                 }
 
                 case "buttonAddToWatchlist" : {
-                    alert("buttonAddToWatchlist in AppView.js");
+                    console.log(movieModel);
+                    userProfile.addToWatchlist(movieModel.toJSON());
                     break;
                 }
+
+
             }
+        },
+
+        processKey: function (key) {
+            console.log(key);
+            if (key.keyCode == 13) {
+
+                var keywords = $(document.activeElement)[0].value;
+                var search = new SearchResultsModel({});
+                search.fetchWithKeywords(keywords, this);
+
+            }
+
+
+        },
+
+        route: function (event) {
+
+            // Contains media ID and media type.
+            var mediaInfo = event.currentTarget.dataset.action.split(" ");
+            switch (mediaInfo[1]) {
+
+                case "track" : {
+                    var movie = new MovieModel({});
+                    movie.fetchMovie(mediaInfo[0], this);
+
+                    break;
+                }
+
+                case "collection" : {
+                    var tvShow = new TVShowModel({});
+                    tvShow.fetchSeason(mediaInfo[0], this);
+
+                    break;
+                }
+
+            }
+
         }
 
     });

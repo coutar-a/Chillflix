@@ -30,6 +30,7 @@
             watchlistCollection.fetch({
                 success: function () {
                     watchlistCollection.each(function(watchlist){
+
                         var view = new WatchlistView({model: watchlist});
                         this.$('#watchlists').append(view.render(watchlist).el);
                     });
