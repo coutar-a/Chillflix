@@ -7,12 +7,6 @@ function $init() {
         // App start :
         new AppView();
 
-        Handlebars.registerHelper("moduloIf", function(index_count,mod,block) {
-
-            if(parseInt(index_count)%(mod)=== 0){
-                return block.fn(this);}
-        });
-
         // Autocompletion
         $('input.autocomplete').autocomplete({
             data: {
@@ -24,14 +18,21 @@ function $init() {
         });
         // CSS initialisation : must be called *last*
         $(".button-collapse").sideNav();
+        $('select').material_select();
+        $("#searchParametersModal").modal();
+
+        // Ajax initialisation :
+        $(document).ajaxStart(function () {
+            $(document.body).css({'cursor': 'wait'});
+        }).ajaxStop(function () {
+            $(document.body).css({'cursor': 'default'});
+        });
+
+
+
 
 
     });
 
-    // Ajax initialisation :
-    $(document).ajaxStart(function () {
-        $(document.body).css({'cursor': 'wait'});
-    }).ajaxStop(function () {
-        $(document.body).css({'cursor': 'default'});
-    });
+
 }

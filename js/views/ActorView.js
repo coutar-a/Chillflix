@@ -18,10 +18,7 @@
 
         render: function(actor) {
 
-            this.model = actor;
-            this.model.on('change',this.render,this);
-            //this.model = {actorName: actor.artistName, primaryGenre: actor.primaryGenreName, artistLink: actor.artistLinkUrl, artistImage: actor.artistImage};
-            this.$el.html(this.template(this.model));
+            this.$el.html(this.template(actor));
             return this;
         }
 

@@ -14,7 +14,37 @@
             <div class="nav-wrapper blue">
                 <a id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down valign">
+                <ul class="right hide-on-med-and-down valign center">
+
+                    <li>
+
+                        <a data-action="buttonSearchParameters"
+                           href="#searchParametersModal" class="modal-trigger buttonSearchParameters waves-effect waves-light"><i class="material-icons left">settings</i>Search settings</a>
+
+
+                        <!-- Search Parameters -->
+                        <div id="searchParametersModal" class="modal modal-fixed-footer">
+                            <div class="modal-content">
+                                <div class="input-field col s12">
+                                    <select id="searchParametersSearchFilter">
+                                        <option value="" disabled selected>Choose your option :</option>
+                                        <option value="">All</option>
+                                        <option value="/movies">Movies</option>
+                                        <option value="/tvshows/episodes">TV Show by episodes</option>
+                                        <option value="/tvshows/episodes">TV Show by seasons</option>
+                                        <option value="/actors">Actors</option>
+                                    </select>
+                                    <label id="SearchFilterLabel">Search filter</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+                            </div>
+                        </div>
+                    </li>
+
+
+
                     <li>
                         <form onsubmit="return false;">
                             <div class="input-field">
@@ -24,7 +54,7 @@
                             </div>
                         </form>
                     </li>
-                    <li><a data-actor-id="15506997" data-action="buttonUserProfile" class="buttonUserProfile"
+                    <li><a data-action="buttonUserProfile" class="buttonUserProfile"
                            href="#"><i class="material-icons left">perm_identity</i>John Smith</a>
                     </li>
                     <li><a data-action="buttonHome" class="buttonHome" href="#">Home</a></li>
@@ -59,8 +89,11 @@
                     <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#"><i class="material-icons">vpn_key</i>Logout</a>
                     </li>
                 </ul>
+
             </div>
         </nav>
+
+
     </script>
     <script type="text/template" id="FooterTemplate">
         <!-- Footer layout -->
@@ -199,6 +232,7 @@
     </script>
     <script type="text/x-handlebars-template" id="MovieTemplate" src="js/templates/">
         <div class="Page">
+
             <div class="row">
                 <div class="col s12 m6 16">
                     <h1 id="movie_name">{{movieName}}</h1>
@@ -244,14 +278,15 @@
 
         <h2> Search results </h2>
 
-
         <ul class="collection searchResultsList">
             {{#each this}}
 
-            <li data-action="{{trackId}}{{collectionId}} {{wrapperType}}" class="collection-item avatar searchResultsItem z-depth-5">
+
+            <li data-action="{{wrapperType}} t:{{trackId}} a:{{artistId}} c:{{collectionId}}"
+                class="collection-item avatar searchResultsItem z-depth-5">
 
                 <img src="{{artworkUrl60}}" alt="" class="circle hoverable">
-                <span class="title blue-text">{{trackName}}{{collectionName}}</span>
+                <span class="title blue-text">{{trackName}} {{#if collectionName}}{{collectionName}} {{/if}}</span>
                 <p>{{artistName}} <br>
                     {{primaryGenreName}}
                 </p>

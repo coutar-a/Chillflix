@@ -49,9 +49,6 @@
         initialize: function () {
 
             userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
-            actorModel.fetchActor(15506997);
-            tvShowModel.fetchSeason(1027617029);
-            movieModel.fetchMovie(265727087);
 
             //
 
@@ -123,12 +120,14 @@
         },
 
         processKey: function (key) {
-            console.log(key);
             if (key.keyCode == 13) {
 
                 var keywords = $(document.activeElement)[0].value;
                 var search = new SearchResultsModel({});
-                search.fetchWithKeywords(keywords, this);
+                var el = $("#searchParametersSearchFilter")[0];
+                var params = el.options[el.selectedIndex].value;
+                console.log(params);
+                search.fetchWithKeywords(keywords, this, params);
 
             }
 
@@ -137,20 +136,38 @@
 
         route: function (event) {
 
+
+            function aux (infos) {
+                var mediaInfos = {};
+                mediaInfos.type = infos[0];
+                mediaInfos.trackId = infos[1].substring(2, infos[1].length);
+                mediaInfos.artistId = infos[2].substring(2, infos[2].length);
+                mediaInfos.collectionId = infos[3].substring(2, infos[3].length);
+                return mediaInfos;
+            }
+            console.log(event);
             // Contains media ID and media type.
-            var mediaInfo = event.currentTarget.dataset.action.split(" ");
-            switch (mediaInfo[1]) {
+            var mediaInfo = aux(event.currentTarget.dataset.action.split(" "));
+
+            switch (mediaInfo.type) {
 
                 case "track" : {
                     var movie = new MovieModel({});
-                    movie.fetchMovie(mediaInfo[0], this);
+                    movie.fetchMovie(mediaInfo.trackId, this);
 
                     break;
                 }
 
                 case "collection" : {
                     var tvShow = new TVShowModel({});
-                    tvShow.fetchSeason(mediaInfo[0], this);
+                    tvShow.fetchSeason(mediaInfo.collectionId, this);
+
+                    break;
+                }
+
+                case "artist" : {
+                    var actor = new ActorModel({});
+                    actor.fetchActor(mediaInfo.artistId, this);
 
                     break;
                 }
@@ -158,6 +175,7 @@
             }
 
         }
+
 
     });
 
