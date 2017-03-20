@@ -14,28 +14,31 @@
         // *******************************************************
 
         //loginView : new LoginView({}),
-        navbarView : new NavbarView({}),
-        homeView : new HomeView({}),
-        movieView : new MovieView({}),
-        tvShowView : new TVShowView({}),
-        actorView : new ActorView({}),
-        //watchlistsView : new WatchlistsView({}),
-        userProfileView : new UserProfileView(),
+        navbarView: new NavbarView({}),
+        homeView: new HomeView({}),
+        movieView: new MovieView({}),
+        tvShowView: new TVShowView({}),
+        actorView: new ActorView({}),
+        watchlistCollectionView: new WatchlistCollectionView({}),
+        userProfileView: new UserProfileView(),
         //userParametersView : new UserParametersView(),
-        footerView : new FooterView({}),
+        searchResultsView: new SearchResultsView({}),
+        footerView: new FooterView({}),
 
         // *******************************************************
 
-        events : {
-            "click .buttonHome" : "eventsDelegate",
-            "click .buttonMoviePage" : "eventsDelegate",
-            "click .buttonTVShowPage" : "eventsDelegate",
-            "click .buttonActorPage" : "eventsDelegate",
-            "click .buttonWatchlistsPage" : "eventsDelegate",
-            "click .buttonUserProfile" : "eventsDelegate",
-            "click .buttonUserParameters" : "eventsDelegate",
-            "click .buttonUserLogout" : "eventsDelegate",
-            "click .buttonAddToWatchlist" : "eventsDelegate"
+        events: {
+            "click .buttonHome": "eventsDelegate",
+            "click .buttonMoviePage": "eventsDelegate",
+            "click .buttonTVShowPage": "eventsDelegate",
+            "click .buttonActorPage": "eventsDelegate",
+            "click .buttonWatchlistsPage": "eventsDelegate",
+            "click .buttonUserProfile": "eventsDelegate",
+            "click .buttonUserParameters": "eventsDelegate",
+            "click .buttonUserLogout": "eventsDelegate",
+            'keyup': 'processKey',
+            "click .searchResultsItem": "route"
+
         },
 
         // *******************************************************
@@ -46,9 +49,6 @@
         initialize: function () {
 
             userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
-            actorModel.fetchActor(15506997);
-            tvShowModel.fetchSeason(1027617029);
-            movieModel.fetchMovie(265727087);
 
             //
 
@@ -67,8 +67,8 @@
          * @param event : Event event -> event to process
          */
         eventsDelegate: function (event) {
-            var eventClassName = event.target.dataset.action;
-            switch (eventClassName) {
+            var dataset = event.target.dataset.action;
+            switch (dataset) {
                 case "buttonHome" : {
                     this.$el.find(" .Page")[0].innerHTML = $(this.homeView.render(userProfile).el).html();
                     break;
@@ -90,7 +90,7 @@
                 }
 
                 case "buttonWatchlistsPage" : {
-                    //this.$el.find(" .Page")[0].innerHTML = $(this.watchlistsView.render(this.currentUser).el).html();
+                    this.$el.find(" .Page")[0].innerHTML = $(this.watchlistCollectionView.render(watchlistCollection).el).html();
                     break;
                 }
 
@@ -110,11 +110,72 @@
                 }
 
                 case "buttonAddToWatchlist" : {
-                    alert("buttonAddToWatchlist in AppView.js");
+                    console.log(movieModel);
+                    userProfile.addToWatchlist(movieModel.toJSON());
                     break;
                 }
+
+
             }
+        },
+
+        processKey: function (key) {
+            if (key.keyCode == 13) {
+
+                var keywords = $(document.activeElement)[0].value;
+                var search = new SearchResultsModel({});
+                var el = $("#searchParametersSearchFilter")[0];
+                var params = el.options[el.selectedIndex].value;
+                console.log(params);
+                search.fetchWithKeywords(keywords, this, params);
+
+            }
+
+
+        },
+
+        route: function (event) {
+
+
+            function aux (infos) {
+                var mediaInfos = {};
+                mediaInfos.type = infos[0];
+                mediaInfos.trackId = infos[1].substring(2, infos[1].length);
+                mediaInfos.artistId = infos[2].substring(2, infos[2].length);
+                mediaInfos.collectionId = infos[3].substring(2, infos[3].length);
+                return mediaInfos;
+            }
+            console.log(event);
+            // Contains media ID and media type.
+            var mediaInfo = aux(event.currentTarget.dataset.action.split(" "));
+
+            switch (mediaInfo.type) {
+
+                case "track" : {
+                    var movie = new MovieModel({});
+                    movie.fetchMovie(mediaInfo.trackId, this);
+
+                    break;
+                }
+
+                case "collection" : {
+                    var tvShow = new TVShowModel({});
+                    tvShow.fetchSeason(mediaInfo.collectionId, this);
+
+                    break;
+                }
+
+                case "artist" : {
+                    var actor = new ActorModel({});
+                    actor.fetchActor(mediaInfo.artistId, this);
+
+                    break;
+                }
+
+            }
+
         }
+
 
     });
 
