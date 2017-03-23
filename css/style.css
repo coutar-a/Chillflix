@@ -2,20 +2,9 @@
  * Nav bar (Normal screen view)
  */
 
-li {
-    margin-left: 10px;
-    margin-right: 10px;
-
-}
-
 .input-field #search {
     height: 64px;
-    width: 50px;
-}
-
-.input-field #search:focus {
-    height: 64px;
-    width: 300px;
+    width: 100%;
 }
 
 /**
@@ -29,7 +18,6 @@ li {
 /**
  * Side menu (Mobile view)
  */
-
 .brand-logo {
     margin-left: 20px;
 }
@@ -39,11 +27,13 @@ li {
 }
 
 .side-nav {
-    background: #ee6e73;
+    background: #2ab2f8;
 }
 
 .side-nav li a {
+    margin: 0.5em;
     color: #FFFFFF;
+
 }
 
 /*
@@ -52,7 +42,7 @@ li {
 
 .card {
     margin: 25px;
-    background: #ee6e73;
+    background: #2ab2f8;
     border: #333333;
 }
 
@@ -111,4 +101,73 @@ li {
    color: #ffffff;
     background-color: #2ab2f8;
 }
+
+
+.searchResultsItem:hover {
+    cursor: pointer;
+    background-color: rgba(30, 150, 236, 0.44);
+
+
+}
+
+
+.input-field #searchMobile {
+
+    margin-left: 0.5em;
+
+}
+
+
+
+.modal-content {
+
+
+    color: #00b0ff;
+
+}
+
+nav .input-field {
+
+    height: 10%;
+
+}
+
+.s2 {
+
+    vertical-align: middle;
+
+}
+input[type=range]::-webkit-slider-thumb {
+    background-color: #2ab2f8;
+}
+
+/***** These are to edit the thumb and the text inside the thumb *****/
+input[type=range] + .thumb {
+    background-color: #2ab2f8;
+}
+input[type=range] + .thumb.active .value {
+    color: #000000;
+
+}
+
+.autocomplete-content li>a, .dropdown-content li>span {
+
+    color: #2ab2f8;
+    line-height: 20px;
+
+}
+
+h2 #searchresultslabel {
+
+    margin-left: 0.5em;
+
+}
+
+i {
+
+    pointer-events: none;
+
+}
+
+
 
