@@ -20,14 +20,14 @@
         tvShowView: new TVShowView({}),
         actorView: new ActorView({}),
         watchlistCollectionView: new WatchlistCollectionView({}),
-        userProfileView: new UserProfileView(),
-        //userParametersView : new UserParametersView(),
+        userProfileView: new UserProfileView({}),
         searchResultsView: new SearchResultsView({}),
         footerView: new FooterView({}),
 
         // *******************************************************
 
         events: {
+
             "click .buttonHome": "eventsDelegate",
             "click .buttonMoviePage": "eventsDelegate",
             "click .buttonTVShowPage": "eventsDelegate",
@@ -36,8 +36,13 @@
             "click .buttonUserProfile": "eventsDelegate",
             "click .buttonUserParameters": "eventsDelegate",
             "click .buttonUserLogout": "eventsDelegate",
-            'keyup': 'processKey',
-            "click .searchResultsItem": "route"
+            "click .button-collapse": "eventsDelegate",
+            "click .buttonSearchParameters": "eventsDelegate",
+            "click .followUser": "eventsDelegate",
+            "click .createWatchlist": "eventsDelegate",
+            "click .removeWatchlist": "eventsDelegate",
+            "click .searchResultsItem": "route",
+            "keyup": "startSearch"
 
         },
 
@@ -49,6 +54,8 @@
         initialize: function () {
 
             userProfile.login({email: "johnsmith@ulaval.ca", password: "motdepasse"}); // Remplacer par le vrai login à la remise 3.
+            navbarModel = new NavbarModel();
+            navbarModel.fetchGenres(this);
 
             //
 
@@ -56,9 +63,11 @@
             this.$el.append(this.homeView.render(userProfile).el);
             this.$el.append(this.footerView.render().el);
 
-            //
 
-            this.listenTo(this.homeView, "click", this.eventsDelegate);
+        },
+
+        cssInitialize: function () {
+            $('.modal').modal();
 
         },
 
@@ -67,25 +76,12 @@
          * @param event : Event event -> event to process
          */
         eventsDelegate: function (event) {
+
             var dataset = event.target.dataset.action;
             switch (dataset) {
+
                 case "buttonHome" : {
                     this.$el.find(" .Page")[0].innerHTML = $(this.homeView.render(userProfile).el).html();
-                    break;
-                }
-
-                case "buttonMoviePage" : {
-                    this.$el.find(" .Page")[0].innerHTML = $(this.movieView.render(movieModel).el).html();
-                    break;
-                }
-
-                case "buttonTVShowPage" : {
-                    this.$el.find(" .Page")[0].innerHTML = $(this.tvShowView.render(tvShowModel).el).html();
-                    break;
-                }
-
-                case "buttonActorPage" : {
-                    this.$el.find(" .Page")[0].innerHTML = $(this.actorView.render(actorModel).el).html();
                     break;
                 }
 
@@ -96,11 +92,7 @@
 
                 case "buttonUserProfile" : {
                     this.$el.find(" .Page")[0].innerHTML = $(this.userProfileView.render(userProfile).el).html();
-                    break;
-                }
-
-                case "buttonUserParameters" : {
-                    //this.$el.find(" .Page")[0].innerHTML = $(this.userParameters.render(this.currentUser).el).html();
+                    this.cssInitialize();
                     break;
                 }
 
@@ -115,19 +107,31 @@
                     break;
                 }
 
+                case "buttonCreateWatchlist" : {
+                    console.log(event.target);
+                    break;
+                }
+
+                case "buttonRemoveWatchlist" : {
+                    console.log(event.target);
+                    break;
+                }
+
+                case "buttonFollowUser" : {
+                    console.log(event.target);
+                    break;
+                }
+
 
             }
         },
 
-        processKey: function (key) {
+        startSearch: function (key) {
             if (key.keyCode == 13) {
 
-                var keywords = $(document.activeElement)[0].value;
+                var keywords = $(document.activeElement)[0].value.replace(" ", "%20");
                 var search = new SearchResultsModel({});
-                var el = $("#searchParametersSearchFilter")[0];
-                var params = el.options[el.selectedIndex].value;
-                console.log(params);
-                search.fetchWithKeywords(keywords, this, params);
+                search.fetchWithKeywords(keywords, this);
 
             }
 
@@ -136,43 +140,53 @@
 
         route: function (event) {
 
-
-            function aux (infos) {
+            function aux(infos) {
                 var mediaInfos = {};
                 mediaInfos.type = infos[0];
                 mediaInfos.trackId = infos[1].substring(2, infos[1].length);
                 mediaInfos.artistId = infos[2].substring(2, infos[2].length);
                 mediaInfos.collectionId = infos[3].substring(2, infos[3].length);
+                mediaInfos.userId = infos[4].substring(2, infos[4].length);
                 return mediaInfos;
             }
-            console.log(event);
+
             // Contains media ID and media type.
             var mediaInfo = aux(event.currentTarget.dataset.action.split(" "));
+
+            console.log(mediaInfo);
 
             switch (mediaInfo.type) {
 
                 case "track" : {
                     var movie = new MovieModel({});
                     movie.fetchMovie(mediaInfo.trackId, this);
-
+                    localStorage.setItem(mediaInfo.trackId, JSON.stringify(mediaInfo));
                     break;
                 }
 
                 case "collection" : {
                     var tvShow = new TVShowModel({});
                     tvShow.fetchSeason(mediaInfo.collectionId, this);
-
+                    localStorage.setItem(mediaInfo.collectionId, JSON.stringify(mediaInfo));
                     break;
                 }
 
                 case "artist" : {
                     var actor = new ActorModel({});
                     actor.fetchActor(mediaInfo.artistId, this);
+                    localStorage.setItem(mediaInfo.artistId, JSON.stringify(mediaInfo));
+                    break;
+                }
 
+                case "userProfile" : {
+                    var user = new UserProfileModel({});
+                    user.fetchProfile(mediaInfo.userId, this);
+                    localStorage.setItem(mediaInfo.userId, JSON.stringify(mediaInfo));
                     break;
                 }
 
             }
+
 
         }
 

@@ -7,7 +7,7 @@
             var self = this;
             this.fetch({
                 headers: {
-                    'Authorization': userProfile.token
+                    'Authorization': userProfile.attributes.token
                 }
             }).success(function (_data, success, result) {
                 // Fetch the video on the youtube API :
