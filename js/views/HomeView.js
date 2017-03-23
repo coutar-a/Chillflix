@@ -5,7 +5,11 @@
         source: ($("#HomeTemplate").html()),
         template : null,
 
+        events : {
 
+          "click .followUser" : "console.log"
+
+        },
 
         initialize: function () {
             this.template = Handlebars.compile(this.source);
@@ -13,12 +17,9 @@
 
         render: function(userProfile) {
 
-            var data = {name : userProfile.attributes.name,
-                email : userProfile.attributes.email,
-                id : userProfile.attributes.id,
-                following : userProfile.attributes.following};
 
-            this.$el.html(this.template(data));
+
+            this.$el.html(this.template(userProfile.attributes));
             return this;
         }
 

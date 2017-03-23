@@ -8,70 +8,104 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Templates -->
-    <script type="text/template" id="NavbarTemplate">
+    <script type="text/x-handlebars-template" id="NavbarTemplate">
         <!-- Navigation bar layout -->
-        <nav>
+        <nav id="nav">
             <div class="nav-wrapper blue">
-                <a id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
-                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down valign center">
+                <a data-action="buttonHome" id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
+                <a id="sidenav" data-action="sidenav" data-activates="mobile-demo" class="button-collapse"><i
+                        class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down valign right">
 
                     <li>
 
-                        <a data-action="buttonSearchParameters"
-                           href="#searchParametersModal" class="modal-trigger buttonSearchParameters waves-effect waves-light"><i class="material-icons left">settings</i>Search settings</a>
+                        <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light" href="#modal1"><i class="material-icons center">settings</i>
+                        </a>
 
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal modal-fixed-footer">
+                            <div class="modal-content col s12">
 
-                        <!-- Search Parameters -->
-                        <div id="searchParametersModal" class="modal modal-fixed-footer">
-                            <div class="modal-content">
-                                <div class="input-field col s12">
-                                    <select id="searchParametersSearchFilter">
-                                        <option value="" disabled selected>Choose your option :</option>
+                                <h5 class="black-text"> Search settings </h5>
+
+                                <div class="input-field">
+                                    <select data-action="searchFilter" id="searchFilter">
+                                        <option id="searchFilterLabel" value="" disabled selected>Search filter</option>
                                         <option value="">All</option>
                                         <option value="/movies">Movies</option>
-                                        <option value="/tvshows/episodes">TV Show by episodes</option>
-                                        <option value="/tvshows/episodes">TV Show by seasons</option>
                                         <option value="/actors">Actors</option>
+                                        <option value="/tvshows/seasons">Tvshows by seasons</option>
+                                        <option value="/tvshows/episodes">Tvshows by episodes</option>
+                                        <option value="/users">Users</option>
                                     </select>
-                                    <label id="SearchFilterLabel">Search filter</label>
                                 </div>
+
+                                <div class="input-field">
+                                    <select data-action="moviesGenres" id="moviesGenres" multiple>
+                                        <option value="" disabled selected>Movies genres</option>
+                                        {{#each moviesGenres}}
+                                        <option value="{{id}}">{{name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+
+                                <div class="input-field">
+                                    <select data-action="tvshowsGenres" id="tvshowsGenres" multiple>
+                                        <option value="" disabled selected>Tvshows genres</option>
+                                        {{#each tvshowsGenres}}
+                                        <option value="{{id}}">{{name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+
+                                <form action="#">
+                                    <h6 id="searchLimitLabel" class="left black-text">Search limit : 50</h6>
+                                    <p class="range-field">
+                                        <input data-action="searchLimit" type="range" id="searchLimit" min="5"
+                                               value="50"
+                                               max="250"/>
+                                    </p>
+                                </form>
                             </div>
+
+
                             <div class="modal-footer">
-                                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Agree</a>
+                                <a href="#!"
+                                   class="modal-action modal-close waves-effect waves-green btn-flat">Done</a>
                             </div>
                         </div>
+
                     </li>
-
-
 
                     <li>
                         <form onsubmit="return false;">
                             <div class="input-field">
-                                <input id="search" class="searchBar autocomplete" type="text" required>
+                                <input id="search" class="searchBar autocomplete" type="text" autocomplete="off"
+                                       required>
                                 <label class="label-icon" for="search"><i class="material-icons">search</i></label>
 
                             </div>
                         </form>
                     </li>
                     <li><a data-action="buttonUserProfile" class="buttonUserProfile"
-                           href="#"><i class="material-icons left">perm_identity</i>John Smith</a>
+                           href="#"><i class="material-icons left">perm_identity</i>{{user.email}}</a>
                     </li>
-                    <li><a data-action="buttonHome" class="buttonHome" href="#">Home</a></li>
-                    <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage" href="#">Watchlist</a></li>
-                    <li><a data-action="buttonTVShowPage" class="buttonTVShowPage" href="#">Series</a></li>
-                    <li><a data-action="buttonUserParameters" class="buttonUserParameters" href="#">Parameters</a></li>
-                    <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#">Logout</a></li>
+                    <li><a data-action="buttonHome" class="buttonHome right" href="#">Home</a></li>
+                    <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage right" href="#">My
+                        Watchlists</a>
+                    </li>
+                    <li><a data-action="buttonUserLogout" class="buttonUserLogout right" href="#">Logout</a></li>
                 </ul>
                 <ul class="side-nav blue" id="mobile-demo">
-                    <li><a class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>John Smith</a>
+                    <li><a data-action="buttonUserProfile" class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>{{user.email}}</a>
                     </li>
                     <li>
                         <form onsubmit="return false;">
                             <div class="input-field">
                                 <input id="searchMobile" class="searchBar autocomplete" type="text" required>
                                 <label class="label-icon" for="searchMobile"><i
-                                        class="material-icons">search</i></label>
+                                        class="material-icons right">search</i></label>
                             </div>
                         </form>
 
@@ -79,12 +113,7 @@
                     <li><a data-action="buttonHome" class="buttonHome" href="#"><i
                             class="material-icons">home</i>Home</a></li>
                     <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage" href="#"><i
-                            class="material-icons">theaters</i>Watchlist</a>
-                    </li>
-                    <li><a data-action="buttonTVShowPage" class="buttonTVShowPage" href="#"><i class="material-icons">videocam</i>Series</a>
-                    </li>
-                    <li><a data-action="buttonUserParameters" class="buttonUserParameters" href="#"><i
-                            class="material-icons">settings</i>Parameters</a>
+                            class="material-icons">theaters</i>My Watchlists</a>
                     </li>
                     <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#"><i class="material-icons">vpn_key</i>Logout</a>
                     </li>
@@ -107,12 +136,11 @@
                     <div class="col l4 offset-l2 s12">
                         <h5 class="white-text">Links</h5>
                         <ul>
+                            <li><a data-action="buttonUserProfile" class="buttonUserProfile" href="#">My profile</a>
+                            </li>
                             <li><a data-action="buttonHome" class="buttonHome" href="#">Home</a></li>
                             <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage"
-                                   href="#">Watchlist</a></li>
-                            <li><a data-action="buttonTVShowPage" class="buttonTVShowPage" href="#">Series</a></li>
-                            <li><a data-action="buttonUserParameters" class="buttonUserParameters"
-                                   href="#">Parameters</a></li>
+                                   href="#">My Watchlists</a></li>
                             <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#">Logout</a></li>
                         </ul>
                     </div>
@@ -131,25 +159,13 @@
                 <div class="column s12">
                     <div class="row center">
                         <div class="space"></div>
-                        <h1>Welcome to Chillflix.</h1>
+                        <h1>Welcome to Chillflix{{#if name}}, {{name}}{{/if}}.</h1>
 
                         <div class="space"></div>
-                        <h5> Demo pages : </h5>
-                        <ul>
-                            <li>
-                                <a data-action="buttonMoviePage" class="buttonMoviePage flow-text" href="#"> Movie page
-                                    example </a>
-                            </li>
-                            <li>
-                                <a data-action="buttonTVShowPage" class="buttonTVShowPage flow-text" href="#"> TV Show
-                                    page example </a>
-                            </li>
-                            <li>
-                                <a data-action="buttonActorPage" class="buttonActorPage flow-text" href="#"> Actor page
-                                    example </a>
-                            </li>
-                        </ul>
+                        <h5> Website in construction. </h5>
                         <div class="space"></div>
+
+
                     </div>
                 </div>
             </div>
@@ -159,13 +175,28 @@
     <script type="text/x-handlebars-template" id="UserProfileTemplate">
         <div class="Page">
             <div class="container">
-                <div class="column s12">
-                    <div class="row center">
+
+                <div class="row center">
+                    <div class="col s12">
                         <div class="space"></div>
+                        <h3>{{name}} {{lastName}}</h3>
                         <h3>{{email}}</h3>
                         <h4>ID : {{id}}</h4>
-                        <div class="space"></div>
+                    </div>
+                </div>
 
+                <div class="divider space"></div>
+
+                <div class="row center">
+                    <div class="col s12">
+                        <a data-action="buttonFollowUser" id="followUser"
+                           class="btn waves-effect waves-light blue followUser white-text"><i
+                                class="material-icons right">thumb_up</i>Follow</a>
+                    </div>
+                </div>
+
+                <div class="row center">
+                    <div class="col s12">
                         <h5>Followed users :</h5>
                         <div class="collection">
                             {{#each following}}
@@ -174,6 +205,78 @@
                         </div>
                         <div class="space"></div>
                     </div>
+                </div>
+
+                <div class="divider space"></div>
+
+                <div class="row center">
+                    <div class="col s6">
+
+
+                        <!-- Modal Trigger -->
+                        <a class="btn waves-effect waves-light blue white-text" href="#modalAddWL"><i
+                                class="material-icons right">add</i>New
+                        </a>
+
+                        <!-- Modal Structure -->
+                        <div id="modalAddWL" class="modal">
+                            <div class="modal-content col s12">
+                                <h5 class="black-text">Add a watchlist</h5>
+                                <div class="divider"> </div>
+                                <div class="input-field col s12">
+                                    <label for="icon_prefix">Watchlist's name</label>
+                                    <input id="icon_prefix" type="text" class="left">
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <a data-action="buttonCreateWatchlist" href="#!"
+                                   class="modal-action modal-close waves-effect waves-green btn-flat createWatchlist">Done</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col s6">
+                        <!-- Modal Trigger -->
+                        <a class="btn waves-effect waves-light blue white-text" href="#modalRemoveWL"><i
+                                class="material-icons right">add</i>New
+                        </a>
+
+                        <!-- Modal Structure -->
+                        <div id="modalRemoveWL" class="modal">
+                            <div class="modal-content col s12">
+                                <h5 class="black-text">My watchlists</h5>
+                                <div class="divider"> </div>
+                                <form action="#">
+                                    {{#each watchlists}}
+                                    <p>
+                                        <input type="checkbox" id="{{id}}" />
+                                        <label for="{{id}}">{{name}}</label>
+                                    </p>
+                                    {{/each}}
+                                </form>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <a data-action="buttonRemoveWatchlist" href="#!"
+                                   class="modal-action modal-close waves-effect waves-green btn-flat removeWatchlist">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row center">
+                    <div class="col s12">
+                        <h5>Watchlists :</h5>
+                        <div class="collection">
+                            {{#each watchlists}}
+                            <a href="#!" class="collection-item">{{name}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -276,29 +379,25 @@
     </script>
     <script type="text/x-handlebars-template" id="SearchResultsTemplate">
 
-        <h2> Search results </h2>
+        <h2 id="searchResultsLabel" class="flow-text"> Search results for : {{query}} </h2>
 
         <ul class="collection searchResultsList">
-            {{#each this}}
-
-
-            <li data-action="{{wrapperType}} t:{{trackId}} a:{{artistId}} c:{{collectionId}}"
+            {{#each searchResults}}
+            <li data-action="{{#if wrapperType}}{{wrapperType}}{{else}}userProfile{{/if}} t:{{trackId}} a:{{artistId}} c:{{collectionId}} u:{{id}}"
                 class="collection-item avatar searchResultsItem z-depth-5">
-
-                <img src="{{artworkUrl60}}" alt="" class="circle hoverable">
-                <span class="title blue-text">{{trackName}} {{#if collectionName}}{{collectionName}} {{/if}}</span>
-                <p>{{artistName}} <br>
+                {{#if artworkUrl100}}<img src="{{artworkUrl100}}" alt="" class="circle hoverable">{{else}} <i
+                    class="material-icons small">perm_identity</i> {{/if}}
+                <span class="title blue-text">{{name}} {{#if trackName}} {{trackName}} {{/if}} {{#if collectionName}}{{collectionName}} {{/if}}</span>
+                <p>{{artistName}} {{email}}<br>
                     {{primaryGenreName}}
                 </p>
-                {{else}}
-
             </li>
-
             {{/each}}
         </ul>
 
 
     </script>
+
     <!-- Lib imports -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>
@@ -314,6 +413,7 @@
     <script src="js/models/MovieModel.js"></script>
     <script src="js/models/ActorModel.js"></script>
     <script src="js/models/SearchResultsModel.js"></script>
+    <script src="js/models/NavbarModel.js"></script>
     <!---->
     <script src="js/views/NavbarView.js"></script>
     <script src="js/views/FooterView.js"></script>

@@ -9,7 +9,7 @@
 
             this.fetch({
                 headers: {
-                    'Authorization': userProfile.token
+                    'Authorization': userProfile.attributes.token
                 }
             }).success(function (_data, success, result) {
                 self.seasonTitle = result.responseJSON.results[0].collectionName;

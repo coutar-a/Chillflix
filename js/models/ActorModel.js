@@ -6,9 +6,10 @@
             var self = this;
             return this.fetch({
                 headers: {
-                    'Authorization': userProfile.token
+                    'Authorization': userProfile.attributes.token
                 }
             }).success(function (_data, success, result) {
+                console.log(result.responseJSON.results[0]);
                 self.fetchImage(caller, result.responseJSON.results[0]);
 
             })

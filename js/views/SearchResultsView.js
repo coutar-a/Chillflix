@@ -15,8 +15,9 @@
         },
 
         render: function (searchResult) {
-            console.log(searchResult);
+            searchResult = {"query" : $("#search")[0].value, "searchResults" : searchResult};
             this.$el.html(this.template(searchResult));
+
             return this;
         }
 

@@ -6,7 +6,7 @@
             movies:[]
         },
         urlRoot: 'https://umovie.herokuapp.com/unsecure/watchlists/',
-        headers:{'Authorization': userProfile.token}
+        headers:{'Authorization': userProfile.attributes.token}
     });
 
 }(jQuery));

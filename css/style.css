@@ -4,6 +4,7 @@
 
 .input-field #search {
     height: 64px;
+    width: 100%;
 }
 
 /**
@@ -32,10 +33,7 @@
 .side-nav li a {
     margin: 0.5em;
     color: #FFFFFF;
-    border: solid;
-    border-width: 0.25em;
-    border-color: rgba(0, 0, 0, 0.38);
-    background-color: rgba(26, 97, 138, 0.82);
+
 }
 
 /*
@@ -104,21 +102,70 @@
     background-color: #2ab2f8;
 }
 
-input.autocomplete {
-
-
-
-}
-
-nav .input-field label:hover {
-    cursor: pointer;
-    
-}
 
 .searchResultsItem:hover {
     cursor: pointer;
     background-color: rgba(30, 150, 236, 0.44);
 
+
+}
+
+
+.input-field #searchMobile {
+
+    margin-left: 0.5em;
+
+}
+
+
+
+.modal-content {
+
+
+    color: #00b0ff;
+
+}
+
+nav .input-field {
+
+    height: 10%;
+
+}
+
+.s2 {
+
+    vertical-align: middle;
+
+}
+input[type=range]::-webkit-slider-thumb {
+    background-color: #2ab2f8;
+}
+
+/***** These are to edit the thumb and the text inside the thumb *****/
+input[type=range] + .thumb {
+    background-color: #2ab2f8;
+}
+input[type=range] + .thumb.active .value {
+    color: #000000;
+
+}
+
+.autocomplete-content li>a, .dropdown-content li>span {
+
+    color: #2ab2f8;
+    line-height: 20px;
+
+}
+
+h2 #searchresultslabel {
+
+    margin-left: 0.5em;
+
+}
+
+i {
+
+    pointer-events: none;
 
 }
 
