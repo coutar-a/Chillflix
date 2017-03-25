@@ -1,0 +1,116 @@
+{{!-- <script type="text/x-handlebars-template" id="NavbarTemplate"> --}}
+        <!-- Navigation bar layout -->
+        <nav id="nav">
+            <div class="nav-wrapper blue">
+                <a data-action="buttonHome" id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
+                <a id="sidenav" data-action="sidenav" data-activates="mobile-demo" class="button-collapse"><i
+                        class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down valign right">
+
+                    <li>
+
+                        <!-- Modal Trigger -->
+                        <a class="waves-effect waves-light" href="#modal1"><i class="material-icons center">settings</i>
+                        </a>
+
+                        <!-- Modal Structure -->
+                        <div id="modal1" class="modal modal-fixed-footer">
+                            <div class="modal-content col s12">
+
+                                <h5 class="black-text"> Search settings </h5>
+
+                                <div class="input-field">
+                                    <select data-action="searchFilter" id="searchFilter">
+                                        <option id="searchFilterLabel" value="" disabled selected>Search filter</option>
+                                        <option value="">All</option>
+                                        <option value="/movies">Movies</option>
+                                        <option value="/actors">Actors</option>
+                                        <option value="/tvshows/seasons">Tvshows by seasons</option>
+                                        <option value="/tvshows/episodes">Tvshows by episodes</option>
+                                        <option value="/users">Users</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-field">
+                                    <select data-action="moviesGenres" id="moviesGenres" multiple>
+                                        <option value="" disabled selected>Movies genres</option>
+                                        {{#each moviesGenres}}
+                                        <option value="{{id}}">{{name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+
+                                <div class="input-field">
+                                    <select data-action="tvshowsGenres" id="tvshowsGenres" multiple>
+                                        <option value="" disabled selected>Tvshows genres</option>
+                                        {{#each tvshowsGenres}}
+                                        <option value="{{id}}">{{name}}</option>
+                                        {{/each}}
+                                    </select>
+                                </div>
+
+                                <form action="#">
+                                    <h6 id="searchLimitLabel" class="left black-text">Search limit : 50</h6>
+                                    <p class="range-field">
+                                        <input data-action="searchLimit" type="range" id="searchLimit" min="5"
+                                               value="50"
+                                               max="250"/>
+                                    </p>
+                                </form>
+                            </div>
+
+
+                            <div class="modal-footer">
+                                <a href="#!"
+                                   class="modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+                            </div>
+                        </div>
+
+                    </li>
+
+                    <li>
+                        <form onsubmit="return false;">
+                            <div class="input-field">
+                                <input id="search" class="searchBar autocomplete" type="text" autocomplete="off"
+                                       required>
+                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+
+                            </div>
+                        </form>
+                    </li>
+                    <li><a data-action="buttonUserProfile" class="buttonUserProfile"
+                           href="#"><i class="material-icons left">perm_identity</i>{{user.email}}</a>
+                    </li>
+                    <li><a data-action="buttonHome" class="buttonHome right" href="#">Home</a></li>
+                    <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage right" href="#">My
+                        Watchlists</a>
+                    </li>
+                    <li><a data-action="buttonUserLogout" class="buttonUserLogout right" href="#">Logout</a></li>
+                </ul>
+                <ul class="side-nav blue" id="mobile-demo">
+                    <li><a data-action="buttonUserProfile" class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>{{user.email}}</a>
+                    </li>
+                    <li>
+                        <form onsubmit="return false;">
+                            <div class="input-field">
+                                <input id="searchMobile" class="searchBar autocomplete" type="text" required>
+                                <label class="label-icon" for="searchMobile"><i
+                                        class="material-icons right">search</i></label>
+                            </div>
+                        </form>
+
+                    </li>
+                    <li><a data-action="buttonHome" class="buttonHome" href="#"><i
+                            class="material-icons">home</i>Home</a></li>
+                    <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage" href="#"><i
+                            class="material-icons">theaters</i>My Watchlists</a>
+                    </li>
+                    <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#"><i class="material-icons">vpn_key</i>Logout</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+{{!--
+    </script> --}}

@@ -2,7 +2,8 @@
 
     ActorView = Backbone.View.extend({
 
-        source: ($("#ActorTemplate").html()),
+        //source: ($("#ActorTemplate").html()),
+        source: Handlebars.getTemplate("ActorTemplate"),
         template : null,
 
         events: {

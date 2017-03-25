@@ -2,7 +2,8 @@
 
     UserProfileView = Backbone.View.extend({
 
-        source: ($("#UserProfileTemplate").html()),
+        // source: ($("#UserProfileTemplate").html()),
+        source: Handlebars.getTemplate('UserProfileTemplate'),
         template: null,
 
         events: {

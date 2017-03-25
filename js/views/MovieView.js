@@ -2,7 +2,8 @@
 
     MovieView = Backbone.View.extend({
 
-        source: ($("#MovieTemplate").html()),
+        //source: ($("#MovieTemplate").html()),
+        source: Handlebars.getTemplate('MovieTemplate'),
         template : null,
 
         events: {
