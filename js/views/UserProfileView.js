@@ -17,7 +17,6 @@
 
         render: function (userProfile) {
             this.$el.html(this.template(userProfile.attributes));
-
             return this;
         },
 
