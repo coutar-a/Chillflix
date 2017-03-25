@@ -14,6 +14,7 @@
                 _this.attributes.following = result.responseJSON.following;
                 _this.attributes.options = {"searchFilter": "", "moviesGenres": [], "tvshowsGenres": [], "searchLimit" : 50};
                 _this.attributes.watchlists = [];
+                _this.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((_this.attributes.email).trim().toLowerCase());
 
             });
 
