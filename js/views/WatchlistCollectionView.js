@@ -2,7 +2,9 @@
 
     WatchlistCollectionView = Backbone.View.extend({
 
-        template: _.template($("#WatchlistCollectionTemplate").html()),
+        //template: _.template($("#WatchlistCollectionTemplate").html()),
+        //underscore template
+        template: _.template(Handlebars.getTemplate('WatchlistCollectionTemplate')),
 
         initialize: function () {
             this.input = $("#newWatchlist");

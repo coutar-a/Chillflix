@@ -2,7 +2,8 @@
 
     TVShowView = Backbone.View.extend({
 
-        source: ($("#TVShowTemplate").html()),
+        //source: ($("#TVShowTemplate").html()),
+        source: Handlebars.getTemplate('TVShowTemplate'),
         template: null,
 
         events: {},

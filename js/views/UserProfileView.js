@@ -2,14 +2,10 @@
 
     UserProfileView = Backbone.View.extend({
 
-        source: ($("#UserProfileTemplate").html()),
+        source: Handlebars.getTemplate('UserProfileTemplate'),
         template: null,
 
-        events: {
-
-
-
-        },
+        events: {},
 
         initialize: function () {
             this.template = Handlebars.compile(this.source);
@@ -20,7 +16,7 @@
             return this;
         },
 
-        route : function (event) {
+        route: function (event) {
             console.log(event);
         }
 

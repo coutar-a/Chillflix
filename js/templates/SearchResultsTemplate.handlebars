@@ -1,0 +1,16 @@
+
+<h2 id="searchResultsLabel" class="flow-text"> Search results for : {{query}} </h2>
+
+<ul class="collection searchResultsList">
+    {{#each searchResults}}
+        <li data-action="{{#if wrapperType}}{{wrapperType}}{{else}}user{{/if}} t:{{trackId}} a:{{artistId}} c:{{collectionId}} u:{{id}}"
+    class="collection-item avatar searchResultsItem z-depth-5">
+    {{#if artworkUrl100}}<img src="{{artworkUrl100}}" alt="" class="circle hoverable">{{else}} <i
+    class="material-icons small">perm_identity</i> {{/if}}
+    <span class="title blue-text">{{name}} {{#if trackName}} {{trackName}} {{/if}} {{#if collectionName}}{{collectionName}} {{/if}}</span>
+    <p>{{artistName}} {{email}}<br>
+        {{primaryGenreName}}
+    </p>
+</li>
+{{/each}}
+</ul>

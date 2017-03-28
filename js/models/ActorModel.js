@@ -34,7 +34,7 @@
                     .done(function (data) {
                         renderData.artistImage = data.data.image;
 
-                        caller.$el.find(" .Page")[0].innerHTML = $(caller.actorView.render(renderData).el).html();
+                        caller.$el.find(" .Page")[0].innerHTML = $(caller.views.actorView.render(renderData).el).html();
 
                     })
 

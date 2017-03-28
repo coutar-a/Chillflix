@@ -30,7 +30,7 @@
             var self = this;
             this.fetch().success(function(_data, success, result) {
                 self.sourceVideo = "https://www.youtube.com/embed/" + result.responseJSON.items[0].id.videoId;
-                caller.$el.find(" .Page")[0].innerHTML = $(caller.tvShowView.render(model).el).html();
+                caller.$el.find(" .Page")[0].innerHTML = $(caller.views.tvShowView.render(model).el).html();
             })
 
         }
