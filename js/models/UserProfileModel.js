@@ -3,20 +3,41 @@
     UserProfileModel = Backbone.Model.extend({
 
         // TODO : Refactor pour le livrable 3.
-        login: function (data) {
+        login: function (data, options) {
             this.url = "http://umovie.herokuapp.com/login";
             var _this = this;
-            this.save(data).success(function (_data, success, result) {
+            this.save(data, {type: 'POST'}).success(function (_data, success, result) {
                 // Setting token on success
-                _this.attributes.name = "John";
-                _this.attributes.lastName = "Smith";
+                _this.attributes.name = result.responseJSON.name;
                 _this.attributes.token = result.responseJSON.token;
                 _this.attributes.following = result.responseJSON.following;
-                _this.attributes.options = {"searchFilter": "", "moviesGenres": [], "tvshowsGenres": [], "searchLimit" : 50};
+                _this.attributes.options = {
+                    "searchFilter": "",
+                    "moviesGenres": [],
+                    "tvshowsGenres": [],
+                    "searchLimit": 50
+                };
                 _this.attributes.watchlists = [];
                 _this.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((_this.attributes.email).trim().toLowerCase());
-
+                Backbone.history.navigate('login/authenticate', {trigger: true});
+                Materialize.toast('Logged in as ' + userProfile.attributes.email, 3000, 'rounded blue');
+            }).fail(function () {
+                Materialize.toast('Wrong credentials. Try again.', 3000, "rounded blue");
+                Backbone.history.navigate('login', {trigger: true});
             });
+
+        },
+
+        register: function (data) {
+
+            this.url = "http://umovie.herokuapp.com/signup";
+            this.save(data, {type: "POST"}).success(function (data) {
+                Materialize.toast('Account created : ' + data.email, 3000, "rounded blue");
+                Backbone.history.navigate('login', {trigger: true});
+            }).fail(function (data) {
+                Materialize.toast(data.statusText + ' : Invalid field(s). Try again.', 3000, "rounded blue");
+            });
+
 
         },
 
@@ -26,7 +47,7 @@
                 headers: {'Authorization': userProfile.attributes.token},
                 success: function (data) {
                     console.log(data);
-                    caller.$el.find(" .Page")[0].innerHTML = $(caller.userProfileView.render(data).el).html();
+                    caller.$el.find(" .Page")[0].innerHTML = $(new UserProfileView().render(data).el).html();
                 }
 
             })
@@ -34,8 +55,11 @@
         },
 
         logout: function () {
+            Materialize.toast('Logged out', 3000, 'rounded blue');
             this.url = "http://umovie.herokuapp.com/logout";
             this.fetch();
+            userProfile = new UserProfileModel();
+
         },
 
         followUser: function (userID) {
@@ -59,7 +83,7 @@
         },
 
         addToWatchlist: function (movie, watchlistId) {
-            this.url = "http://umovie.herokuapp.com/watchlists/58c5f5ee1b8fb8040090bba3/movies";
+            this.url = "http://umovie.herokuapp.com/watchlists/" + watchlistId + "/movies";
             this.save(movie, {
                 type: 'POST', dataType: 'application/json', headers: {
                     'Authorization': this.attributes.token

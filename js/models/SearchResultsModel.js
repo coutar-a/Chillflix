@@ -19,7 +19,7 @@
                         _data = data.attributes;
                     }
                     //
-                    caller.$el.find(" .Page")[0].innerHTML = $(caller.searchResultsView.render(_data).el).html(); // TODO : Refactor.
+                    caller.$el.find(" .Page")[0].innerHTML = $(caller.views.searchResultsView.render(_data).el).html(); // TODO : Refactor.
                 }
             })
         },

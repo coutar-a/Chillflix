@@ -3,7 +3,7 @@
 
 <ul class="collection searchResultsList">
     {{#each searchResults}}
-    <li data-action="{{#if wrapperType}}{{wrapperType}}{{else}}userProfile{{/if}} t:{{trackId}} a:{{artistId}} c:{{collectionId}} u:{{id}}"
+        <li data-action="{{#if wrapperType}}{{wrapperType}}{{else}}user{{/if}} t:{{trackId}} a:{{artistId}} c:{{collectionId}} u:{{id}}"
     class="collection-item avatar searchResultsItem z-depth-5">
     {{#if artworkUrl100}}<img src="{{artworkUrl100}}" alt="" class="circle hoverable">{{else}} <i
     class="material-icons small">perm_identity</i> {{/if}}
