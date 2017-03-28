@@ -2,7 +2,7 @@
 
     NavbarView = Backbone.View.extend({
 
-        source: ($("#NavbarTemplate").html()),
+        source: Handlebars.getTemplate('NavbarTemplate'),
         template: null,
 
         events: {
@@ -23,26 +23,16 @@
             this.$el.html(this.template(data));
             // CSS and Ajax re-initialisation.
             this._init();
-            //this._initAutocompletion(); TODO
             return this;
         },
 
         _init: function () {
 
-            // Ajax initialisation : (Ne fonctionne pas, à régler)
-            $(document).ajaxStart(function () {
-                $(document.body).css({'cursor': 'wait'});
-            });
-
-            $(document).ajaxStop(function () {
-                $(document.body).css({'cursor': 'default'});
-            });
             // CSS initialisation
             $('.modal').modal();
             $(".button-collapse").sideNav();
             $('select').material_select();
-
-
+            //this._initAutocompletion(); TODO
         },
 
         _initAutocompletion: function () {

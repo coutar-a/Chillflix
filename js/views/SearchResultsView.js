@@ -5,7 +5,8 @@
 
     SearchResultsView = Backbone.View.extend({
 
-        source: ($("#SearchResultsTemplate").html()),
+        //source: ($("#SearchResultsTemplate").html()),
+        source: Handlebars.getTemplate('SearchResultsTemplate'),
         template: null,
 
 

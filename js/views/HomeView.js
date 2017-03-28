@@ -2,7 +2,8 @@
 
     HomeView = Backbone.View.extend({
 
-        source: ($("#HomeTemplate").html()),
+        //source: ($("#HomeTemplate").html()),
+        source: Handlebars.getTemplate('HomeTemplate'),
         template : null,
 
         events : {

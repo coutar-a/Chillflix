@@ -6,406 +6,23 @@
     <!-- CSS -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection"/>
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaina" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <!-- Templates -->
-    <script type="text/x-handlebars-template" id="NavbarTemplate">
-        <!-- Navigation bar layout -->
-        <nav id="nav">
-            <div class="nav-wrapper blue">
-                <a data-action="buttonHome" id="Logo" href="#" class="buttonHome brand-logo">Chillflix</a>
-                <a id="sidenav" data-action="sidenav" data-activates="mobile-demo" class="button-collapse"><i
-                        class="material-icons">menu</i></a>
-                <ul class="right hide-on-med-and-down valign right">
-
-                    <li>
-
-                        <!-- Modal Trigger -->
-                        <a class="waves-effect waves-light" href="#modal1"><i class="material-icons center">settings</i>
-                        </a>
-
-                        <!-- Modal Structure -->
-                        <div id="modal1" class="modal modal-fixed-footer">
-                            <div class="modal-content col s12">
-
-                                <h5 class="black-text"> Search settings </h5>
-
-                                <div class="input-field">
-                                    <select data-action="searchFilter" id="searchFilter">
-                                        <option id="searchFilterLabel" value="" disabled selected>Search filter</option>
-                                        <option value="">All</option>
-                                        <option value="/movies">Movies</option>
-                                        <option value="/actors">Actors</option>
-                                        <option value="/tvshows/seasons">Tvshows by seasons</option>
-                                        <option value="/tvshows/episodes">Tvshows by episodes</option>
-                                        <option value="/users">Users</option>
-                                    </select>
-                                </div>
-
-                                <div class="input-field">
-                                    <select data-action="moviesGenres" id="moviesGenres" multiple>
-                                        <option value="" disabled selected>Movies genres</option>
-                                        {{#each moviesGenres}}
-                                        <option value="{{id}}">{{name}}</option>
-                                        {{/each}}
-                                    </select>
-                                </div>
-
-                                <div class="input-field">
-                                    <select data-action="tvshowsGenres" id="tvshowsGenres" multiple>
-                                        <option value="" disabled selected>Tvshows genres</option>
-                                        {{#each tvshowsGenres}}
-                                        <option value="{{id}}">{{name}}</option>
-                                        {{/each}}
-                                    </select>
-                                </div>
-
-                                <form action="#">
-                                    <h6 id="searchLimitLabel" class="left black-text">Search limit : 50</h6>
-                                    <p class="range-field">
-                                        <input data-action="searchLimit" type="range" id="searchLimit" min="5"
-                                               value="50"
-                                               max="250"/>
-                                    </p>
-                                </form>
-                            </div>
-
-
-                            <div class="modal-footer">
-                                <a href="#!"
-                                   class="modal-action modal-close waves-effect waves-green btn-flat">Done</a>
-                            </div>
-                        </div>
-
-                    </li>
-
-                    <li>
-                        <form onsubmit="return false;">
-                            <div class="input-field">
-                                <input id="search" class="searchBar autocomplete" type="text" autocomplete="off"
-                                       required>
-                                <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-
-                            </div>
-                        </form>
-                    </li>
-                    <li><a data-action="buttonUserProfile" class="buttonUserProfile"
-                           href="#"><i class="material-icons left">perm_identity</i>{{user.email}}</a>
-                    </li>
-                    <li><a data-action="buttonHome" class="buttonHome right" href="#">Home</a></li>
-                    <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage right" href="#">My
-                        Watchlists</a>
-                    </li>
-                    <li><a data-action="buttonUserLogout" class="buttonUserLogout right" href="#">Logout</a></li>
-                </ul>
-                <ul class="side-nav blue" id="mobile-demo">
-                    <li><a data-action="buttonUserProfile" class="buttonUserProfile" href="#"><i class="material-icons">perm_identity</i>{{user.email}}</a>
-                    </li>
-                    <li>
-                        <form onsubmit="return false;">
-                            <div class="input-field">
-                                <input id="searchMobile" class="searchBar autocomplete" type="text" required>
-                                <label class="label-icon" for="searchMobile"><i
-                                        class="material-icons right">search</i></label>
-                            </div>
-                        </form>
-
-                    </li>
-                    <li><a data-action="buttonHome" class="buttonHome" href="#"><i
-                            class="material-icons">home</i>Home</a></li>
-                    <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage" href="#"><i
-                            class="material-icons">theaters</i>My Watchlists</a>
-                    </li>
-                    <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#"><i class="material-icons">vpn_key</i>Logout</a>
-                    </li>
-                </ul>
-
-            </div>
-        </nav>
-
-
-    </script>
-    <script type="text/template" id="FooterTemplate">
-        <!-- Footer layout -->
-        <footer class="page-footer grey darken-4">
-            <div class="container">
-                <div class="row">
-                    <div class="col l6 s12">
-                        <h5 class="white-text">Chillflix</h5>
-                        <p class="grey-text text-lighten-4">When you want to watch movies and actually chill.</p>
-                    </div>
-                    <div class="col l4 offset-l2 s12">
-                        <h5 class="white-text">Links</h5>
-                        <ul>
-                            <li><a data-action="buttonUserProfile" class="buttonUserProfile" href="#">My profile</a>
-                            </li>
-                            <li><a data-action="buttonHome" class="buttonHome" href="#">Home</a></li>
-                            <li><a data-action="buttonWatchlistsPage" class="buttonWatchlistsPage"
-                                   href="#">My Watchlists</a></li>
-                            <li><a data-action="buttonUserLogout" class="buttonUserLogout" href="#">Logout</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    © 2017 Copyright Équipe 13
-                </div>
-            </div>
-        </footer>
-    </script>
-    <script type="text/x-handlebars-template" id="HomeTemplate">
-        <div class="Page">
-            <div class="container">
-                <div class="column s12">
-                    <div class="row center">
-                        <div class="space"></div>
-                        <h1>Welcome to Chillflix{{#if name}}, {{name}}{{/if}}.</h1>
-
-                        <div class="space"></div>
-                        <h5> Website in construction. </h5>
-                        <div class="space"></div>
-
-
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </script>
-    <script type="text/x-handlebars-template" id="UserProfileTemplate">
-        <div class="Page">
-            <div class="container">
-
-                <div class="row center">
-                    <div class="col s12">
-                        <div class="space"></div>
-                        <h3>{{name}} {{lastName}}</h3>
-                        <h3>{{email}}</h3>
-                        <h4>ID : {{id}}</h4>
-                    </div>
-                </div>
-
-                <div class="divider space"></div>
-
-                <div class="row center">
-                    <div class="col s12">
-                        <a data-action="buttonFollowUser" id="followUser"
-                           class="btn waves-effect waves-light blue followUser white-text"><i
-                                class="material-icons right">thumb_up</i>Follow</a>
-                    </div>
-                </div>
-
-                <div class="row center">
-                    <div class="col s12">
-                        <h5>Followed users :</h5>
-                        <div class="collection">
-                            {{#each following}}
-                            <a href="#!" class="collection-item">{{email}}</a>
-                            {{/each}}
-                        </div>
-                        <div class="space"></div>
-                    </div>
-                </div>
-
-                <div class="divider space"></div>
-
-                <div class="row center">
-                    <div class="col s6">
-
-
-                        <!-- Modal Trigger -->
-                        <a class="btn waves-effect waves-light blue white-text" href="#modalAddWL"><i
-                                class="material-icons right">add</i>New
-                        </a>
-
-                        <!-- Modal Structure -->
-                        <div id="modalAddWL" class="modal">
-                            <div class="modal-content col s12">
-                                <h5 class="black-text">Add a watchlist</h5>
-                                <div class="divider"> </div>
-                                <div class="input-field col s12">
-                                    <label for="icon_prefix">Watchlist's name</label>
-                                    <input id="icon_prefix" type="text" class="left">
-                                </div>
-                            </div>
-
-                            <div class="modal-footer">
-                                <a data-action="buttonCreateWatchlist" href="#!"
-                                   class="modal-action modal-close waves-effect waves-green btn-flat createWatchlist">Done</a>
-                            </div>
-                        </div>
-
-
-                    </div>
-                    <div class="col s6">
-                        <!-- Modal Trigger -->
-                        <a class="btn waves-effect waves-light blue white-text" href="#modalRemoveWL"><i
-                                class="material-icons right">add</i>New
-                        </a>
-
-                        <!-- Modal Structure -->
-                        <div id="modalRemoveWL" class="modal">
-                            <div class="modal-content col s12">
-                                <h5 class="black-text">My watchlists</h5>
-                                <div class="divider"> </div>
-                                <form action="#">
-                                    {{#each watchlists}}
-                                    <p>
-                                        <input type="checkbox" id="{{id}}" />
-                                        <label for="{{id}}">{{name}}</label>
-                                    </p>
-                                    {{/each}}
-                                </form>
-
-                            </div>
-
-                            <div class="modal-footer">
-                                <a data-action="buttonRemoveWatchlist" href="#!"
-                                   class="modal-action modal-close waves-effect waves-green btn-flat removeWatchlist">Done</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row center">
-                    <div class="col s12">
-                        <h5>Watchlists :</h5>
-                        <div class="collection">
-                            {{#each watchlists}}
-                            <a href="#!" class="collection-item">{{name}}</a>
-                            {{/each}}
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-    </script>
-    <script type="text/x-handlebars-template" id="ActorTemplate">
-        <div class="Page">
-            <div class="row">
-                <div class="col s12 m6 l6">
-                    <h1 id="actor_name">{{artistName}}</h1>
-                    <a class="buttoniTunes" href="{{artistLinkUrl}}" id="itunes_link"></a>
-                    <div class="divider"></div>
-                    <h5> Films </h5>
-                    <ul id="actor_movies">
-                        <li> Alice in Wonderland</li>
-                        <li> Pirates of the caribbean</li>
-                        <li> Once upon a time in mexico</li>
-                    </ul>
-                    <div class="divider"></div>
-                    <h5> Genre </h5>
-                    <ul id="actor_genre">
-                        <li>{{primaryGenreName}}</li>
-                    </ul>
-                    <div class="divider"></div>
-                </div>
-                <div class="col s12 m6 l6">
-                    <div class="card-panel">
-                        <img id="actor_image" class="materialboxed responsive-img" src="{{artistImage}}">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </script>
-    <script type="text/x-handlebars-template" id="TVShowTemplate">
-        <div class="Page">
-            <div class="row">
-                <div class="col s12 m6 l6">
-                    <h1>{{seasonTitle}}</h1>
-                    <a class="buttoniTunes" href="{{seasonLink}}" id="season_link"></a>
-                    <div class="divider"></div>
-                    <h5> Genre </h5>
-                    <ul>
-                        <li>{{primaryGenre}}</li>
-                    </ul>
-                    <div class="divider"></div>
-                    <h5> Description </h5>
-                    <p>{{longDescription}}</p>
-                </div>
-                <div class="col s12 m6 l6">
-                    <img id="tvshow_image" class="materialboxed responsive-img" src="{{artwork}}">
-                    <div class="video-container">
-                        <iframe width="600" height="400" src="{{sourceVideo}}" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </script>
-    <script type="text/x-handlebars-template" id="MovieTemplate" src="js/templates/">
-        <div class="Page">
-
-            <div class="row">
-                <div class="col s12 m6 16">
-                    <h1 id="movie_name">{{movieName}}</h1>
-                    <p>Rating - {{contentAdvisoryRating}}</p>
-                    <p>Genre - {{primaryGenreName}}</p>
-                    <a class="buttoniTunes" href="{{movieViewUrl}}"></a>
-                    <div class="col s12 m12 14">
-                        <img class="materialboxed responsive-img" src="{{artworkUrl100}}">
-                    </div>
-
-                    <div class="divider"></div>
-                    <p>{{longDescription}}</p>
-                    <div class="divider"></div>
-                    <br><br><br>
-
-                </div>
-
-                <div class="col s12 m6 16">
-                    <a data-action="buttonAddToWatchlist" class="buttonAddToWatchlist waves-effect waves-light blue btn"
-                       href="#">Add to watchlist</a>
-                    <h5><i class="material-icons left"> video_library </i> Trailer </h5>
-                    <div class="divider"></div>
-                    <div class="video-container">
-                        <iframe width="600" height="400" src="{{youtubePreviewUrl}}" frameborder="0"
-                                allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </script>
-    <script type="text/x-handlebars-template" id="WatchlistTemplate">
-        <p>{{name}}</p>
-        <div id="watchlist-movies"></div>
-    </script>
-    <script type="text/x-handlebars-template" id="WatchlistCollectionTemplate">
-        <div class="Page">
-            <h3>My watchlists</h3>
-            <input id="newWatchlist" placeholder="New watchlist">
-            <div id="watchlists"></div>
-        </div>
-    </script>
-    <script type="text/x-handlebars-template" id="SearchResultsTemplate">
-
-        <h2 id="searchResultsLabel" class="flow-text"> Search results for : {{query}} </h2>
-
-        <ul class="collection searchResultsList">
-            {{#each searchResults}}
-            <li data-action="{{#if wrapperType}}{{wrapperType}}{{else}}userProfile{{/if}} t:{{trackId}} a:{{artistId}} c:{{collectionId}} u:{{id}}"
-                class="collection-item avatar searchResultsItem z-depth-5">
-                {{#if artworkUrl100}}<img src="{{artworkUrl100}}" alt="" class="circle hoverable">{{else}} <i
-                    class="material-icons small">perm_identity</i> {{/if}}
-                <span class="title blue-text">{{name}} {{#if trackName}} {{trackName}} {{/if}} {{#if collectionName}}{{collectionName}} {{/if}}</span>
-                <p>{{artistName}} {{email}}<br>
-                    {{primaryGenreName}}
-                </p>
-            </li>
-            {{/each}}
-        </ul>
-
-
-    </script>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/register.css">
 
     <!-- Lib imports -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/libs/materialize.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/blueimp-md5/2.7.0/js/md5.js"></script>
     <script src="js/libs/handlebars-v4.0.5.js"></script>
     <script src="js/libs/underscore-min.js"></script>
     <script src="js/libs/backbone-min.js"></script>
     <!-- Home made scripts -->
     <script src="js/app.js"></script>
+    <script src="js/libs/templateLoader.js"></script>
+    <script src="js/router/Router.js"></script>
+    <script src="js/router/AppRouter.js"></script>
     <script src="js/models/UserProfileModel.js"></script>
     <script src="js/models/TVShowModel.js"></script>
     <script src="js/models/WatchlistModel.js"></script>
@@ -417,6 +34,8 @@
     <!---->
     <script src="js/views/NavbarView.js"></script>
     <script src="js/views/FooterView.js"></script>
+    <script src="js/views/LoginView.js"></script>
+    <script src="js/views/RegisterView.js"></script>
     <script src="js/views/HomeView.js"></script>
     <script src="js/views/MovieView.js"></script>
     <script src="js/views/TVShowView.js"></script>
@@ -441,7 +60,10 @@
 <body onload="$init()">
 
 <!--AppView Container-->
-<div class="appViewContainer"></div>
+
+<div class="appViewContainer">
+
+</div>
 
 </body>
 </html>
