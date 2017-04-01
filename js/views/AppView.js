@@ -53,8 +53,17 @@
             this.appRouter.on('route:collection/:id/seasons/', this.appRouter.seasons); // TODO
 
             Backbone.history.start();
-            //
+
+            // if (this.validateCookie()) {
+            //     this.redirect();
+            // }
+            // else {
+            //     Backbone.history.navigate('login', {trigger: true});
+            //     this.appRouter.login();
+            // }
+
             Backbone.history.navigate('login', {trigger: true});
+            this.appRouter.login();
 
         },
 
@@ -128,6 +137,17 @@
 
         settings: function () {
             $("#settingsModal").modal('open');
+        },
+
+        validateCookie : function() {
+            return !!Cookies.get('token');
+        },
+
+        redirect : function () {
+            userProfile = JSON.parse(Cookies.get('user'));
+            console.log("oui");
+            Backbone.history.navigate('login/authenticate', {trigger: true});
+            this.appRouter.initApp();
         },
 
         authenticate: function () {

@@ -9,7 +9,8 @@
             this.save(data, {type: 'POST'}).success(function (_data, success, result) {
                 // Setting token on success
                 _this.attributes.name = result.responseJSON.name;
-                _this.attributes.token = result.responseJSON.token;
+                Cookies.set('token', result.responseJSON.token, {expires : 1});
+                _this.attributes.token = Cookies.get('token');
                 _this.attributes.following = result.responseJSON.following;
                 _this.attributes.options = {
                     "searchFilter": "",
@@ -19,6 +20,9 @@
                 };
                 _this.attributes.watchlists = [];
                 _this.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((_this.attributes.email).trim().toLowerCase());
+                Cookies.set('user', _this, {expires : 1});
+                //
+
                 Backbone.history.navigate('login/authenticate', {trigger: true});
                 Materialize.toast('Logged in as ' + userProfile.attributes.email, 3000, 'rounded blue');
             }).fail(function () {
@@ -46,7 +50,7 @@
             this.fetch({
                 headers: {'Authorization': userProfile.attributes.token},
                 success: function (data) {
-                    console.log(data);
+                    data.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((data.attributes.email).trim().toLowerCase());
                     caller.$el.find(" .Page")[0].innerHTML = $(new UserProfileView().render(data).el).html();
                 }
 
@@ -104,7 +108,6 @@
                 }
             })
         }
-
 
     });
 

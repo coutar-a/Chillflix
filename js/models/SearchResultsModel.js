@@ -31,7 +31,7 @@
                 headers: {'Authorization': userProfile.attributes.token},
                 success: function (data) {
 
-                    var _data = {};
+                    var _data = {"Apple" : null};
 
                     // Autocomplete initialisation
                     $('input.autocomplete').autocomplete({

@@ -1,0 +1,24 @@
+{
+  "name": "umovie-h17-team-13-h17",
+  "version": "1.0.0",
+  "description": "Suivre le guide d'installation de Git pour votre poste de travail :\r * [Windows](http://www.git-scm.com/book/en/Getting-Started-Installing-Git#Installing-on-Windows)\r * [Mac](http://www.git-scm.com/book/en/Getting-Started-Installing-Git#Installing-on-Mac)\r * [Linux](http://www.git-scm.com/book/en/Getting-Started-Installing-Git#Installing-on-Linux)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server ./js/templates/ --cors -p 8080"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GLO3102/umovie-h17-team-13-h17.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GLO3102/umovie-h17-team-13-h17/issues"
+  },
+  "homepage": "https://github.com/GLO3102/umovie-h17-team-13-h17#readme",
+  "dependencies": {
+    "http-server": "^0.9.0"
+  }
+}

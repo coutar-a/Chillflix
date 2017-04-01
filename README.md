@@ -1,4 +1,21 @@
-# Chillflix
+# Chillflix (EN)
+
+A netflix-like website created for the class GLO-3102 (H17). The website uses the API given by the teachers which is linked to a database containing films and actors.
+
+## Installation
+
+This project uses [NodeJS](https://nodejs.org/en/) to load the frontend.
+
+1. Clone the repository on your computer
+2. Run ```npm install``` at the project's root to install the dependencies.
+
+## Launching the app
+
+* Run ```npm start``` at the project's root to start the local server on port ```8080``` 
+
+* Open ```index.html``` in your browser to start using the app.
+
+# Chillflix (FR)
 
 ### Installer Git
 Suivre le guide d'installation de Git pour votre poste de travail :
@@ -7,11 +24,6 @@ Suivre le guide d'installation de Git pour votre poste de travail :
 * [Linux](http://www.git-scm.com/book/en/Getting-Started-Installing-Git#Installing-on-Linux)
 
 ### Télécharger le code source
-Créer un dossier sur votre machine pour conserver le code
-Ouvrir un terminal et se déplacer dans ce dossier:
-```
-cd Workspace/
-```
 Cloner le répertoire umovie-h17-team-13-h17
 ```
 git clone git@github.com:GLO3102/umovie-h17-team-13-h17.git
@@ -29,19 +41,17 @@ sudo apt-get install nodejs
 sudo apt-get install npm
 ```
 
-### Installer le serveur web
-
-Exécuter la commande suivante dans un terminal :
-
-```
-npm install -g http-server
-```
-
 ### Lancer l'application
 
-Rendez-vous à la racine du dépôt, puis exécutez la commande suivante :
+* Lancer la commande suivante dans un terminal à la racine du dépot installer les dépendences:
 ```
-http-server ./js/templates/ --cors
+	npm install
 ```
 
-Puis lancez index.html dans votre navigateur.
+* Ensuite lancer la commande suivante pour lancer le serveur local sur le port 8080:
+
+```
+	npm start
+```
+
+* Puis lancez index.html dans votre navigateur.
