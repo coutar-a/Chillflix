@@ -2,15 +2,15 @@
 
     UserProfileModel = Backbone.Model.extend({
 
-        // TODO : Refactor pour le livrable 3.
         login: function (data, options) {
             this.url = "http://umovie.herokuapp.com/login";
             var _this = this;
             this.save(data, {type: 'POST'}).success(function (_data, success, result) {
                 // Setting token on success
                 _this.attributes.name = result.responseJSON.name;
-                Cookies.set('token', result.responseJSON.token, {expires : 1});
-                _this.attributes.token = Cookies.get('token');
+                console.log(result.responseJSON.token);
+                $.cookie('token', result.responseJSON.token, {expires : 1});
+                _this.attributes.token = $.cookie('token');
                 _this.attributes.following = result.responseJSON.following;
                 _this.attributes.options = {
                     "searchFilter": "",
@@ -20,7 +20,7 @@
                 };
                 _this.attributes.watchlists = [];
                 _this.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((_this.attributes.email).trim().toLowerCase());
-                Cookies.set('user', _this, {expires : 1});
+                $.cookie('user', JSON.stringify(_this), {expires : 1});
                 //
 
                 Backbone.history.navigate('login/authenticate', {trigger: true});

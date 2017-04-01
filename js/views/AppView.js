@@ -39,32 +39,29 @@
 
         initialize: function () {
 
-            this.appRouter = new AppRouter({parentView: this});
-
-            this.appRouter.on('route:login', this.appRouter.login);
-            this.appRouter.on('route:login/register', this.appRouter.register);
-            this.appRouter.on('route:login/authenticate', this.appRouter.initApp);
-            this.appRouter.on('route:home', this.appRouter.home);
-            this.appRouter.on('route:search/:query', this.appRouter.search);
-            this.appRouter.on('route:user/:id', this.appRouter.userProfile);
-            this.appRouter.on('route:track/:id', this.appRouter.movie);
-            this.appRouter.on('route:artist/:id', this.appRouter.artist);
-            this.appRouter.on('route:collection/:id', this.appRouter.collection);
-            this.appRouter.on('route:collection/:id/seasons/', this.appRouter.seasons); // TODO
-
+            var router = new AppRouter({parentView: this});
+            router.on("route", this.validateToken);
+            //
             Backbone.history.start();
+            this.checkForCookies();
 
-            // if (this.validateCookie()) {
-            //     this.redirect();
-            // }
-            // else {
-            //     Backbone.history.navigate('login', {trigger: true});
-            //     this.appRouter.login();
-            // }
+        },
 
-            Backbone.history.navigate('login', {trigger: true});
-            this.appRouter.login();
+        checkForCookies: function () {
+            console.log(!!$.cookie('token'));
+            if (!!$.cookie('token')) {
+                userProfile.attributes = JSON.parse($.cookie('user'));
+                Backbone.history.navigate('login/authenticate', {trigger: true});
+            } else {
+                Backbone.history.navigate('login', {trigger: true});
+            }
 
+        },
+
+        validateToken: function () {
+            if (!(!!$.cookie('token'))) {
+                this.logout();
+            }
         },
 
         route: function (e) {
@@ -137,17 +134,6 @@
 
         settings: function () {
             $("#settingsModal").modal('open');
-        },
-
-        validateCookie : function() {
-            return !!Cookies.get('token');
-        },
-
-        redirect : function () {
-            userProfile = JSON.parse(Cookies.get('user'));
-            console.log("oui");
-            Backbone.history.navigate('login/authenticate', {trigger: true});
-            this.appRouter.initApp();
         },
 
         authenticate: function () {
