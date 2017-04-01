@@ -64,7 +64,6 @@
             this._router.user(id);
         }
 
-
     });
 
 }(jQuery));
