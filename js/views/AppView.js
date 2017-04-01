@@ -55,6 +55,7 @@
             Backbone.history.start();
             //
             Backbone.history.navigate('login', {trigger: true});
+            this.home();
 
         },
 
