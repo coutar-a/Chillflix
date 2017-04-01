@@ -4,7 +4,7 @@ A netflix-like website created for the class GLO-3102 (H17). The website uses th
 
 ## Installation
 
-* This project uses [NodeJS](https://nodejs.org/en/) to load the frontend.
+This project uses [NodeJS](https://nodejs.org/en/) to load the frontend.
 
 1. Clone the repository on your computer
 2. Run ```npm install``` at the project's root to install the dependencies.
