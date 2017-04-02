@@ -31,12 +31,17 @@
                 headers: {'Authorization': userProfile.attributes.token},
                 success: function (data) {
 
-                    var _data = {};
+                    var _data = {"Apple1": null,
+                                 "Apple2": null,
+                                 "Apple3": null};
 
                     // Autocomplete initialisation
-                    $('input.autocomplete').autocomplete({
+                    $('input.search').autocomplete({
                         data: _data,
                         limit: 10,
+                        onAutocomplete: function (val) {
+                            $('')
+                        },
                         minLength: 1
                     });
 
