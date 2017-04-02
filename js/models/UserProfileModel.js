@@ -2,14 +2,15 @@
 
     UserProfileModel = Backbone.Model.extend({
 
-        // TODO : Refactor pour le livrable 3.
         login: function (data, options) {
             this.url = "http://umovie.herokuapp.com/login";
             var _this = this;
             this.save(data, {type: 'POST'}).success(function (_data, success, result) {
                 // Setting token on success
                 _this.attributes.name = result.responseJSON.name;
-                _this.attributes.token = result.responseJSON.token;
+                console.log(result.responseJSON.token);
+                $.cookie('token', result.responseJSON.token, {expires : 1});
+                _this.attributes.token = $.cookie('token');
                 _this.attributes.following = result.responseJSON.following;
                 _this.attributes.options = {
                     "searchFilter": "",
@@ -19,6 +20,9 @@
                 };
                 _this.attributes.watchlists = [];
                 _this.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((_this.attributes.email).trim().toLowerCase());
+                $.cookie('user', JSON.stringify(_this), {expires : 1});
+                //
+
                 Backbone.history.navigate('login/authenticate', {trigger: true});
                 Materialize.toast('Logged in as ' + userProfile.attributes.email, 3000, 'rounded blue');
             }).fail(function () {
@@ -46,7 +50,7 @@
             this.fetch({
                 headers: {'Authorization': userProfile.attributes.token},
                 success: function (data) {
-                    console.log(data);
+                    data.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((data.attributes.email).trim().toLowerCase());
                     caller.$el.find(" .Page")[0].innerHTML = $(new UserProfileView().render(data).el).html();
                 }
 
@@ -104,7 +108,6 @@
                 }
             })
         }
-
 
     });
 
