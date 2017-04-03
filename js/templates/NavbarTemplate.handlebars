@@ -70,10 +70,10 @@
             </li>
 
             <li>
-                <form onsubmit="return false;">
+                <form onsubmit="return false;" autocomplete="off">
                     <div class="input-field">
                         {{!-- this is the search bar --}}
-                        <input id="search" data-href="/search/" class="searchBar autocomplete" type="text"
+                        <input id="search" data-href="/search/" class="searchBar autocomplete" type="text" autocomplete='off'
                                required>
                         <label class="label-icon" for="search"><i class="material-icons">search</i></label>
 
@@ -94,9 +94,9 @@
                     class="material-icons">perm_identity</i>{{user.email}}</a>
             </li>
             <li>
-                <form onsubmit="return false;">
+                <form onsubmit="return false;" autocomplete='off'>
                     <div class="input-field">
-                        <input id="searchMobile" class="searchBar autocomplete" type="text" required>
+                        <input id="searchMobile" class="searchBar autocomplete" type="text" autocomplete='off' required>
                         <label class="label-icon" for="searchMobile"><i
                                 class="material-icons right">search</i></label>
                     </div>

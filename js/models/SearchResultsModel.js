@@ -32,7 +32,7 @@
                     var counter = 0
                     for (var key in autodata) {
                         counter++
-                        if (counter > 7){
+                        if (counter > 7) {
                             autodata = {}
                             $('.autocomplete-content').remove();
                         }
@@ -40,17 +40,17 @@
                     var toAdd = {};
 
                     if (data.attributes.hasOwnProperty("results")) {
-                        for (var key in data.attributes.results){
+                        for (var key in data.attributes.results) {
                             var hasArtistName = data.attributes.results[key].hasOwnProperty("artistName");
                             var hasTrackName = data.attributes.results[key].hasOwnProperty("trackName");
-                            if(hasArtistName && hasTrackName){
+                            if (hasArtistName && hasTrackName) {
                                 var artistName = data.attributes.results[key].artistName.toString();
                                 var trackName = data.attributes.results[key].trackName.toString();
 
-                                if (autodata[artistName] === undefined){
+                                if (autodata[artistName] === undefined) {
                                     autodata[artistName] = null;
                                     toAdd[artistName] = null;
-                                } else if (autodata[trackName] === undefined){
+                                } else if (autodata[trackName] === undefined) {
                                     autodata[trackName] = null;
                                     toAdd[trackName] = null;
                                 }
@@ -58,7 +58,7 @@
                             } else if (hasArtistName) {
                                 var artistName = data.attributes.results[key].artistName.toString();
 
-                                if (autodata[artistName] === undefined){
+                                if (autodata[artistName] === undefined) {
                                     autodata[artistName] = null;
                                     toAdd[artistName] = null;
                                 }
@@ -66,7 +66,8 @@
                         }
                         console.log("results", autodata);
                         $('input.autocomplete').autocomplete({
-                            data: toAdd
+                            data: toAdd,
+                            minLength: 2
                         });
                     }
                 }

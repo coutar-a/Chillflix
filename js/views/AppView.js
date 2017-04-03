@@ -60,7 +60,8 @@
 
         validateToken: function () {
             if (!(!!$.cookie('token'))) {
-                this.logout();
+                userProfile.logout();
+                Backbone.history.navigate('login', {trigger: true});
             }
         },
 
@@ -144,13 +145,28 @@
         },
 
         register: function () {
+
+            function validateFormat (email, password, passwordConfirm) {
+                return email.includes("@") && password == passwordConfirm;
+            }
+
             var email = $("#inputRegisterEmail")[0].value;
             var password = $("#inputRegisterPassword")[0].value;
+            var passwordConfirm = $("#inputRegisterComfirmPassword")[0].value;
             var firstname = $("#inputRegisterFirstname")[0].value;
             var lastname = $("#inputRegisterLastname")[0].value;
             userProfile = new UserProfileModel();
-            console.log("ok");
-            userProfile.register({email: email, password: password, name: firstname + " " + lastname});
+
+            if (validateFormat(email, password, passwordConfirm)) {
+                userProfile.register({email: email, password: password, name: firstname + " " + lastname});
+            } else if (!email.includes("@") && password == passwordConfirm) {
+                Materialize.toast('Invalid email address', 3000, "rounded red");
+            } else if (email.includes("@") && password != passwordConfirm) {
+                Materialize.toast('Passwords not matching', 3000, "rounded red");
+            } else {
+                Materialize.toast('Invalid email address & Passwords not matching', 3000, "rounded red");
+            }
+
 
         },
 
