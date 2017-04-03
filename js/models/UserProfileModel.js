@@ -26,7 +26,7 @@
                 Backbone.history.navigate('login/authenticate', {trigger: true});
                 Materialize.toast('Logged in as ' + userProfile.attributes.email, 3000, 'rounded blue');
             }).fail(function () {
-                Materialize.toast('Wrong credentials. Try again.', 3000, "rounded blue");
+                Materialize.toast('Wrong credentials. Try again.', 3000, "rounded red");
                 Backbone.history.navigate('login', {trigger: true});
             });
 

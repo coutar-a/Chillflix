@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bf40fd29-1e97-4be7-9285-78e39c22136b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/SearchResultsModel.js" afterPath="$PROJECT_DIR$/js/models/SearchResultsModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/UserProfileModel.js" afterPath="$PROJECT_DIR$/js/models/UserProfileModel.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/js/views/AppView.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="513">
-              <caret line="175" column="9" lean-forward="true" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
+              <caret line="143" column="27" lean-forward="false" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
               <folding>
                 <element signature="e#0#236#0" expanded="false" />
                 <element signature="e#341#881#0" expanded="false" />
@@ -45,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchResultsModel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchResultsModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/models/SearchResultsModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="684">
-              <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+            <state relative-caret-position="665">
+              <caret line="67" column="62" lean-forward="true" selection-start-line="67" selection-start-column="62" selection-end-line="67" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -97,15 +97,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserProfileModel.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserProfileModel.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/models/UserProfileModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
-              <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
+            <state relative-caret-position="551">
+              <caret line="29" column="68" lean-forward="true" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
               <folding>
-                <element signature="e#105#1574#0" expanded="true" />
                 <element signature="e#283#1368#0" expanded="true" />
-                <element signature="e#1743#1919#0" expanded="true" />
+                <element signature="e#1742#1918#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -223,11 +222,11 @@
         <option value="$PROJECT_DIR$/js/templates/RegisterTemplate.handlebars" />
         <option value="$PROJECT_DIR$/js/templates/UserProfileTemplate.handlebars" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/models/UserProfileModel.js" />
         <option value="$PROJECT_DIR$/js/router/AppRouter.js" />
         <option value="$PROJECT_DIR$/js/templates/NavbarTemplate.handlebars" />
         <option value="$PROJECT_DIR$/js/views/AppView.js" />
         <option value="$PROJECT_DIR$/js/models/SearchResultsModel.js" />
+        <option value="$PROJECT_DIR$/js/models/UserProfileModel.js" />
       </list>
     </option>
   </component>
@@ -694,7 +693,7 @@
       <workItem from="1490766188235" duration="390000" />
       <workItem from="1490821236474" duration="76000" />
       <workItem from="1491079032323" duration="3709000" />
-      <workItem from="1491253819543" duration="1979000" />
+      <workItem from="1491253819543" duration="2201000" />
     </task>
     <task id="LOCAL-00001" summary="Changements pour le responsiveness pour tablette">
       <created>1486223173276</created>
@@ -822,11 +821,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491255779388</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Redirection fixed + Validation du format du formulaire 'Register'.">
+      <created>1491255806655</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1491255806655</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247233000" />
+    <option name="totallyTimeSpent" value="247455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -1233,22 +1239,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/UserProfileModel.js">
+    <entry file="file://$PROJECT_DIR$/js/models/SearchResultsModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
-          <caret line="34" column="8" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="8" />
-          <folding>
-            <element signature="e#105#1574#0" expanded="true" />
-            <element signature="e#283#1368#0" expanded="true" />
-            <element signature="e#1743#1919#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="665">
+          <caret line="67" column="62" lean-forward="true" selection-start-line="67" selection-start-column="62" selection-end-line="67" selection-end-column="62" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/views/AppView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="513">
-          <caret line="175" column="9" lean-forward="true" selection-start-line="175" selection-start-column="9" selection-end-line="175" selection-end-column="9" />
+          <caret line="143" column="27" lean-forward="false" selection-start-line="143" selection-start-column="27" selection-end-line="143" selection-end-column="27" />
           <folding>
             <element signature="e#0#236#0" expanded="false" />
             <element signature="e#341#881#0" expanded="false" />
@@ -1264,11 +1266,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/SearchResultsModel.js">
+    <entry file="file://$PROJECT_DIR$/js/models/UserProfileModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="68" column="39" lean-forward="false" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
-          <folding />
+        <state relative-caret-position="551">
+          <caret line="29" column="68" lean-forward="true" selection-start-line="29" selection-start-column="68" selection-end-line="29" selection-end-column="68" />
+          <folding>
+            <element signature="e#283#1368#0" expanded="true" />
+            <element signature="e#1742#1918#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
