@@ -66,8 +66,7 @@
                         }
                         console.log("results", autodata);
                         $('input.autocomplete').autocomplete({
-                            data: toAdd,
-                            minLength: 2
+                            data: toAdd
                         });
                     }
                 }
