@@ -24,6 +24,7 @@
                 "q= " + movieName + " movie trailer";
             this.fetch().success(function (_data, success, result) {
                 data.youtubePreviewUrl = "https://www.youtube.com/embed/" + result.responseJSON.items[0].id.videoId;
+                console.log(data);
                 caller.$el.find(" .Page")[0].innerHTML = $(caller.views.movieView.render(data).el).html();
             })
 

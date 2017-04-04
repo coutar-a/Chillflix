@@ -29,12 +29,15 @@
 
         events: {
             "click .link": "route", // Route with data-href attribute
-            "click .searchResultsItem": "route", // Route with data-action attribute
+            "click .searchResultsItemButton": "route", // Route with data-action attribute
             "keyup .searchBar": "search", // Starts the search query
             "click .buttonSettings": "settings", // Opens the search settings modal
             "click .buttonLogin": "authenticate",
             "click .buttonRegister": "register",
-            "click .buttonLogout": "logout"
+            "click .buttonLogout": "logout",
+            "click .buttonAddToWatchlist" : "addToWatchlist",
+            "click .buttonFollowUser" : "followUser",
+            "click .buttonUnfollowUser" : "unfollowUser"
         },
 
         initialize: function () {
@@ -173,6 +176,18 @@
         logout: function () {
             userProfile.logout();
             Backbone.history.navigate('login', {trigger: true});
+        },
+
+        addToWatchlist : function (e) {
+            // var movieId = userProfile.addToWatchlist();
+        },
+
+        followUser : function (e) {
+            userProfile.followUser(e.target.dataset.href);
+        },
+
+        unfollowUser : function (e) {
+            userProfile.unfollowUser(e.target.dataset.href);
         }
 
     });

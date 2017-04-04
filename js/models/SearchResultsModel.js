@@ -5,7 +5,6 @@
         fetchWithKeywords: function (keywords, caller) {
 
             this._buildURL(keywords);
-            console.log(this.url);
             this.fetch({
                 headers: {'Authorization': userProfile.attributes.token},
                 success: function (data) {
@@ -17,6 +16,7 @@
                     }
                     //
                     caller.$el.find(" .Page")[0].innerHTML = $(caller.views.searchResultsView.render(_data).el).html(); // TODO : Refactor.
+                    $('.collapsible').collapsible();
                 }
             })
         },
@@ -64,7 +64,6 @@
                                 }
                             }
                         }
-                        console.log("results", autodata);
                         $('input.autocomplete').autocomplete({
                             data: toAdd
                         });
