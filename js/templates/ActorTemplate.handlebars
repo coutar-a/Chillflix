@@ -5,10 +5,12 @@
                     <a class="buttoniTunes" href="{{artistLinkUrl}}" id="itunes_link"></a>
                     <div class="divider"></div>
                     <h5> Films </h5>
-                    <ul id="actor_movies">
-                        <li> Alice in Wonderland</li>
-                        <li> Pirates of the caribbean</li>
-                        <li> Once upon a time in mexico</li>
+                    <ul id="actor_movies" class="collection">
+                        {{#each knownFor}}
+                            {{#each this}}
+                                <li class="collection-item">{{#if original_title}}{{original_title}}{{else}} {{original_name}} {{/if}}</li>
+                            {{/each}}
+                        {{/each}}
                     </ul>
                     <div class="divider"></div>
                     <h5> Genre </h5>

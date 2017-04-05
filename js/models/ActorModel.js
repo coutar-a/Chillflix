@@ -9,7 +9,6 @@
                     'Authorization': userProfile.attributes.token
                 }
             }).success(function (_data, success, result) {
-                console.log(result.responseJSON.results[0]);
                 self.fetchImage(caller, result.responseJSON.results[0]);
 
             })
@@ -24,8 +23,10 @@
             return this.fetch({dataType: 'jsonp'}).success(function (_data) {
 
                 actorId = _data.results[0].id;
-                console.log(_data);
-                console.log(actorId);
+                renderData.knownFor = [];
+                for (var i = 0; i < _data.results.length; ++i) {
+                    renderData.knownFor.push(_data.results[i].known_for);
+                }
             }).then(function () {
 
 
@@ -37,7 +38,6 @@
                 })
                     .done(function (data) {
                         renderData.artistImage = 'https://image.tmdb.org/t/p/w640/' + data.profiles[0].file_path;
-
                         caller.$el.find(" .Page")[0].innerHTML = $(caller.views.actorView.render(renderData).el).html();
 
                     })

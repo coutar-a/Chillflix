@@ -18,7 +18,6 @@
         },
 
         render: function(actor) {
-
             this.$el.html(this.template(actor));
             return this;
         }

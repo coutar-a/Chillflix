@@ -1,21 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf40fd29-1e97-4be7-9285-78e39c22136b" name="Default" comment="Redirection fixed + Validation du format du formulaire 'Register'.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/SearchResultPartial.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/templates/SearchResultsTemplate.html" afterPath="" />
+    <list default="true" id="bf40fd29-1e97-4be7-9285-78e39c22136b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/MovieModel.js" afterPath="$PROJECT_DIR$/js/models/MovieModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/SearchResultsModel.js" afterPath="$PROJECT_DIR$/js/models/SearchResultsModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/UserProfileModel.js" afterPath="$PROJECT_DIR$/js/models/UserProfileModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/templates/MovieTemplate.handlebars" afterPath="$PROJECT_DIR$/js/templates/MovieTemplate.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/templates/SearchResultsTemplate.handlebars" afterPath="$PROJECT_DIR$/js/templates/SearchResultsTemplate.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/templates/UserProfileTemplate.handlebars" afterPath="$PROJECT_DIR$/js/templates/UserProfileTemplate.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/AppView.js" afterPath="$PROJECT_DIR$/js/views/AppView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/MovieView.js" afterPath="$PROJECT_DIR$/js/views/MovieView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/SearchResultsView.js" afterPath="$PROJECT_DIR$/js/views/SearchResultsView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/ActorModel.js" afterPath="$PROJECT_DIR$/js/models/ActorModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/templates/ActorTemplate.handlebars" afterPath="$PROJECT_DIR$/js/templates/ActorTemplate.handlebars" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/ActorView.js" afterPath="$PROJECT_DIR$/js/views/ActorView.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,31 +29,15 @@
       <file leaf-file-name="AppView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/views/AppView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="189" column="29" lean-forward="true" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
+            <state relative-caret-position="1121">
+              <caret line="189" column="29" lean-forward="false" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
               <folding>
                 <element signature="e#0#236#0" expanded="false" />
-                <element signature="e#1831#2185#0" expanded="true" />
-                <element signature="e#2665#4471#0" expanded="true" />
-                <element signature="e#2708#3216#0" expanded="true" />
                 <element signature="e#3449#3661#0" expanded="false" />
                 <element signature="e#3707#3924#0" expanded="false" />
                 <element signature="e#3966#4179#0" expanded="false" />
                 <element signature="e#4219#4430#0" expanded="false" />
-                <element signature="e#5046#5292#0" expanded="true" />
-                <element signature="e#5399#5489#0" expanded="true" />
-                <element signature="e#6812#6882#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MovieView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/views/MovieView.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -86,8 +60,8 @@
       <file leaf-file-name="UserProfileModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/models/UserProfileModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="92" column="26" lean-forward="true" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+            <state relative-caret-position="342">
+              <caret line="92" column="26" lean-forward="false" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
               <folding>
                 <element signature="e#105#1515#0" expanded="true" />
                 <element signature="e#283#1310#0" expanded="true" />
@@ -113,16 +87,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchResultsModel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchResultsModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/models/SearchResultsModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+            <state relative-caret-position="323">
+              <caret line="93" column="11" lean-forward="true" selection-start-line="93" selection-start-column="11" selection-end-line="93" selection-end-column="11" />
               <folding>
+                <element signature="e#14#4052#0" expanded="true" />
+                <element signature="e#122#820#0" expanded="true" />
+                <element signature="e#186#809#0" expanded="false" />
                 <element signature="e#303#795#0" expanded="true" />
-                <element signature="e#869#3279#0" expanded="true" />
                 <element signature="e#1113#3253#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActorTemplate.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/templates/ActorTemplate.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActorModel.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/models/ActorModel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" column="58" lean-forward="false" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+              <folding>
+                <element signature="e#551#1863#0" expanded="true" />
+                <element signature="e#888#1150#0" expanded="true" />
+                <element signature="e#1169#1849#0" expanded="true" />
+                <element signature="e#1574#1833#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ActorView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/views/ActorView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -130,7 +141,7 @@
       <file leaf-file-name="UserProfileTemplate.handlebars" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/templates/UserProfileTemplate.handlebars">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
+            <state relative-caret-position="551">
               <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
               <folding />
             </state>
@@ -147,39 +158,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AppRouter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/router/AppRouter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-              <folding>
-                <element signature="e#574#644#0" expanded="true" />
-                <element signature="e#676#723#0" expanded="true" />
-                <element signature="e#753#798#0" expanded="true" />
-                <element signature="e#831#879#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Router.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/router/Router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-              <folding>
-                <element signature="e#107#652#0" expanded="true" />
-                <element signature="e#276#535#0" expanded="true" />
-                <element signature="e#1220#1441#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MovieModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/models/MovieModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
+            <state relative-caret-position="285">
               <caret line="27" column="75" lean-forward="true" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
               <folding>
                 <element signature="e#101#623#0" expanded="true" />
@@ -216,7 +198,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/HomeView.js" />
         <option value="$PROJECT_DIR$/js/UserProfile.js" />
         <option value="$PROJECT_DIR$/js/NavBarView.js" />
         <option value="$PROJECT_DIR$/js/NavbarView.js" />
@@ -233,7 +214,6 @@
         <option value="$PROJECT_DIR$/js/templates/SearchResultsTemplate.html" />
         <option value="$PROJECT_DIR$/js/collections/SearchResultsCollection.js" />
         <option value="$PROJECT_DIR$/Remise2/src/js/models/ActorModel.js" />
-        <option value="$PROJECT_DIR$/js/views/ActorView.js" />
         <option value="$PROJECT_DIR$/js/models/WatchlistCollection.js" />
         <option value="$PROJECT_DIR$/js/models/WatchlistModel.js" />
         <option value="$PROJECT_DIR$/js/views/SearchParametersView.js" />
@@ -245,7 +225,6 @@
         <option value="$PROJECT_DIR$/js/app.js" />
         <option value="$PROJECT_DIR$/js/models/NavbarModel.js" />
         <option value="$PROJECT_DIR$/js/views/NavbarView.js" />
-        <option value="$PROJECT_DIR$/js/models/ActorModel.js" />
         <option value="$PROJECT_DIR$/js/views/LoginView.js" />
         <option value="$PROJECT_DIR$/css/login.css" />
         <option value="$PROJECT_DIR$/css/register.css" />
@@ -267,6 +246,9 @@
         <option value="$PROJECT_DIR$/js/views/AppView.js" />
         <option value="$PROJECT_DIR$/js/models/UserProfileModel.js" />
         <option value="$PROJECT_DIR$/js/models/SearchResultsModel.js" />
+        <option value="$PROJECT_DIR$/js/templates/ActorTemplate.handlebars" />
+        <option value="$PROJECT_DIR$/js/views/ActorView.js" />
+        <option value="$PROJECT_DIR$/js/models/ActorModel.js" />
       </list>
     </option>
   </component>
@@ -382,6 +364,24 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="umovie-h17-team-13-h17" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="umovie-h17-team-13-h17" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -464,119 +464,6 @@
       <recent name="C:\Users\Charles\WebstormProjects\TP-Web\umovie-h17-team-13-h17\css" />
       <recent name="C:\Users\Charles\WebstormProjects\TP-Web\umovie-h17-team-13-h17\js\views" />
     </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/collections/SearchResultsCollection.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/models/SearchResultsModel.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/templates/NavbarTemplate.handlebars</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/views/NavbarView.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="home.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TP-Web/home.html">
@@ -751,7 +638,9 @@
       <workItem from="1490766188235" duration="390000" />
       <workItem from="1490821236474" duration="76000" />
       <workItem from="1491079032323" duration="3709000" />
-      <workItem from="1491253819543" duration="20180000" />
+      <workItem from="1491253819543" duration="20237000" />
+      <workItem from="1491289430427" duration="208000" />
+      <workItem from="1491423714223" duration="2845000" />
     </task>
     <task id="LOCAL-00001" summary="Changements pour le responsiveness pour tablette">
       <created>1486223173276</created>
@@ -893,11 +782,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491256026619</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Follow / Unfollow d'un user fonctionnel -&gt; Messages d'erreur pas encore cohérents à 100%">
+      <created>1491281222846</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1491281222846</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265434000" />
+    <option name="totallyTimeSpent" value="268544000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
@@ -965,7 +861,8 @@
     <MESSAGE value="Refactor de la mort" />
     <MESSAGE value="Redirection / Cookie stuff" />
     <MESSAGE value="Redirection fixed + Validation du format du formulaire 'Register'." />
-    <option name="LAST_COMMIT_MESSAGE" value="Redirection fixed + Validation du format du formulaire 'Register'." />
+    <MESSAGE value="Follow / Unfollow d'un user fonctionnel -&gt; Messages d'erreur pas encore cohérents à 100%" />
+    <option name="LAST_COMMIT_MESSAGE" value="Follow / Unfollow d'un user fonctionnel -&gt; Messages d'erreur pas encore cohérents à 100%" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1041,13 +938,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Remise2/src/js/models/ActorModel.js" />
-    <entry file="file://$PROJECT_DIR$/js/views/ActorView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/models/WatchlistCollection.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1081,13 +971,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/ActorTemplate.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1151,12 +1034,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-          <folding>
-            <element signature="e#202#274#0" expanded="false" />
-            <element signature="e#305#385#0" expanded="false" />
-            <element signature="e#423#437#0" expanded="false" />
-            <element signature="e#468#481#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1181,21 +1058,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/ActorModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/views/UserProfileView.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding>
-            <element signature="e#455#498#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1203,7 +1069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1211,23 +1076,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="767">
           <caret line="173" column="23" lean-forward="false" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/SearchResultsTemplate.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/js/templates/SearchResultsTemplate.html" />
     <entry file="file://$PROJECT_DIR$/js/templates/NavbarTemplate.handlebars">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1653">
           <caret line="102" column="23" lean-forward="true" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1235,9 +1091,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
           <caret line="5" column="45" lean-forward="false" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding>
-            <element signature="e#107#599#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1245,31 +1098,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/router/AppRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
+        <state relative-caret-position="665">
           <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
           <folding>
-            <element signature="e#574#644#0" expanded="true" />
-            <element signature="e#676#723#0" expanded="true" />
-            <element signature="e#753#798#0" expanded="true" />
-            <element signature="e#831#879#0" expanded="true" />
+            <element signature="e#574#644#0" expanded="false" />
+            <element signature="e#676#723#0" expanded="false" />
+            <element signature="e#753#798#0" expanded="false" />
+            <element signature="e#831#879#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/router/Router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
+        <state relative-caret-position="361">
           <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
           <folding>
-            <element signature="e#107#652#0" expanded="true" />
-            <element signature="e#276#535#0" expanded="true" />
-            <element signature="e#1220#1441#0" expanded="true" />
+            <element signature="e#107#652#0" expanded="false" />
+            <element signature="e#276#535#0" expanded="false" />
+            <element signature="e#1220#1441#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1284,7 +1136,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/templates/UserProfileTemplate.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
+        <state relative-caret-position="551">
           <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
           <folding />
         </state>
@@ -1313,7 +1165,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/models/MovieModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
+        <state relative-caret-position="285">
           <caret line="27" column="75" lean-forward="true" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
           <folding>
             <element signature="e#101#623#0" expanded="true" />
@@ -1324,28 +1176,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/views/AppView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="189" column="29" lean-forward="true" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
+        <state relative-caret-position="1121">
+          <caret line="189" column="29" lean-forward="false" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
           <folding>
             <element signature="e#0#236#0" expanded="false" />
-            <element signature="e#1831#2185#0" expanded="true" />
-            <element signature="e#2665#4471#0" expanded="true" />
-            <element signature="e#2708#3216#0" expanded="true" />
             <element signature="e#3449#3661#0" expanded="false" />
             <element signature="e#3707#3924#0" expanded="false" />
             <element signature="e#3966#4179#0" expanded="false" />
             <element signature="e#4219#4430#0" expanded="false" />
-            <element signature="e#5046#5292#0" expanded="true" />
-            <element signature="e#5399#5489#0" expanded="true" />
-            <element signature="e#6812#6882#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/models/UserProfileModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="92" column="26" lean-forward="true" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
+        <state relative-caret-position="342">
+          <caret line="92" column="26" lean-forward="false" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
           <folding>
             <element signature="e#105#1515#0" expanded="true" />
             <element signature="e#283#1310#0" expanded="true" />
@@ -1370,14 +1216,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/templates/ActorTemplate.handlebars">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" column="22" lean-forward="true" selection-start-line="20" selection-start-column="22" selection-end-line="20" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/models/SearchResultsModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="323">
+          <caret line="93" column="11" lean-forward="true" selection-start-line="93" selection-start-column="11" selection-end-line="93" selection-end-column="11" />
           <folding>
+            <element signature="e#14#4052#0" expanded="true" />
+            <element signature="e#122#820#0" expanded="true" />
+            <element signature="e#186#809#0" expanded="false" />
             <element signature="e#303#795#0" expanded="true" />
-            <element signature="e#869#3279#0" expanded="true" />
             <element signature="e#1113#3253#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/ActorView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/models/ActorModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="58" lean-forward="false" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
+          <folding>
+            <element signature="e#551#1863#0" expanded="true" />
+            <element signature="e#888#1150#0" expanded="true" />
+            <element signature="e#1169#1849#0" expanded="true" />
+            <element signature="e#1574#1833#0" expanded="true" />
           </folding>
         </state>
       </provider>
