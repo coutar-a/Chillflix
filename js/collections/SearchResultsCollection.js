@@ -1,6 +1,3 @@
-/**
- * Created by Charles on 15/03/2017.
- */
 (function ($) {
 
     SearchResultsCollection = Backbone.Collection.extend({

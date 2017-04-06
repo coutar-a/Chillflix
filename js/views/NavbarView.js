@@ -1,5 +1,7 @@
 (function ($) {
 
+    autodata = {};
+
     NavbarView = Backbone.View.extend({
 
         source: Handlebars.getTemplate('NavbarTemplate'),
@@ -7,7 +9,7 @@
 
         events: {
 
-            "input .searchBar": "autocomplete",
+            "input .searchBar": "fetchAutocomplete",
             "change #searchFilter": "userOptions",
             "change #moviesGenres": "userOptions",
             "change #tvshowsGenres": "userOptions",
@@ -17,6 +19,7 @@
 
         initialize: function () {
             this.template = Handlebars.compile(this.source);
+            this.model = new SearchResultsModel();
         },
 
         render: function (data) {
@@ -32,19 +35,22 @@
             $('.modal').modal();
             $(".button-collapse").sideNav();
             $('select').material_select();
-            //this._initAutocompletion(); TODO
+            this._initAutocomplete();
         },
 
-        _initAutocompletion: function () {
+        _initAutocomplete : function () {
+            $('input.autocomplete').autocomplete({
+                data: this.getAutocompleteContent()
+            });
+        },
 
-            var keys = [];
-            for (var key in localStorage) {
+        getAutocompleteContent : function () {
+            return autodata;
+        },
 
-                keys.push(key);
-            }
-            var model = SearchResultsModel({});
-            model.fetchForAutocomplete(keys);
-
+        fetchAutocomplete: function () {
+            // $('.autocomplete-content').remove();
+            this.model.fetchAutocompleteResults();
         },
 
         userOptions: function (e) {

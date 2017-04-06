@@ -9,7 +9,6 @@
                     'Authorization': userProfile.attributes.token
                 }
             }).success(function (_data, success, result) {
-                console.log(result.responseJSON.results[0]);
                 self.fetchImage(caller, result.responseJSON.results[0]);
 
             })
@@ -21,13 +20,14 @@
             var actorData;
 
             return this.fetch({dataType: 'jsonp'}).success(function (_data) {
-
+              
                 if(_data.results.length > 0 && _data.results[0].profile_path) {
                     renderData.artistImage = 'https://image.tmdb.org/t/p/w640/' + _data.results[0].profile_path;
                 } else {
                     renderData.artistImage = './images/765-default-avatar.png';
                 }
                 caller.$el.find(" .Page")[0].innerHTML = $(caller.views.actorView.render(renderData).el).html();
+
             });
         }
 

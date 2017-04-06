@@ -7,7 +7,7 @@
             <p>Genre - {{primaryGenreName}}</p>
             <a class="buttoniTunes" href="{{movieViewUrl}}"></a>
             <div class="col s12 m12 14">
-                <img class="materialboxed responsive-img" src="{{artworkUrl100}}">
+                <img class="materialboxed responsive-img" src="{{artworkUrl100}}" width="100px" height="100px">
             </div>
 
             <div class="divider"></div>
@@ -18,13 +18,13 @@
         </div>
 
         <div class="col s12 m6 16">
-            <a data-action="buttonAddToWatchlist" class="buttonAddToWatchlist waves-effect waves-light blue btn"
-            href="#">Add to watchlist</a>
+            <a data-action="{{trackId}}" data-href="{{trackId}}" class="buttonAddToWatchlist waves-effect waves-light blue btn">Add to
+                watchlist</a>
             <h5><i class="material-icons left"> video_library </i> Trailer </h5>
             <div class="divider"></div>
             <div class="video-container">
                 <iframe width="600" height="400" src="{{youtubePreviewUrl}}" frameborder="0"
-                allowfullscreen></iframe>
+                        allowfullscreen></iframe>
             </div>
         </div>
     </div>
