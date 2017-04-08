@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bf40fd29-1e97-4be7-9285-78e39c22136b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/TVShowModel.js" afterPath="$PROJECT_DIR$/js/models/TVShowModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/TVShowView.js" afterPath="$PROJECT_DIR$/js/views/TVShowView.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,7 +42,7 @@
         <entry file="file://$PROJECT_DIR$/js/models/TVShowModel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="390">
-              <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
+              <caret line="42" column="67" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="11" />
               <folding>
                 <marker date="1491675238923" expanded="true" signature="1667:1681" ph="{...}" />
               </folding>
@@ -472,7 +470,7 @@
       <workItem from="1489278060939" duration="1311000" />
       <workItem from="1489702766562" duration="5286000" />
       <workItem from="1490462475280" duration="11209000" />
-      <workItem from="1491672655446" duration="2795000" />
+      <workItem from="1491672655446" duration="2901000" />
     </task>
     <task id="LOCAL-00001" summary="Changements pour le responsiveness pour tablette">
       <created>1486223173276</created>
@@ -523,11 +521,18 @@
       <option name="project" value="LOCAL" />
       <updated>1491076711190</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="TvshowModel.episodes">
+      <created>1491675515161</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1491675515161</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81356000" />
+    <option name="totallyTimeSpent" value="81462000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -590,7 +595,8 @@
     <MESSAGE value="Actor" />
     <MESSAGE value="merge" />
     <MESSAGE value="npm init" />
-    <option name="LAST_COMMIT_MESSAGE" value="npm init" />
+    <MESSAGE value="TvshowModel.episodes" />
+    <option name="LAST_COMMIT_MESSAGE" value="TvshowModel.episodes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -854,7 +860,7 @@
     <entry file="file://$PROJECT_DIR$/js/models/TVShowModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
-          <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
+          <caret line="42" column="67" selection-start-line="0" selection-start-column="0" selection-end-line="53" selection-end-column="11" />
           <folding>
             <marker date="1491675238923" expanded="true" signature="1667:1681" ph="{...}" />
           </folding>
