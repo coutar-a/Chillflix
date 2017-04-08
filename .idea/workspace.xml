@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bf40fd29-1e97-4be7-9285-78e39c22136b" name="Default" comment="Redirection fixed + Validation du format du formulaire 'Register'.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/templates/SearchResultPartial.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/templates/SearchResultsTemplate.html" afterPath="" />
+    <list default="true" id="bf40fd29-1e97-4be7-9285-78e39c22136b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/MovieModel.js" afterPath="$PROJECT_DIR$/js/models/MovieModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/SearchResultsModel.js" afterPath="$PROJECT_DIR$/js/models/SearchResultsModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/UserProfileModel.js" afterPath="$PROJECT_DIR$/js/models/UserProfileModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/templates/MovieTemplate.handlebars" afterPath="$PROJECT_DIR$/js/templates/MovieTemplate.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/templates/SearchResultsTemplate.handlebars" afterPath="$PROJECT_DIR$/js/templates/SearchResultsTemplate.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/templates/UserProfileTemplate.handlebars" afterPath="$PROJECT_DIR$/js/templates/UserProfileTemplate.handlebars" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/AppView.js" afterPath="$PROJECT_DIR$/js/views/AppView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/MovieView.js" afterPath="$PROJECT_DIR$/js/views/MovieView.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/SearchResultsView.js" afterPath="$PROJECT_DIR$/js/views/SearchResultsView.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/models/TVShowModel.js" afterPath="$PROJECT_DIR$/js/models/TVShowModel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/views/TVShowView.js" afterPath="$PROJECT_DIR$/js/views/TVShowView.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -39,138 +28,25 @@
       <file leaf-file-name="AppView.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/views/AppView.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="741">
-              <caret line="189" column="29" lean-forward="true" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
+            <state relative-caret-position="18">
+              <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
               <folding>
                 <element signature="e#0#236#0" expanded="false" />
-                <element signature="e#1831#2185#0" expanded="true" />
-                <element signature="e#2665#4471#0" expanded="true" />
-                <element signature="e#2708#3216#0" expanded="true" />
-                <element signature="e#3449#3661#0" expanded="false" />
-                <element signature="e#3707#3924#0" expanded="false" />
-                <element signature="e#3966#4179#0" expanded="false" />
-                <element signature="e#4219#4430#0" expanded="false" />
-                <element signature="e#5046#5292#0" expanded="true" />
-                <element signature="e#5399#5489#0" expanded="true" />
-                <element signature="e#6812#6882#0" expanded="true" />
+                <element signature="e#341#881#0" expanded="false" />
+                <element signature="e#900#1542#0" expanded="false" />
+                <element signature="e#6554#6664#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MovieView.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/views/MovieView.js">
+      <file leaf-file-name="TVShowModel.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/models/TVShowModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchResultPartial.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/templates/SearchResultPartial.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state relative-caret-position="390">
+              <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
               <folding>
-                <element signature="e#0#44#0" expanded="false" />
-                <element signature="e#1471#2567#0" expanded="false" />
-                <element signature="e#2593#3582#0" expanded="false" />
-                <element signature="e#3606#4599#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserProfileModel.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/models/UserProfileModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="92" column="26" lean-forward="true" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-              <folding>
-                <element signature="e#105#1515#0" expanded="true" />
-                <element signature="e#283#1310#0" expanded="true" />
-                <element signature="e#1329#1502#0" expanded="true" />
-                <element signature="e#1552#2022#0" expanded="true" />
-                <element signature="e#1684#1860#0" expanded="true" />
-                <element signature="e#1883#2008#0" expanded="true" />
-                <element signature="e#2069#2574#0" expanded="true" />
-                <element signature="e#2277#2547#0" expanded="true" />
-                <element signature="e#2862#3685#0" expanded="true" />
-                <element signature="e#3362#3526#0" expanded="true" />
-                <element signature="e#3549#3673#0" expanded="true" />
-                <element signature="e#4232#4398#0" expanded="true" />
-                <element signature="e#4421#4541#0" expanded="true" />
-                <element signature="e#4610#5124#0" expanded="true" />
-                <element signature="e#4929#5054#0" expanded="true" />
-                <element signature="e#5077#5111#0" expanded="true" />
-                <element signature="e#5168#5781#0" expanded="true" />
-                <element signature="e#5580#5712#0" expanded="true" />
-                <element signature="e#5735#5769#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchResultsModel.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/models/SearchResultsModel.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
-              <folding>
-                <element signature="e#303#795#0" expanded="true" />
-                <element signature="e#869#3279#0" expanded="true" />
-                <element signature="e#1113#3253#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserProfileTemplate.handlebars" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/templates/UserProfileTemplate.handlebars">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="539">
-              <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchResultsTemplate.handlebars" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/templates/SearchResultsTemplate.handlebars">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="3" column="86" lean-forward="false" selection-start-line="3" selection-start-column="86" selection-end-line="3" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppRouter.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/router/AppRouter.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
-              <folding>
-                <element signature="e#574#644#0" expanded="true" />
-                <element signature="e#676#723#0" expanded="true" />
-                <element signature="e#753#798#0" expanded="true" />
-                <element signature="e#831#879#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Router.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/router/Router.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="643">
-              <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
-              <folding>
-                <element signature="e#107#652#0" expanded="true" />
-                <element signature="e#276#535#0" expanded="true" />
-                <element signature="e#1220#1441#0" expanded="true" />
+                <marker date="1491675238923" expanded="true" signature="1667:1681" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -179,12 +55,81 @@
       <file leaf-file-name="MovieModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/models/MovieModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="75" lean-forward="true" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
+            <state relative-caret-position="396">
+              <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchResultsView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/views/SearchResultsView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchResultsModel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/models/SearchResultsModel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="498">
+              <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserProfileModel.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/models/UserProfileModel.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
               <folding>
-                <element signature="e#101#623#0" expanded="true" />
-                <element signature="e#393#586#0" expanded="true" />
+                <element signature="e#5168#5781#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AppRouter.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/router/AppRouter.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Router.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/router/Router.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TVShowView.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/views/TVShowView.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SearchResultsTemplate.handlebars" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/templates/SearchResultsTemplate.handlebars">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -194,79 +139,44 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
-        <option value="CSS File" />
         <option value="JavaScript File" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>search</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature/template_loading" />
+        <entry key="$PROJECT_DIR$" value="dev" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/HomeView.js" />
-        <option value="$PROJECT_DIR$/js/UserProfile.js" />
-        <option value="$PROJECT_DIR$/js/NavBarView.js" />
-        <option value="$PROJECT_DIR$/js/NavbarView.js" />
-        <option value="$PROJECT_DIR$/js/FooterView.js" />
-        <option value="$PROJECT_DIR$/home.html" />
-        <option value="$PROJECT_DIR$/js/init.js" />
-        <option value="$PROJECT_DIR$/js/AppView.js" />
-        <option value="$PROJECT_DIR$/js/UserProfileView.js" />
-        <option value="$PROJECT_DIR$/js/views/FooterView.js" />
-        <option value="$PROJECT_DIR$/js/collections/UserProfiles.js" />
-        <option value="$PROJECT_DIR$/js/collections/UserProfileCollection.js" />
-        <option value="$PROJECT_DIR$/js/collections/UsersCollection.js" />
-        <option value="$PROJECT_DIR$/js/views/WatchlistCollectionView.js" />
-        <option value="$PROJECT_DIR$/js/templates/SearchResultsTemplate.html" />
-        <option value="$PROJECT_DIR$/js/collections/SearchResultsCollection.js" />
-        <option value="$PROJECT_DIR$/Remise2/src/js/models/ActorModel.js" />
-        <option value="$PROJECT_DIR$/js/views/ActorView.js" />
-        <option value="$PROJECT_DIR$/js/models/WatchlistCollection.js" />
-        <option value="$PROJECT_DIR$/js/models/WatchlistModel.js" />
-        <option value="$PROJECT_DIR$/js/views/SearchParametersView.js" />
-        <option value="$PROJECT_DIR$/js/views/HomeView.js" />
-        <option value="$PROJECT_DIR$/js/templates/HomeTemplate.handlebars" />
-        <option value="$PROJECT_DIR$/js/views/RegisterView.js" />
-        <option value="$PROJECT_DIR$/js/models/TVShowModel.js" />
-        <option value="$PROJECT_DIR$/js/router/router2.js" />
-        <option value="$PROJECT_DIR$/js/app.js" />
-        <option value="$PROJECT_DIR$/js/models/NavbarModel.js" />
-        <option value="$PROJECT_DIR$/js/views/NavbarView.js" />
-        <option value="$PROJECT_DIR$/js/models/ActorModel.js" />
-        <option value="$PROJECT_DIR$/js/views/LoginView.js" />
-        <option value="$PROJECT_DIR$/css/login.css" />
-        <option value="$PROJECT_DIR$/css/register.css" />
-        <option value="$PROJECT_DIR$/js/router/Router.js" />
-        <option value="$PROJECT_DIR$/js/views/UserProfileView.js" />
-        <option value="$PROJECT_DIR$/js/templates/LoginTemplate.handlebars" />
-        <option value="$PROJECT_DIR$/js/templates/RegisterTemplate.handlebars" />
-        <option value="$PROJECT_DIR$/js/router/AppRouter.js" />
-        <option value="$PROJECT_DIR$/js/templates/NavbarTemplate.handlebars" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/js/views/SearchResultsView.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/js/templates/SearchResultsTemplate.handlebars" />
-        <option value="$PROJECT_DIR$/js/templates/MovieTemplate.handlebars" />
-        <option value="$PROJECT_DIR$/js/models/MovieModel.js" />
-        <option value="$PROJECT_DIR$/js/views/MovieView.js" />
-        <option value="$PROJECT_DIR$/js/templates/SearchResultPartial.js" />
-        <option value="$PROJECT_DIR$/js/templates/UserProfileTemplate.handlebars" />
-        <option value="$PROJECT_DIR$/js/views/AppView.js" />
+        <option value="$PROJECT_DIR$/js/pageLoader.js" />
+        <option value="$PROJECT_DIR$/js/User.js" />
+        <option value="$PROJECT_DIR$/js/Film.js" />
+        <option value="$PROJECT_DIR$/js/Movie.js" />
+        <option value="$PROJECT_DIR$/js/Utils.js" />
+        <option value="$PROJECT_DIR$/js/UMovie.js" />
+        <option value="$PROJECT_DIR$/js/PageLoader.js" />
+        <option value="$PROJECT_DIR$/js/init.js" />
+        <option value="$PROJECT_DIR$/home.html" />
+        <option value="$PROJECT_DIR$/js/collections/UsersCollection.js" />
+        <option value="$PROJECT_DIR$/js/views/UserProfileView.js" />
+        <option value="$PROJECT_DIR$/js/views/ActorView.js" />
+        <option value="$PROJECT_DIR$/js/models/ActorModel.js" />
+        <option value="$PROJECT_DIR$/js/views/HomeView.js" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/router/AppRouter.js" />
         <option value="$PROJECT_DIR$/js/models/UserProfileModel.js" />
         <option value="$PROJECT_DIR$/js/models/SearchResultsModel.js" />
+        <option value="$PROJECT_DIR$/js/models/MovieModel.js" />
+        <option value="$PROJECT_DIR$/js/views/AppView.js" />
+        <option value="$PROJECT_DIR$/js/views/TVShowView.js" />
+        <option value="$PROJECT_DIR$/js/models/TVShowModel.js" />
       </list>
     </option>
   </component>
@@ -282,8 +192,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1066" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -322,8 +232,15 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
     <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -340,10 +257,15 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="umovie-h17-team-13-h17" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="umovie-h17-team-13-h17" />
@@ -365,6 +287,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="umovie-h17-team-13-h17" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="umovie-h17-team-13-h17" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -400,186 +340,31 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="router" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="umovie-h17-team-13-h17" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="umovie-h17-team-13-h17" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="umovie-h17-team-13-h17" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="umovie-h17-team-13-h17" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/js/views/LoginView.js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Font" />
+    <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="js.eslint.eslintPackage" value="" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="javascript.nodejs.core.library.configured.version" value="7.4.0" />
-    <property name="two.files.diff.last.used.file" value="$PROJECT_DIR$/js/views/LoginView.js" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Charles\WebstormProjects\TP-Web\umovie-h17-team-13-h17\js\Legacy" />
-      <recent name="C:\Users\Charles\WebstormProjects\TP-Web\umovie-h17-team-13-h17\js\views" />
-      <recent name="C:\Users\Charles\WebstormProjects\TP-Web\umovie-h17-team-13-h17\js\models" />
-      <recent name="C:\Users\Charles\WebstormProjects\TP-Web\umovie-h17-team-13-h17\js\libs" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Charles\WebstormProjects\TP-Web\umovie-h17-team-13-h17\css" />
-      <recent name="C:\Users\Charles\WebstormProjects\TP-Web\umovie-h17-team-13-h17\js\views" />
-    </key>
-  </component>
-  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
-    <UpdatedFiles>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Updated from server" />
-        <option name="myStatusName" value="Changed on server" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="CHANGED_ON_SERVER" />
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Updated" />
-          <option name="myStatusName" value="Changed" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/collections/SearchResultsCollection.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/models/SearchResultsModel.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/templates/NavbarTemplate.handlebars</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/js/views/NavbarView.js</PATH>
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Created" />
-          <option name="myStatusName" value="Created" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="CREATED" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Deleted" />
-          <option name="myStatusName" value="Deleted" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="true" />
-          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
-        </FILE-GROUP>
-        <FILE-GROUP>
-          <option name="myUpdateName" value="Restored" />
-          <option name="myStatusName" value="Will be restored" />
-          <option name="mySupportsDeletion" value="false" />
-          <option name="myCanBeAbsent" value="false" />
-          <option name="myId" value="RESTORED" />
-        </FILE-GROUP>
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Modified" />
-        <option name="myStatusName" value="Modified" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MODIFIED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Skipped" />
-        <option name="myStatusName" value="Skipped" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SKIPPED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with conflicts" />
-        <option name="myStatusName" value="Will be merged with conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_CONFLICTS" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with tree conflicts" />
-        <option name="myStatusName" value="Merged with tree conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged with property conflicts" />
-        <option name="myStatusName" value="Will be merged with property conflicts" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Merged" />
-        <option name="myStatusName" value="Will be merged" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="MERGED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Not in repository" />
-        <option name="myStatusName" value="Not in repository" />
-        <option name="mySupportsDeletion" value="true" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="UNKNOWN" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally added" />
-        <option name="myStatusName" value="Locally added" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_ADDED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Locally removed" />
-        <option name="myStatusName" value="Locally removed" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="LOCALLY_REMOVED" />
-      </FILE-GROUP>
-      <FILE-GROUP>
-        <option name="myUpdateName" value="Switched" />
-        <option name="myStatusName" value="Switched" />
-        <option name="mySupportsDeletion" value="false" />
-        <option name="myCanBeAbsent" value="false" />
-        <option name="myId" value="SWITCHED" />
-      </FILE-GROUP>
-    </UpdatedFiles>
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Charles/Documents/oldDesktop/Webstorm projects/Chillflix/umovie-h17-team-13-h17/js/views/TVShowView.js" />
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="home.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/TP-Web/home.html">
+      <method />
+    </configuration>
+    <configuration default="false" name="home.html (1)" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/umovie-h17-team-13-h17/home.html">
       <method />
     </configuration>
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/umovie-h17-team-13-h17/index.html">
@@ -592,12 +377,6 @@
       <method />
     </configuration>
     <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
-      <config-file value="" />
-      <node-interpreter value="project" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
       <config-file value="" />
       <node-interpreter value="project" />
       <envs />
@@ -625,7 +404,7 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run" />
+      <command value="run-script" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
@@ -644,47 +423,16 @@
       <recursive>false</recursive>
       <method />
     </configuration>
-    <configuration default="false" name="Node" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" path-to-js-file="js/app.js" working-dir="$PROJECT_DIR$">
-      <browser start="true" with-js-debugger="true" url="http://localhost:63342/umovie-h17-team-13-h17/index.html" />
-      <profiling v8-profiler-path="" />
-      <EXTENSION ID="com.jetbrains.nodejs.remote.docker.NodeJSDockerRunConfigurationExtension">
-        <option name="envVars">
-          <list />
-        </option>
-        <option name="extraHosts">
-          <list />
-        </option>
-        <option name="links">
-          <list />
-        </option>
-        <option name="networkDisabled" value="false" />
-        <option name="networkMode" value="bridge" />
-        <option name="portBindings">
-          <list />
-        </option>
-        <option name="publishAllPorts" value="false" />
-        <option name="version" value="1" />
-        <option name="volumeBindings">
-          <list />
-        </option>
-      </EXTENSION>
-      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSProfilingRunConfigurationExtension">
-        <profiling v8-profiler-path="" />
-      </EXTENSION>
-      <EXTENSION ID="com.jetbrains.nodejs.run.NodeJSStartBrowserRunConfigurationExtension">
-        <browser start="true" with-js-debugger="true" url="http://localhost:63342/umovie-h17-team-13-h17/index.html" />
-      </EXTENSION>
-      <method />
-    </configuration>
     <list size="3">
-      <item index="0" class="java.lang.String" itemvalue="Node.js.Node" />
-      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
+      <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
+      <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.home.html (1)" />
       <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="3">
         <item index="0" class="java.lang.String" itemvalue="JavaScript Debug.index.html" />
-        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
+        <item index="1" class="java.lang.String" itemvalue="JavaScript Debug.home.html (1)" />
+        <item index="2" class="java.lang.String" itemvalue="JavaScript Debug.home.html" />
       </list>
     </recent_temporary>
   </component>
@@ -716,42 +464,15 @@
       <workItem from="1486666234558" duration="682000" />
       <workItem from="1486677832518" duration="23000" />
       <workItem from="1486695645589" duration="3914000" />
-      <workItem from="1486733540700" duration="13729000" />
-      <workItem from="1486841880738" duration="1329000" />
-      <workItem from="1486850080738" duration="1068000" />
-      <workItem from="1486851333910" duration="39000" />
-      <workItem from="1487180174461" duration="600000" />
-      <workItem from="1488764828906" duration="6373000" />
-      <workItem from="1488776468052" duration="7000" />
-      <workItem from="1488862387948" duration="8102000" />
-      <workItem from="1488919910572" duration="37511000" />
-      <workItem from="1489000551593" duration="614000" />
-      <workItem from="1489093163603" duration="2391000" />
-      <workItem from="1489203715242" duration="814000" />
-      <workItem from="1489284017125" duration="3301000" />
-      <workItem from="1489350719462" duration="9233000" />
-      <workItem from="1489459247829" duration="6455000" />
-      <workItem from="1489545473743" duration="6032000" />
-      <workItem from="1489619527431" duration="2536000" />
-      <workItem from="1489628118503" duration="16525000" />
-      <workItem from="1489876072645" duration="96000" />
-      <workItem from="1489876751662" duration="69000" />
-      <workItem from="1489956833365" duration="65000" />
-      <workItem from="1490021970970" duration="24489000" />
-      <workItem from="1490160104377" duration="14103000" />
-      <workItem from="1490227106708" duration="11570000" />
-      <workItem from="1490296090229" duration="6403000" />
-      <workItem from="1490304093715" duration="1060000" />
-      <workItem from="1490424366818" duration="72000" />
-      <workItem from="1490477717855" duration="12407000" />
-      <workItem from="1490503320087" duration="131000" />
-      <workItem from="1490589840668" duration="5806000" />
-      <workItem from="1490648665191" duration="21805000" />
-      <workItem from="1490684229043" duration="144000" />
-      <workItem from="1490766188235" duration="390000" />
-      <workItem from="1490821236474" duration="76000" />
-      <workItem from="1491079032323" duration="3709000" />
-      <workItem from="1491253819543" duration="20180000" />
+      <workItem from="1486733540700" duration="13042000" />
+      <workItem from="1487111940654" duration="617000" />
+      <workItem from="1487719675497" duration="671000" />
+      <workItem from="1488653108500" duration="12236000" />
+      <workItem from="1489264082559" duration="7989000" />
+      <workItem from="1489278060939" duration="1311000" />
+      <workItem from="1489702766562" duration="5286000" />
+      <workItem from="1490462475280" duration="11209000" />
+      <workItem from="1491672655446" duration="2795000" />
     </task>
     <task id="LOCAL-00001" summary="Changements pour le responsiveness pour tablette">
       <created>1486223173276</created>
@@ -774,142 +495,51 @@
       <option name="project" value="LOCAL" />
       <updated>1486363726312</updated>
     </task>
-    <task id="LOCAL-00004" summary="Ajout des classes UMovie, Utils, et Movie. Barres de recherche semi-fonctionnels">
-      <created>1486795158146</created>
+    <task id="LOCAL-00004" summary="Actor">
+      <created>1489102247821</created>
       <option name="number" value="00004" />
       <option name="presentableId" value="LOCAL-00004" />
       <option name="project" value="LOCAL" />
-      <updated>1486795158146</updated>
+      <updated>1489102247821</updated>
     </task>
-    <task id="LOCAL-00005" summary="Migration vers backbone">
-      <created>1488770531769</created>
+    <task id="LOCAL-00005" summary="merge">
+      <created>1489278763025</created>
       <option name="number" value="00005" />
       <option name="presentableId" value="LOCAL-00005" />
       <option name="project" value="LOCAL" />
-      <updated>1488770531769</updated>
+      <updated>1489278763025</updated>
     </task>
-    <task id="LOCAL-00006" summary="Migration vers backbone">
-      <created>1488770667090</created>
+    <task id="LOCAL-00006" summary="npm init">
+      <created>1491067915352</created>
       <option name="number" value="00006" />
       <option name="presentableId" value="LOCAL-00006" />
       <option name="project" value="LOCAL" />
-      <updated>1488770667090</updated>
+      <updated>1491067915352</updated>
     </task>
-    <task id="LOCAL-00007" summary="Migration vers backbone">
-      <created>1488879617226</created>
+    <task id="LOCAL-00007" summary="npm init">
+      <created>1491076711190</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1488879617226</updated>
+      <updated>1491076711190</updated>
     </task>
-    <task id="LOCAL-00008" summary="Migration vers backbone">
-      <created>1488927214936</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1488927214936</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Migration vers backbone">
-      <created>1488963355338</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1488963355338</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Migration vers backbone">
-      <created>1488964840298</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1488964840298</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Migration vers backbone">
-      <created>1489093303071</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1489093303071</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Merge avec la branche Movies">
-      <created>1489204491129</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1489204491129</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Ajout des deux vidéos pour séries et film avec l'API youtube">
-      <created>1489287185001</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1489287185001</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Barre de recherche fonctionnelle">
-      <created>1489637143123</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1489637143123</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Barre de recherche fonctionnelle">
-      <created>1489645794613</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1489645794613</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Refactor de la mort">
-      <created>1490678087337</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1490678087337</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Redirection / Cookie stuff">
-      <created>1491082724538</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1491082724538</updated>
-    </task>
-    <task id="LOCAL-00018" summary="Redirection fixed + Validation du format du formulaire 'Register'.">
-      <created>1491255779388</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1491255779388</updated>
-    </task>
-    <task id="LOCAL-00019" summary="Redirection fixed + Validation du format du formulaire 'Register'.">
-      <created>1491255806655</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1491255806655</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Redirection fixed + Validation du format du formulaire 'Register'.">
-      <created>1491256026619</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1491256026619</updated>
-    </task>
-    <option name="localTasksCounter" value="21" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="265434000" />
+    <option name="totallyTimeSpent" value="81356000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1066" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15677084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13836017" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3420502" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294979" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3438486" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39958158" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -957,427 +587,276 @@
     <MESSAGE value="Changements pour le responsiveness pour tablette" />
     <MESSAGE value="Gestion des events avec jQuery et refactor de pageLoader.js en classe -&gt; PageLoader.js" />
     <MESSAGE value="Ajout de la classe User" />
-    <MESSAGE value="Ajout des classes UMovie, Utils, et Movie. Barres de recherche semi-fonctionnels" />
-    <MESSAGE value="Migration vers backbone" />
-    <MESSAGE value="Merge avec la branche Movies" />
-    <MESSAGE value="Ajout des deux vidéos pour séries et film avec l'API youtube" />
-    <MESSAGE value="Barre de recherche fonctionnelle" />
-    <MESSAGE value="Refactor de la mort" />
-    <MESSAGE value="Redirection / Cookie stuff" />
-    <MESSAGE value="Redirection fixed + Validation du format du formulaire 'Register'." />
-    <option name="LAST_COMMIT_MESSAGE" value="Redirection fixed + Validation du format du formulaire 'Register'." />
+    <MESSAGE value="Actor" />
+    <MESSAGE value="merge" />
+    <MESSAGE value="npm init" />
+    <option name="LAST_COMMIT_MESSAGE" value="npm init" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="6" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/pageLoader.js" />
-    <entry file="file://$PROJECT_DIR$/js/collections/UserProfileCollection.js" />
-    <entry file="file://$PROJECT_DIR$/js/Legacy/User.js" />
     <entry file="file://$PROJECT_DIR$/css/materialize.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5641">
-          <caret line="2219" column="7" lean-forward="false" selection-start-line="2219" selection-start-column="7" selection-end-line="2219" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/WatchlistView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/WatchlistCollectionView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="35" column="21" lean-forward="false" selection-start-line="35" selection-start-column="21" selection-end-line="35" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/FooterView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/collections/MoviesCollection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="9" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/collections/ActorsCollection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="11" lean-forward="false" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/collections/UsersCollection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/TVShowView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="38" lean-forward="false" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/collections/SearchResultsCollection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="33" lean-forward="false" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Remise2/src/js/models/ActorModel.js" />
-    <entry file="file://$PROJECT_DIR$/js/views/ActorView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="32" lean-forward="true" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/WatchlistCollection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="57" lean-forward="false" selection-start-line="5" selection-start-column="57" selection-end-line="5" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/WatchlistModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/SearchParametersView.js" />
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/HTML5.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="2184" column="0" lean-forward="false" selection-start-line="2184" selection-start-column="0" selection-end-line="2184" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/HomeView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="21" column="62" lean-forward="false" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/RegisterView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/ActorTemplate.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-87">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/HomeTemplate.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="22" lean-forward="false" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/TVShowModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="32" column="72" lean-forward="false" selection-start-line="32" selection-start-column="72" selection-end-line="32" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/libs/backbone-min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="0" column="21985" lean-forward="false" selection-start-line="0" selection-start-column="21985" selection-end-line="0" selection-end-column="21985" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/NavbarView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/NavbarModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="40" column="9" lean-forward="true" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="25" column="19" lean-forward="false" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/register.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="9" lean-forward="false" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/LoginView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="10" lean-forward="false" selection-start-line="26" selection-start-column="10" selection-end-line="26" selection-end-column="10" />
-          <folding>
-            <element signature="e#202#274#0" expanded="false" />
-            <element signature="e#305#385#0" expanded="false" />
-            <element signature="e#423#437#0" expanded="false" />
-            <element signature="e#468#481#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/LoginTemplate.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/RegisterTemplate.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="691">
-          <caret line="39" column="66" lean-forward="false" selection-start-line="39" selection-start-column="66" selection-end-line="39" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/ActorModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/UserProfileView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="25" column="11" lean-forward="false" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
-          <folding>
-            <element signature="e#455#498#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="24" column="52" lean-forward="false" selection-start-line="24" selection-start-column="52" selection-end-line="24" selection-end-column="52" />
-          <folding />
+        <state relative-caret-position="37723">
+          <caret line="2219" column="7" selection-start-line="2219" selection-start-column="7" selection-end-line="2219" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="173" column="23" lean-forward="false" selection-start-line="173" selection-start-column="23" selection-end-line="173" selection-end-column="23" />
+        <state relative-caret-position="1105">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html" />
+    <entry file="file://$PROJECT_DIR$/css/materialize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37723">
+          <caret line="2219" column="7" selection-start-line="2219" selection-start-column="7" selection-end-line="2219" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html" />
+    <entry file="file://$PROJECT_DIR$/css/materialize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37723">
+          <caret line="2219" column="7" selection-start-line="2219" selection-start-column="7" selection-end-line="2219" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html" />
+    <entry file="file://$PROJECT_DIR$/css/materialize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37723">
+          <caret line="2219" column="7" selection-start-line="2219" selection-start-column="7" selection-end-line="2219" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html" />
+    <entry file="file://$PROJECT_DIR$/css/materialize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="53256">
+          <caret line="2219" column="7" selection-start-line="2219" selection-start-column="7" selection-end-line="2219" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html" />
+    <entry file="file://$PROJECT_DIR$/tvshow.html" />
+    <entry file="file://$PROJECT_DIR$/movie.html" />
+    <entry file="file://$PROJECT_DIR$/images/film.png" />
+    <entry file="file://$PROJECT_DIR$/images/guy.png" />
+    <entry file="file://$PROJECT_DIR$/js/materialize.js" />
+    <entry file="file://$PROJECT_DIR$/js/materialize.min.js" />
+    <entry file="file://$PROJECT_DIR$/css/materialize.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="20">
+          <caret line="2219" column="7" selection-start-line="2219" selection-start-column="7" selection-end-line="2219" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="72" column="0" selection-start-line="72" selection-start-column="0" selection-end-line="72" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/Utils.js" />
+    <entry file="file://$PROJECT_DIR$/js/User.js" />
+    <entry file="file://$PROJECT_DIR$/home.html" />
+    <entry file="file://$PROJECT_DIR$/js/Movie.js" />
+    <entry file="file://$PROJECT_DIR$/js/init.js" />
+    <entry file="file://$PROJECT_DIR$/js/UMovie.js" />
+    <entry file="file://$PROJECT_DIR$/js/PageLoader.js" />
+    <entry file="file://$PROJECT_DIR$/js/views/UserProfileView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/FooterView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/collections/UsersCollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="17" selection-start-line="18" selection-start-column="23" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/PreviewFromYoutube.js" />
+    <entry file="file://$PROJECT_DIR$/js/collections/MoviesCollection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/MovieView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="49" selection-start-line="25" selection-start-column="49" selection-end-line="25" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/models/ActorModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="648">
+          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/ActorView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/HomeView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/SearchResultsTemplate.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="31" column="42" lean-forward="true" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        <state relative-caret-position="648">
+          <caret line="36" column="50" selection-start-line="36" selection-start-column="50" selection-end-line="36" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/NavbarTemplate.handlebars">
+    <entry file="file://$PROJECT_DIR$/js/router/Router.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="102" column="23" lean-forward="true" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/SearchResultsView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="45" lean-forward="false" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-          <folding>
-            <element signature="e#107#599#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/MovieTemplate.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="90">
+          <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/router/AppRouter.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="47" column="28" lean-forward="false" selection-start-line="47" selection-start-column="28" selection-end-line="47" selection-end-column="28" />
+        <state relative-caret-position="198">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/models/UserProfileModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="58" selection-start-line="21" selection-start-column="58" selection-end-line="21" selection-end-column="58" />
           <folding>
-            <element signature="e#574#644#0" expanded="true" />
-            <element signature="e#676#723#0" expanded="true" />
-            <element signature="e#753#798#0" expanded="true" />
-            <element signature="e#831#879#0" expanded="true" />
+            <element signature="e#5168#5781#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/router/Router.js">
+    <entry file="file://$PROJECT_DIR$/js/views/SearchResultsView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="643">
-          <caret line="50" column="20" lean-forward="true" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/models/SearchResultsModel.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="498">
+          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/views/AppView.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
           <folding>
-            <element signature="e#107#652#0" expanded="true" />
-            <element signature="e#276#535#0" expanded="true" />
-            <element signature="e#1220#1441#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/MovieView.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/UserProfileTemplate.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="539">
-          <caret line="29" column="49" lean-forward="true" selection-start-line="29" selection-start-column="49" selection-end-line="29" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/SearchResultsTemplate.handlebars">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="86" lean-forward="false" selection-start-line="3" selection-start-column="86" selection-end-line="3" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/templates/SearchResultPartial.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#44#0" expanded="false" />
-            <element signature="e#1471#2567#0" expanded="false" />
-            <element signature="e#2593#3582#0" expanded="false" />
-            <element signature="e#3606#4599#0" expanded="false" />
+            <element signature="e#0#236#0" expanded="false" />
+            <element signature="e#341#881#0" expanded="false" />
+            <element signature="e#900#1542#0" expanded="false" />
+            <element signature="e#6554#6664#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/models/MovieModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="513">
-          <caret line="27" column="75" lean-forward="true" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
-          <folding>
-            <element signature="e#101#623#0" expanded="true" />
-            <element signature="e#393#586#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="396">
+          <caret line="25" column="53" selection-start-line="25" selection-start-column="53" selection-end-line="25" selection-end-column="53" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/views/AppView.js">
+    <entry file="file://$PROJECT_DIR$/js/views/TVShowView.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="189" column="29" lean-forward="true" selection-start-line="189" selection-start-column="29" selection-end-line="189" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#236#0" expanded="false" />
-            <element signature="e#1831#2185#0" expanded="true" />
-            <element signature="e#2665#4471#0" expanded="true" />
-            <element signature="e#2708#3216#0" expanded="true" />
-            <element signature="e#3449#3661#0" expanded="false" />
-            <element signature="e#3707#3924#0" expanded="false" />
-            <element signature="e#3966#4179#0" expanded="false" />
-            <element signature="e#4219#4430#0" expanded="false" />
-            <element signature="e#5046#5292#0" expanded="true" />
-            <element signature="e#5399#5489#0" expanded="true" />
-            <element signature="e#6812#6882#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="108">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/UserProfileModel.js">
+    <entry file="file://$PROJECT_DIR$/js/templates/SearchResultsTemplate.handlebars">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="92" column="26" lean-forward="true" selection-start-line="92" selection-start-column="26" selection-end-line="92" selection-end-column="26" />
-          <folding>
-            <element signature="e#105#1515#0" expanded="true" />
-            <element signature="e#283#1310#0" expanded="true" />
-            <element signature="e#1329#1502#0" expanded="true" />
-            <element signature="e#1552#2022#0" expanded="true" />
-            <element signature="e#1684#1860#0" expanded="true" />
-            <element signature="e#1883#2008#0" expanded="true" />
-            <element signature="e#2069#2574#0" expanded="true" />
-            <element signature="e#2277#2547#0" expanded="true" />
-            <element signature="e#2862#3685#0" expanded="true" />
-            <element signature="e#3362#3526#0" expanded="true" />
-            <element signature="e#3549#3673#0" expanded="true" />
-            <element signature="e#4232#4398#0" expanded="true" />
-            <element signature="e#4421#4541#0" expanded="true" />
-            <element signature="e#4610#5124#0" expanded="true" />
-            <element signature="e#4929#5054#0" expanded="true" />
-            <element signature="e#5077#5111#0" expanded="true" />
-            <element signature="e#5168#5781#0" expanded="true" />
-            <element signature="e#5580#5712#0" expanded="true" />
-            <element signature="e#5735#5769#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/models/SearchResultsModel.js">
+    <entry file="file://$PROJECT_DIR$/js/models/TVShowModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="37" lean-forward="false" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+        <state relative-caret-position="390">
+          <caret line="42" column="67" selection-start-line="42" selection-start-column="67" selection-end-line="42" selection-end-column="67" />
           <folding>
-            <element signature="e#303#795#0" expanded="true" />
-            <element signature="e#869#3279#0" expanded="true" />
-            <element signature="e#1113#3253#0" expanded="true" />
+            <marker date="1491675238923" expanded="true" signature="1667:1681" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -27,7 +27,6 @@
             return this;
         }
 
-
     })
 
 })(jQuery);
