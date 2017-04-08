@@ -33,7 +33,7 @@
                     for (var key in autodata) {
                         counter++
                         if (counter > 7) {
-                            autodata = {}
+                            autodata = {};
                             $('.autocomplete-content').remove();
                         }
                     }
