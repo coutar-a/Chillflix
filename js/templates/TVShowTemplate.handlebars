@@ -17,8 +17,12 @@
                     <div class="video-container">
                         <iframe width="600" height="400" src="{{sourceVideo}}" frameborder="0" allowfullscreen></iframe>
                     </div>
+                    <ul>
+                        {{#each episodes}}
+                            <li>{{trackName}}</li>
+                        {{/each}}
+                    </ul>
                 </div>
-
 
             </div>
         </div>
