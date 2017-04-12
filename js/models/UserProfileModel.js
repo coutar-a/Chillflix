@@ -68,16 +68,15 @@
         },
 
         createWatchlist: function (name) {
-
-            this.url = "http://umovie.herokuapp.com/watchlists";
-            this.save(movie, {
-                type: 'POST', dataType: 'application/json', headers: {
-                    'Authorization': this.attributes.token
-                }, data: {
-                    "name": name,
-                    "owner": userProfile.attributes.email
+            watchlistCollection.create(
+                {
+                    name: name,
+                    owner: userProfile.attributes
+                },
+                {
+                    success: function(){ console.log("Watchlist " + name + " successfully created")}
                 }
-            })
+            );
         }
 
 
