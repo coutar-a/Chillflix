@@ -5,7 +5,7 @@ function $init() {
 
 
         // App start :
-        new AppView();
+        app = new AppView();
 
 
     });

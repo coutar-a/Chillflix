@@ -57,29 +57,21 @@
             });
         },
 
-        addToWatchlist: function (movie, watchlistId) {
-            this.url = "http://umovie.herokuapp.com/watchlists/58c5f5ee1b8fb8040090bba3/movies";
-            this.save(movie, {
-                type: 'POST', dataType: 'application/json', headers: {
-                    'Authorization': this.attributes.token
-                }
-            })
-
+        getWatchlists: function(){
+            return watchlistCollection.filterByUserEmail(this.attributes.email);
         },
 
         createWatchlist: function (name) {
             watchlistCollection.create(
                 {
                     name: name,
-                    owner: userProfile.attributes
+                    owner: this.attributes
                 },
                 {
                     success: function(){ console.log("Watchlist " + name + " successfully created")}
                 }
             );
         }
-
-
     });
 
     userProfile = new UserProfileModel();
