@@ -12,7 +12,7 @@
         },
 
         render: function (userProfile) {
-            this.$el.html(this.template(userProfile.attributes));
+            this.$el.html(this.template(userProfile.toJSON()));
             return this;
         },
 
