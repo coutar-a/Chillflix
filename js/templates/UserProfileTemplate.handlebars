@@ -100,8 +100,11 @@
                 <div class="row center">
                     <div class="col s12">
                         <h5>Watchlists :</h5>
-                        <ul class="collection" id="watchlistContainer">
-                        </ul>
+                        <div class="collection">
+                            {{#each watchlists}}
+                            <a href="#!" class="collection-item">{{name}}</a>
+                            {{/each}}
+                        </div>
                     </div>
                 </div>
             </div>
