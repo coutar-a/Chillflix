@@ -19,7 +19,7 @@
         movieView: new MovieView({}),
         tvShowView: new TVShowView({}),
         actorView: new ActorView({}),
-        watchlistCollectionView: new WatchlistCollectionView({}),
+        watchlistCollectionView: new MyWatchlistsView({}),
         userProfileView: new UserProfileView({}),
         searchResultsView: new SearchResultsView({}),
         footerView: new FooterView({}),

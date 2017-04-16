@@ -370,11 +370,12 @@
         <p>{{name}}</p>
         <div id="watchlist-movies"></div>
     </script>
-    <script type="text/x-handlebars-template" id="WatchlistCollectionTemplate">
+    <script type="text/x-handlebars-template" id="MyWatchlistsTemplate">
         <div class="Page">
             <h3>My watchlists</h3>
-            <input id="newWatchlist" placeholder="New watchlist">
-            <div id="watchlists"></div>
+            <ul class="collection" id="watchlists">
+
+            </ul>
         </div>
     </script>
     <script type="text/x-handlebars-template" id="SearchResultsTemplate">
@@ -422,7 +423,7 @@
     <script src="js/views/UserProfileView.js"></script>
     <script src="js/views/ActorView.js"></script>
     <script src="js/views/WatchlistView.js"></script>
-    <script src="js/views/WatchlistCollectionView.js"></script>
+    <script src="js/views/MyWatchlistsView.js"></script>
     <script src="js/views/SearchResultsView.js"></script>
     <script src="js/views/AppView.js"></script>
     <!---->

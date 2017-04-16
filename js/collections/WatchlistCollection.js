@@ -17,5 +17,6 @@
     });
 
     watchlistCollection = new WatchlistCollection();
+    watchlistCollection.fetch();
 
 }(jQuery));
