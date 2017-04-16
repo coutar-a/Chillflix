@@ -12,6 +12,7 @@
         },
 
         render: function (userProfile) {
+            console.log(userProfile);
             this.$el.html(this.template(userProfile.toJSON()));
             return this;
         },

@@ -17,7 +17,7 @@
                     "tvshowsGenres": [],
                     "searchLimit": 50
                 };
-                _this.attributes.watchlists = [];
+                _this.attributes.watchlists = this.getWatchlists();
                 _this.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((_this.attributes.email).trim().toLowerCase());
                 $.cookie('user', JSON.stringify(_this), {expires: 1});
                 //
@@ -46,9 +46,11 @@
 
         fetchProfile: function (id, caller) {
             this.url = "http://umovie.herokuapp.com/users/" + id;
+            var self = this;
             this.fetch({
                 headers: {'Authorization': userProfile.attributes.token},
                 success: function (data) {
+                    data.attributes.watchlists = self.getWatchlists();
                     data.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((data.attributes.email).trim().toLowerCase());
                     caller.$el.find(" .Page")[0].innerHTML = $(new UserProfileView().render(data).el).html();
                 }
