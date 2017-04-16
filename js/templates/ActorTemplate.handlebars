@@ -1,0 +1,28 @@
+<div class="Page">
+            <div class="row">
+                <div class="col s12 m6 l6">
+                    <h1 id="actor_name">{{artistName}}</h1>
+                    <a class="buttoniTunes" href="{{artistLinkUrl}}" id="itunes_link"></a>
+                    <div class="divider"></div>
+                    <h5> Films </h5>
+                    <ul id="actor_movies" class="collection">
+                        {{#each knownFor}}
+                            {{#each this}}
+                                <li class="collection-item">{{#if original_title}}{{original_title}}{{else}} {{original_name}} {{/if}}</li>
+                            {{/each}}
+                        {{/each}}
+                    </ul>
+                    <div class="divider"></div>
+                    <h5> Genre </h5>
+                    <ul id="actor_genre">
+                        <li>{{primaryGenreName}}</li>
+                    </ul>
+                    <div class="divider"></div>
+                </div>
+                <div class="col s12 m6 l6">
+                    <div class="card-panel">
+                        <img id="actor_image" class="materialboxed responsive-img" src="{{artistImage}}">
+                    </div>
+                </div>
+            </div>
+        </div>

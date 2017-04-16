@@ -1,13 +1,15 @@
 (function ($) {
 
+    autodata = {};
+
     NavbarView = Backbone.View.extend({
 
-        source: ($("#NavbarTemplate").html()),
+        source: Handlebars.getTemplate('NavbarTemplate'),
         template: null,
 
         events: {
 
-            "input .searchBar": "autocomplete",
+            "input .searchBar": "fetchAutocomplete",
             "change #searchFilter": "userOptions",
             "change #moviesGenres": "userOptions",
             "change #tvshowsGenres": "userOptions",
@@ -17,44 +19,38 @@
 
         initialize: function () {
             this.template = Handlebars.compile(this.source);
+            this.model = new SearchResultsModel();
         },
 
         render: function (data) {
             this.$el.html(this.template(data));
             // CSS and Ajax re-initialisation.
             this._init();
-            //this._initAutocompletion(); TODO
             return this;
         },
 
         _init: function () {
 
-            // Ajax initialisation : (Ne fonctionne pas, à régler)
-            $(document).ajaxStart(function () {
-                $(document.body).css({'cursor': 'wait'});
-            });
-
-            $(document).ajaxStop(function () {
-                $(document.body).css({'cursor': 'default'});
-            });
             // CSS initialisation
             $('.modal').modal();
             $(".button-collapse").sideNav();
             $('select').material_select();
-
-
+            this._initAutocomplete();
         },
 
-        _initAutocompletion: function () {
+        _initAutocomplete : function () {
+            $('input.autocomplete').autocomplete({
+                data: this.getAutocompleteContent()
+            });
+        },
 
-            var keys = [];
-            for (var key in localStorage) {
+        getAutocompleteContent : function () {
+            return autodata;
+        },
 
-                keys.push(key);
-            }
-            var model = SearchResultsModel({});
-            model.fetchForAutocomplete(keys);
-
+        fetchAutocomplete: function () {
+            // $('.autocomplete-content').remove();
+            this.model.fetchAutocompleteResults();
         },
 
         userOptions: function (e) {

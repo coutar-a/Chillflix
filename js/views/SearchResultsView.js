@@ -5,7 +5,8 @@
 
     SearchResultsView = Backbone.View.extend({
 
-        source: ($("#SearchResultsTemplate").html()),
+        //source: ($("#SearchResultsTemplate").html()),
+        source: Handlebars.getTemplate('SearchResultsTemplate'),
         template: null,
 
 
@@ -17,7 +18,6 @@
         render: function (searchResult) {
             searchResult = {"query" : $("#search")[0].value, "searchResults" : searchResult};
             this.$el.html(this.template(searchResult));
-
             return this;
         }
 

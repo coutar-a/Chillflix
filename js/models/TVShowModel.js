@@ -12,6 +12,7 @@
                     'Authorization': userProfile.attributes.token
                 }
             }).success(function (_data, success, result) {
+                self.collectionId = result.responseJSON.results[0].collectionId;
                 self.seasonTitle = result.responseJSON.results[0].collectionName;
                 self.seasonLink = result.responseJSON.results[0].collectionViewUrl;
                 self.primaryGenreName = result.responseJSON.results[0].primaryGenreName;
@@ -30,9 +31,20 @@
             var self = this;
             this.fetch().success(function(_data, success, result) {
                 self.sourceVideo = "https://www.youtube.com/embed/" + result.responseJSON.items[0].id.videoId;
-                caller.$el.find(" .Page")[0].innerHTML = $(caller.tvShowView.render(model).el).html();
+                self.fetchEpisodes(self.collectionId, caller, self);
+
             })
 
+        },
+
+        fetchEpisodes : function(collectionId, caller, model) {
+            this.url = "https://umovie.herokuapp.com/unsecure/tvshows/seasons/" + collectionId + "/episodes";
+            var self = this;
+            this.fetch().success(function(_data, success, result) {
+                model.episodes = _data.results;
+                console.log(model.episodes);
+                caller.$el.find(" .Page")[0].innerHTML = $(caller.views.tvShowView.render(model).el).html();
+            })
         }
 
     });

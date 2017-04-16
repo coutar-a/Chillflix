@@ -2,7 +2,8 @@
 
     WatchlistView = Backbone.View.extend({
 
-        source: ($("#WatchlistTemplate").html()),
+        //source: ($("#WatchlistTemplate").html()),
+        source: Handlebars.getTemplate('WatchlistTemplate'),
         template : null,
 
         events: {

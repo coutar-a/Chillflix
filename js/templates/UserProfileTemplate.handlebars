@@ -1,0 +1,112 @@
+<div class="Page">
+            <div class="container">
+
+                <div class="row center">
+                    <div class="col s12">
+                        <div class="space"></div>
+                        <img id="avatar" src={{gravatarSrc}}>
+                        <h3>{{name}} {{lastName}}</h3>
+                        <h3>{{email}}</h3>
+                    </div>
+                </div>
+
+                <div class="divider space"></div>
+
+                <div class="row center">
+                    <div class="col s6">
+                        <a data-action="buttonFollowUser" data-href="{{id}}" id="followUser"
+                           class="btn waves-effect waves-light blue buttonFollowUser white-text"><i
+                                class="material-icons right">thumb_up</i>Follow</a>
+                    </div>
+                    <div class="col s6">
+                        <a data-action="buttonUnfollowUser" data-href="{{id}}" id="unfollowUser"
+                           class="btn waves-effect waves-light blue buttonUnfollowUser white-text"><i
+                                class="material-icons right">thumb_down</i>Unfollow</a>
+                    </div>
+                </div>
+
+                <div class="row center">
+                    <div class="col s12">
+                        <h5>Followed users :</h5>
+                        <div class="collection">
+                            {{#each following}}
+                            <a href="#!" class="collection-item">{{email}}</a>
+                            {{/each}}
+                        </div>
+                        <div class="space"></div>
+                    </div>
+                </div>
+
+                <div class="divider space"></div>
+
+                <div class="row center">
+                    <div class="col s6">
+
+
+                        <!-- Modal Trigger -->
+                        <a class="btn waves-effect waves-light blue white-text" href="#modalAddWL"><i
+                                class="material-icons right">add</i>New
+                        </a>
+
+                        <!-- Modal Structure -->
+                        <div id="modalAddWL" class="modal">
+                            <div class="modal-content col s12">
+                                <h5 class="black-text">Add a watchlist</h5>
+                                <div class="divider"> </div>
+                                <div class="input-field col s12">
+                                    <label for="icon_prefix">Watchlist's name</label>
+                                    <input id="icon_prefix" type="text" class="left">
+                                </div>
+                            </div>
+
+                            <div class="modal-footer">
+                                <a data-action="buttonCreateWatchlist" href="#!"
+                                   class="modal-action modal-close waves-effect waves-green btn-flat createWatchlist">Done</a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col s6">
+                        <!-- Modal Trigger -->
+                        <a class="btn waves-effect waves-light blue white-text" href="#modalRemoveWL"><i
+                                class="material-icons right">remove</i>Remove
+                        </a>
+
+                        <!-- Modal Structure -->
+                        <div id="modalRemoveWL" class="modal">
+                            <div class="modal-content col s12">
+                                <h5 class="black-text">My watchlists</h5>
+                                <div class="divider"> </div>
+                                <form action="#">
+                                    {{#each watchlists}}
+                                    <p>
+                                        <input type="checkbox" id="{{id}}" />
+                                        <label for="{{id}}">{{name}}</label>
+                                    </p>
+                                    {{/each}}
+                                </form>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <a data-action="buttonRemoveWatchlist" href="#!"
+                                   class="modal-action modal-close waves-effect waves-green btn-flat removeWatchlist">Done</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row center">
+                    <div class="col s12">
+                        <h5>Watchlists :</h5>
+                        <div class="collection">
+                            {{#each watchlists}}
+                            <a href="#!" class="collection-item">{{name}}</a>
+                            {{/each}}
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>

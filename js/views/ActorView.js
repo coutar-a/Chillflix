@@ -2,7 +2,8 @@
 
     ActorView = Backbone.View.extend({
 
-        source: ($("#ActorTemplate").html()),
+        //source: ($("#ActorTemplate").html()),
+        source: Handlebars.getTemplate("ActorTemplate"),
         template : null,
 
         events: {
@@ -17,7 +18,6 @@
         },
 
         render: function(actor) {
-
             this.$el.html(this.template(actor));
             return this;
         }
