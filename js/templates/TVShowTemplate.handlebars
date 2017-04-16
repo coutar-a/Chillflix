@@ -1,28 +1,24 @@
 <div class="Page">
             <div class="row">
-                <div class="col s12 m6 l6">
-                    <h1>{{seasonTitle}}</h1>
-                    <a class="buttoniTunes" href="{{seasonLink}}" id="season_link"></a>
-                    <div class="divider"></div>
-                    <h5> Genre </h5>
-                    <ul>
-                        <li>{{primaryGenre}}</li>
-                    </ul>
-                    <div class="divider"></div>
-                    <h5> Description </h5>
-                    <p>{{longDescription}}</p>
-                </div>
-                <div class="col s12 m6 l6">
-                    <img id="tvshow_image" class="materialboxed responsive-img" src="{{artwork}}">
-                    <div class="video-container">
-                        <iframe width="600" height="400" src="{{sourceVideo}}" frameborder="0" allowfullscreen></iframe>
-                    </div>
+                <div class="col s12">
+                    <h5> Episode list </h5>
                     <ul>
                         {{#each episodes}}
-                            <li>{{trackName}}</li>
+                            <li><a class="waves-effect waves-light btn" href="#modal1">{{trackName}}</a></li>
                         {{/each}}
                     </ul>
                 </div>
-
             </div>
+
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal modal-fixed-footer">
+        <div class="modal-content">
+            <h4>{{seasonTitle}}</h4>
+            <div class="divider"></div>
+                <ul><li>{{longDescription}}</li></ul>
         </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+        </div>
+    </div>
+</div>

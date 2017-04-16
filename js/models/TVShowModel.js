@@ -42,8 +42,9 @@
             var self = this;
             this.fetch().success(function(_data, success, result) {
                 model.episodes = _data.results;
-                console.log(model.episodes);
+                console.log(model);
                 caller.$el.find(" .Page")[0].innerHTML = $(caller.views.tvShowView.render(model).el).html();
+                $('.modal').modal();
             })
         }
 
