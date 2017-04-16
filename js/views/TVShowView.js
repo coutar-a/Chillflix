@@ -2,7 +2,6 @@
 
     TVShowView = Backbone.View.extend({
 
-        //source: ($("#TVShowTemplate").html()),
         source: Handlebars.getTemplate('TVShowTemplate'),
         template: null,
 
@@ -15,6 +14,7 @@
         render: function (tvshow) {
             this.$el.html(this.template(tvshow));
             return this;
+
         }
 
     })
