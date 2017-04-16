@@ -3,7 +3,6 @@
     TVShowModel = Backbone.Model.extend({
         fetchSeason: function (id, caller) {
             this.url = "https://umovie.herokuapp.com/unsecure/tvshows/seasons/" + id;
-            // todo encode/encrypt the line above
 
             var self = this;
 
@@ -19,6 +18,7 @@
                 self.longDescription = result.responseJSON.results[0].longDescription;
                 self.artworkUrl = result.responseJSON.results[0].artworkUrl100;
                 self.fetchYoutubeVideo(self.seasonTitle, caller, self);
+
             })
         },
 
@@ -42,8 +42,10 @@
             var self = this;
             this.fetch().success(function(_data, success, result) {
                 model.episodes = _data.results;
-                console.log(model.episodes);
+                console.log(model);
                 caller.$el.find(" .Page")[0].innerHTML = $(caller.views.tvShowView.render(model).el).html();
+                $('.modal').modal();
+                $('#inputSearch');
             })
         }
 
