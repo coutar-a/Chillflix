@@ -111,7 +111,12 @@
         },
 
         getWatchlists: function(){
-            return watchlistCollection.filterByUserEmail(this.attributes.email);
+            var result = [];
+            var models = watchlistCollection.filterByUserEmail(this.attributes.email);
+            models.forEach(function(model){
+                result.push(model.toJSON());
+            });
+            return result;
         },
 
         createWatchlist: function (name) {
