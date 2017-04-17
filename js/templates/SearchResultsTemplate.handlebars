@@ -1,18 +1,7 @@
 <h2 id="searchResultsLabel" class="flow-text"> Search results for : {{query}} </h2>
-<ul class="collapsible searchResultsList" data-collapsible="accordion">
-    <li>
-        <div class="collapsible-header"><i class="material-icons">settings</i>Search filters</div>
-        <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-    </li>
-</ul>
+
 <ul class="collapsible searchResultsList" data-collapsible="accordion">
     {{#each searchResults}}
         {{searchResultItem this}}
     {{/each}}
 </ul>
-
-<script>
-
-    $('.collapsible').collapsible();
-
-</script>
