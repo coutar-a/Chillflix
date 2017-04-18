@@ -63,8 +63,8 @@ function Router(parentView) {
 
     this.seasons = function (id) {
         // TODO
-        // var tvShow = new TVShowModel({});
-        // tvShow.fetchSeason(id, parentView);
+         //var tvShow = new TVShowModel({});
+         //tvShow.fetchSeason(id, parentView);
     };
 
     this.user = function (id) {

@@ -55,3 +55,11 @@ sudo apt-get install npm
 ```
 
 * Puis lancez index.html dans votre navigateur.
+
+## Design
+
+### Fonctionnalités Avancées
+
+- Intégration gravatar : Si l'utilisateur s'est inscrit sur gravatar avec la même adresse email que sur CHillflix, Son avatar sera affiché dans son profil.
+
+- Autocomplétion : L'utilisateur écrit dans la barre d'autocomplétion. Une recherche s'effectue à chaque caractère entré et un menu de style "dropdown" propose les résultats pertinent de la recherche.

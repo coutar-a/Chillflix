@@ -2,7 +2,11 @@ function $init() {
 
     $(document).ready(function () {
 
-        new AppView();
+
+
+        // App start :
+        app = new AppView();
+
 
     });
 

@@ -17,7 +17,7 @@
                     "tvshowsGenres": [],
                     "searchLimit": 50
                 };
-                _this.attributes.watchlists = [];
+                _this.attributes.watchlists = this.getWatchlists();
                 _this.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((_this.attributes.email).trim().toLowerCase());
                 $.cookie('user', JSON.stringify(_this), {expires: 1});
                 //
@@ -46,9 +46,11 @@
 
         fetchProfile: function (id, caller) {
             this.url = "http://umovie.herokuapp.com/users/" + id;
+            var self = this;
             this.fetch({
                 headers: {'Authorization': userProfile.attributes.token},
                 success: function (data) {
+                    data.attributes.watchlists = self.getWatchlists();
                     data.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((data.attributes.email).trim().toLowerCase());
                     caller.$el.find(" .Page")[0].innerHTML = $(new UserProfileView().render(data).el).html();
                 }
@@ -108,37 +110,26 @@
             });
         },
 
-        addToWatchlist: function (movie, watchlistId) {
-            this.url = "http://umovie.herokuapp.com/watchlists/" + watchlistId + "/movies";
-            this.save(movie, {
-                type: 'POST', dataType: 'application/json', headers: {
-                    'Authorization': userProfile.attributes.token
-                }
-            }).success(function (data) {
-                Materialize.toast("Successfully added " + data.responseText.trackName, 3000, 'rounded blue');
-            }).fail(function (data) {
-                //
+        getWatchlists: function(){
+            var result = [];
+            var models = watchlistCollection.filterByUserEmail(this.attributes.email);
+            models.forEach(function(model){
+                result.push(model.toJSON());
             });
-
+            return result;
         },
 
         createWatchlist: function (name) {
-
-            this.url = "http://umovie.herokuapp.com/watchlists";
-            this.save(movie, {
-                type: 'POST', dataType: 'application/json', headers: {
-                    'Authorization': userProfile.attributes.token
-                }, data: {
-                    "name": name,
-                    "owner": userProfile.attributes.email
+            watchlistCollection.create(
+                {
+                    name: name,
+                    owner: this.attributes
+                },
+                {
+                    success: function(){ console.log("Watchlist " + name + " successfully created")}
                 }
-            }).success(function (data) {
-                Materialize.toast("Successfully created watchlist " + data.responseText.name, 3000, 'rounded blue');
-            }).fail(function (data) {
-                //
-            });
+            );
         }
-
     });
 
     userProfile = new UserProfileModel();
