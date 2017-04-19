@@ -15,6 +15,7 @@
                         _data = data.attributes;
                     }
                     //
+                    console.log(_data);
                     caller.$el.find(" .Page")[0].innerHTML = $(caller.views.searchResultsView.render(_data).el).html(); // TODO : Refactor.
                     $('.collapsible').collapsible();
                 }
@@ -86,6 +87,7 @@
             if (userProfile.attributes.options.searchFilter != "/users" || bool) {
                 this.url += "&limit=" + userProfile.attributes.options.searchLimit;
             }
+            console.log(this.url);
         }
 
     });
