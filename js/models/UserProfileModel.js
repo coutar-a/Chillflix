@@ -8,8 +8,11 @@
             this.save(data, {type: 'POST'}).success(function (_data, success, result) {
                 // Setting token on success
                 _this.attributes.name = result.responseJSON.name;
+
                 $.cookie('token', result.responseJSON.token, {expires: 1});
+                //Cookies.set('token', result.responseJSON.token, {expires: 1});
                 _this.attributes.token = $.cookie('token');
+                //_this.attributes.token = Cookies.get('token');
                 _this.attributes.following = result.responseJSON.following;
                 _this.attributes.options = {
                     "searchFilter": "",
@@ -20,6 +23,7 @@
                 _this.attributes.watchlists = _this.getWatchlists();
                 _this.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((_this.attributes.email).trim().toLowerCase());
                 $.cookie('user', JSON.stringify(_this), {expires: 1});
+                //Cookies.set('user', JSON.stringify(_this), {expires: 1});
                 //
 
                 Backbone.history.navigate('login/authenticate', {trigger: true});

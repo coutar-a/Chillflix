@@ -50,6 +50,14 @@
         },
 
         checkForCookies: function () {
+
+            /*console.log(!!Cookies.get('token'));
+            if (!!Cookies.get('token')) {
+                userProfile.attributes = JSON.parse(Cookies.get('user'));
+                Backbone.history.navigate('login/authenticate', {trigger: true});
+            } else {
+                Backbone.history.navigate('login', {trigger: true});
+            }*/
             console.log(!!$.cookie('token'));
             if (!!$.cookie('token')) {
                 userProfile.attributes = JSON.parse($.cookie('user'));
@@ -61,6 +69,10 @@
         },
 
         validateToken: function () {
+            /*if (!(!!Cookies.get('token'))) {
+                userProfile.logout();
+                Backbone.history.navigate('login', {trigger: true});
+            }*/
             if (!(!!$.cookie('token'))) {
                 userProfile.logout();
                 Backbone.history.navigate('login', {trigger: true});
