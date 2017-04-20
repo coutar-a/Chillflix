@@ -54,7 +54,7 @@ sudo apt-get install npm
 	npm start
 ```
 
-* Puis lancez index.html dans votre navigateur.
+* Puis rendez-vous à localhost:8080/index.html dans votre navigateur.
 
 ## Design
 
