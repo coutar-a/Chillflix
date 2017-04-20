@@ -48,6 +48,10 @@
 
         },
 
+        onCreateWLModalReady: function(){
+            Console.log("ready");
+        },
+
         fetchProfile: function (id, caller) {
             this.url = "http://umovie.herokuapp.com/users/" + id;
             var self = this;
@@ -57,6 +61,9 @@
                     data.attributes.watchlists = self.getWatchlists();
                     data.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((data.attributes.email).trim().toLowerCase());
                     caller.$el.find(" .Page")[0].innerHTML = $(new UserProfileView().render(data).el).html();
+                    $('.modal').modal({
+                        ready: this.onCreateWLModalReady
+                    });
                 }
 
             })

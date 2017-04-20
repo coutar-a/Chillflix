@@ -36,7 +36,8 @@
             "click .buttonLogout": "logout",
             "click .buttonAddToWatchlist" : "addToWatchlist",
             "click .buttonFollowUser" : "followUser",
-            "click .buttonUnfollowUser" : "unfollowUser"
+            "click .buttonUnfollowUser" : "unfollowUser",
+            "click .buttonCreateWatchlist" : "createWatchlist"
         },
 
         initialize: function () {
