@@ -48,10 +48,6 @@
 
         },
 
-        onCreateWLModalReady: function(){
-            Console.log("ready");
-        },
-
         fetchProfile: function (id, caller) {
             this.url = "http://umovie.herokuapp.com/users/" + id;
             var self = this;
@@ -61,11 +57,27 @@
                     data.attributes.watchlists = self.getWatchlists();
                     data.attributes.gravatarSrc = "https://secure.gravatar.com/avatar/" + md5((data.attributes.email).trim().toLowerCase());
                     caller.$el.find(" .Page")[0].innerHTML = $(new UserProfileView().render(data).el).html();
-                    $('.modal').modal({
-                        ready: this.onCreateWLModalReady
+
+                    $('#modalAddWL').modal({
+                        complete: function(modal){
+                            userProfile.createWatchlist(modal[0].querySelector("#icon_prefix").value);
+                            userProfile.fetchProfile(id, caller);
+                        }
+                    });
+
+                    $('#modalRemoveWL').modal({
+                        complete: function(modal){
+                            var elements = modal[0].querySelectorAll("input");
+                            for(var i=0; i<elements.length; i++){
+                                if(elements[i].checked === true)
+                                {
+                                    watchlistCollection.get(elements[i].id).destroy();
+                                }
+                            }
+                            userProfile.fetchProfile(id, caller);
+                        }
                     });
                 }
-
             })
 
         },
